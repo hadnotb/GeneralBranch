@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>La fusion des marges</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+
+		/*PArtie 1*/
+		.bleu{
+			background-color: dodgerblue;
+			min-height:300px;
+			width:500px;
+		}
+		.vert{
+			background-color: olivedrab;
+			min-height:200px;
+			width:400px;		
+		}
+		.jaune{
+			background-color: gold;
+			min-height:150px;
+			width:300px;
+		}
+		h1{ 
+			margin-bottom:0
+		}
+		.bleu,.vert,.jaune{
+			margin:0;
+		}
+		/*.bleu{
+			padding:100px;
+			border:1px solid red;
+		}
+		.vert{
+			margin: 100px
+		}
+		/*Partie 2*/
+		main.bleu{
+			margin-top:20px;
+
+		}
+		section.vert{
+			margin-top: 110px
+		}
+		article.jaune{
+			margin-top:50px;
+		}
+		/* main.bleu,article.jaune,section.vert{
+			border:solid red 1px;
+			padding:2px;
+		} */
+		/*Partie 3*/
+		aside.bleu{
+			margin-top:20px;
+
+		}
+		blockquote.vert{
+			margin-top: 110px
+		}
+		figure.jaune{
+			margin-top:50px;
+		}
+		aside.bleu,blockquote.vert,figure.jaune{
+			border:solid red 1px;
+			padding:20px;
+		}
+	</style>
+</head>
+<body>
+	<h1>Le cas des blocs enfants</h1>
+	<h2>Fusion des marges, les enfants fusionnent leurs marges superieure sur le côté commun avec les parents </h2>
+	<div class="bleu">
+		<div class="vert">
+			<div class="jaune">
+				<p>La marge de ce paragraphe traverse ses 3 parents et s'applique au bord haut du plus grand parent</p>
+			</div>
+		</div>
+	</div>
+	<hr>
+	<h2>dans le cas de valeurs différents sur les éléments imbriqués, c'est la plus grande qui qui s'appliquent au plus </h2>
+	<main class="bleu">
+		<section class="vert">
+			<article class="jaune">
+				<p>Hop là!</p>
+				<p>cette article jaune a<strong> 50px de marge</strong></p>
+			</article>
+			<p>cette section verte a<strong> 110px de marge</strong>, c'est moi qu'ai gagné</p>
+		</section>
+		<p>ce main bleu a<strong> 20px de marge</strong></p>
+	</main>
+	<hr>
+	<h2>Les bordures ou les padding annulent la fusion des marges</h2>
+	<aside class="bleu">
+		<blockquote class="vert">
+			<figure class="jaune">
+				<p>Hop là!</p>
+				<p>cette article jaune a<strong> 50px de marge</strong></p>
+			</figure>
+			<p>cette section verte a<strong> 110px de marge</strong>, c'est moi qu'ai gagné</p>
+		</blockquote>
+		<p>ce main bleu a<strong> 20px de marge</strong></p>
+	</aside>
+
+
+
+</body>
+</html>

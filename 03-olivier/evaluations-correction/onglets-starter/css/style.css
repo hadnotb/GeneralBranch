@@ -1,0 +1,39 @@
+main {
+    width: 100%;
+    max-width: 1000px;
+    left: 50%;
+    position: relative;
+    transform: translateX(-50%);
+    margin-top:5rem;
+}
+
+dl {
+    position: relative;
+    border:1px solid grey;
+}
+
+dt {
+    width: 25%;
+    padding:15px;
+    border: 1px solid grey;
+}
+
+dt:hover,
+dt.selected {
+    cursor: pointer;
+    background: darkgrey;
+}
+
+dd {
+    position: absolute;
+    top:0;
+    left: 25%;
+    width: 75%;
+    height: 100%;
+    padding:15px;
+    display:none;
+}
+
+dd.visible {
+    display:block;
+}

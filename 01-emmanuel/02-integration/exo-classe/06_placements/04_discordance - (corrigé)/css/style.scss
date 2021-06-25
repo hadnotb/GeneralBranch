@@ -1,0 +1,239 @@
+@import 'mixin';
+@import 'content';
+body{
+    margin:0;
+    background-color: $bgColorUltraLight;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+//layout tres grands ecrans
+.Header,.MainContent,.Footer{
+    max-width: 1000px;
+    margin:0 auto;
+}
+
+// Header
+.Header{
+    display:flex;
+    flex-direction: column;
+    background:linear-gradient(45deg,$secondColor 0% ,$defonceColor 100% );
+    // background-color: $defonceColor;
+}
+.Header-social{
+    justify-content: space-around;
+    order:-1;
+    padding:1em;
+    background-color: black;
+    color:silver;
+}
+.Header-social-link:link,.Header-social-link:visited{
+    text-decoration:none;
+    color:white;
+    margin-left:1em;
+}
+.Header-social-link:hover{
+    color:$firstColor;
+}
+.Header-social-navMenu{
+    justify-content: space-around;
+    align-items:center;
+}
+.Header-social-text{
+    text-align: center;
+    margin:0;
+}
+.Header-content-figure{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.Header-content-img{
+    width:100%;
+    max-width: 300px;
+}
+.Header-content-legend{
+    color:$secondColor;
+    order:-1;
+}
+.Header-content-text{
+    margin-left:1em;
+}
+.Header-content-text-h1{
+    font-size: 3em;
+    color:$firstColor;
+    margin-bottom: 0;
+}
+.Header-content-text-h2{
+    font-size: 1.8em;
+    margin-top: 0;;
+}
+.Header-navMenu{
+    flex-direction: column;
+    align-items: center;
+    background-color: $bgColor;
+}
+//Navigation menu
+.Header-navMenu-link:link,.Header-navMenu-link:visited{
+    padding:.7em;
+    width:100%;
+    text-align: center;
+    position:relative;
+    text-decoration:none;
+    text-transform: uppercase;
+    color:white;
+}
+.Header-navMenu-link:hover,.Header-navMenu-link.active:hover {
+    background-color:$firstColor;
+}
+.Header-navMenu-link.active{
+    background-color: $bgColorLight;
+}
+
+// main
+.MainContent{
+    background-color: $defonceColor;
+    &-services{
+        // padding:1em;
+        background-color: $defonceColor;
+        &-block{
+            padding:1em;
+            &.impair{
+                background-color: $bgColorUltraLight;
+                .ServiceBlock-h2{
+                    text-align: right;
+                }
+            }
+        }
+    }
+}
+.ServiceBlock{
+    background-color: $defonceColor;
+    &-h2{
+        color:$firstColor;
+        font-size: 1.8em;;
+    }
+    &-img{
+        width:100%;
+    }
+
+}
+.MainContent-cta{
+    background: url(../img/computer-bg.jpg) center;
+    background-size: cover;
+    position:relative;
+    // z-index:-1;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    padding:6em 1em 3em;
+    &::before{
+        @include overlayParent;
+        background-color: rgba(6, 67, 95, 0.65);
+    }
+    &-titles{
+        color:$defonceColor;
+        text-shadow: 4px 4px 6px #666;
+        margin-bottom:2em;
+        @include overlayChild;
+
+    }
+    &-button{
+        @include overlayChild;
+    }
+}
+// footer
+.Footer{
+    background-color: $bgColor;
+    color:$defonceColor;
+    &-block{
+        padding:1em;
+        &-h2{
+            text-align: center;
+            text-transform: uppercase;
+        }
+    }
+
+}
+// ##################################################
+// ##################################################
+// ##################################################
+// ##################################################
+
+
+
+@media screen AND (min-width:550px){
+    .Header{
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: flex-start;
+        &-content-figure{
+            align-items:flex-start;
+        }
+        &-content-img{
+            max-width:100px;
+        }
+        &-content-legend{
+            order:0;
+            font-size:.8em;
+        }
+        &-social{
+            order:0;
+            background-color: $transparentColor; 
+            align-items: center;
+            &-navMenu{
+                flex-direction: column;
+            }
+            &-link:link,&-link:visited{
+                color:black;
+            }        
+            &-link:hover{
+                color:$firstColor;
+            }   
+        }
+        &-navMenu{
+            width:100%;
+            flex-direction: row;
+            justify-content: flex-end;
+            &-link:link{
+                width:auto;
+            }
+           
+        }
+
+    }
+    .MainContent{
+        background-color: $defonceColor;        
+        &-services{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap:2em;
+            padding:2em;
+            &-block{
+                background-color: $bgColorUltraLight;
+                &.impair{
+                    .ServiceBlock-h2{
+                        text-align:center;
+                    }
+                }
+            }
+            .ServiceBlock-h2{
+                text-align:center;
+                
+            }
+        }
+        &-cta{
+            padding:8em 1em;
+        }
+    }
+    .Footer{
+        display:flex;
+        flex:1 1 300px;
+        justify-content: space-between;
+        &-block-content{
+            text-align: justify;
+
+        }
+    }
+
+
+}//fin de query

@@ -1,0 +1,66 @@
+.SiteHeader{
+    background: url("../../img/fond.jpg");
+    border: solid;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    img{
+        
+    }
+    &-nav{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: center;
+        &-link{
+        
+            text-decoration: none;
+        }
+
+    }
+    
+
+}
+.MainContent{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    &-carte {
+        padding-top: 150px;
+        border: solid grey 0.5px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: center;
+        p{
+            text-align: center;
+            text-justify: justify;
+        }
+        
+        
+    }
+}
+.SiteFooter{ 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    color: blanchedalmond;
+    &-credit{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center ;
+        p{
+            text-align: center;
+        }
+
+
+
+       
+        
+        
+    }
+}

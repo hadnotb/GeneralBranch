@@ -1,0 +1,134 @@
+/*CSS généraux*/
+
+body{
+    /* background-image: url(../img/fd-montagne-e4ecfa.jpg);
+    background-repeat: no-repeat; /*ne duplique pas l'image sur tte la page*/
+    /* background-position: top center;
+    background-color: #e4ecfa; */
+    background: url(../img/fd-montagne-e4ecfa.jpg) no-repeat top center #e4ecfa;
+    /*raccourci applique ttes les proprietés à ce qui s'applique au background*/
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h1{
+    color: white;
+    text-shadow: 2px 2px 4px #333;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: 'Bookman Old Style', serif; /*la dern police saisie est prioritaire donc bookman reste appliquée aux h12345*/
+}
+
+a:link{ /*etat naturel*/
+    color: orange;
+}
+
+a:visited{ /*déja cliqué*/
+    color:blue;
+}
+
+a:hover{ /*survolé*/
+    color:orangered;
+}
+
+/*CSS par zone de la page*/
+
+header {
+    height: 200px;
+    text-align: center;
+}
+
+header ul{ /*ne s'applique qu'aux ul du header*/
+    list-style-type: none;
+}
+header nav li{
+    padding: 2em;
+    margin-top: 1em ;
+    display: inline-block;
+}
+
+header nav li a:link, header nav a :visited{
+    color: red;
+    background-color: burlywood;
+    font-weight: bold;
+    padding :1em 2em;
+    border-radius: 100px;
+    box-shadow: 3px 3px 15px #666;
+}
+header nav li a:hover{
+
+    background-color:yellow;
+
+}
+nav a:link, nav a:visited{
+    color:rgb(173, 169, 169);
+    text-decoration: none;
+}
+
+article{
+    background-color: rgba(255,255,255,0.8);
+    max-width: 500px; /*largeur du bloc que l'on limite avec le max*/
+    /* margin-left: auto; */
+    /* margin-right: auto; /*permet de centrer le bloc */
+    margin : 0 auto 20px auto; /*raccourci sens aiguilles montre*/
+    padding: 20px; /*marge interne s'applique partout*/
+    border-radius: 0 100px 0 0; /*arrondi du cadre*/
+    box-shadow: 2px 2px 4px #333; /*ombre s'applique au bloc*/
+    overflow : hidden; /*gestion débordement*/
+}
+
+
+article h2{
+    text-transform: uppercase; /*majuscules*/
+    color:#666;
+    background: url(../img/puce-h1.png) no-repeat;
+    background-size: contain; /*l'image s'adapte au texte en taille*/
+    padding-left: 120px; /*decaler le titre a gauche à l'image*/
+}
+
+article figure{
+    width:35%;
+    background-color: silver;
+    float:left;  
+    border: 3px solid #333;
+    margin : .5em .5em .5em 0;
+}
+
+article figure img{
+    width:100%;
+}
+
+article figure figcaption{
+    padding : .5em;
+    text-transform: uppercase;
+    color : #666;
+    font-size : .8em;
+}
+
+article .info{
+    color : white;
+    background : url(../img/info.png) no-repeat #666 ;
+    padding : .7em .7em .7em 9em;
+    border-radius: 30px 30px 30px 30px;
+    min-height: 128px; /*taille min de l'image même si le cadre est trop petit*/
+}
+
+#massifs{
+    background-color : dodgerblue;
+    color: white;
+}
+
+#massifs h2{
+    color: white;
+}
+
+#massifs figure{
+    border-color : darkblue;
+    background-color: rgb(109, 109, 255);
+}
+
+#massifs figcaption{
+    color: white;
+}
+
+

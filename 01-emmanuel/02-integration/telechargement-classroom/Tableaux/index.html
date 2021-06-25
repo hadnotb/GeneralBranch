@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Tableaux</title>
+	<meta charset="utf-8">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;900&display=swap" rel="stylesheet"> 
+	<style type="text/css">
+		body{
+			font-family: 'Roboto', sans-serif;
+			margin:0;
+		}
+		section{
+			background-image: linear-gradient(45deg, red 0%,  orange 100%);
+			padding:5em;
+		}
+		section:nth-child(odd){
+			background-image: linear-gradient(45deg, rgb(234, 0, 255) 0%,  rgb(255, 0, 0) 100%);
+		}
+		table{
+			border-collapse: collapse;
+			margin-bottom: 50px;
+			width:500px;
+			margin-left: auto;
+			margin-right: auto;
+		}
+		td,th{
+			border:1px #333 solid;
+			padding:.7em;
+			background-color: white;
+		}
+		th{
+			background-color: black;
+			color:white;
+		}
+		caption{
+			font-size:1.2em;
+			font-weight:900;
+			padding:2em 0 .7em;
+			text-transform:uppercase;
+			color:white;
+
+		}
+		.nodata{
+			background-color: transparent;
+			border:none;
+			font-weight: bold;
+
+		}
+		.form1{
+			background-color: rgb(106, 208, 255);
+			text-align: center;
+			font-weight: bold;
+
+		}
+		.form2{
+			background-color: rgb(43, 188, 255);
+			text-align: center;
+			font-weight: bold;
+
+		}
+		.form3{
+			background-color: rgb(0, 174, 255);
+			text-align: center;
+			font-weight: bold;
+
+		}
+		.promo{
+			text-align: center;
+			font-weight: bold;
+			background-color: rgb(2, 16, 136);
+			color:white;
+		}
+	</style>
+</head>
+<body>
+	<section>
+		<table>
+			<caption>Tableau des voyageurs</caption>
+			<tr>
+				<th>Prénom</th>
+				<th>Age</th>
+				<th>Destination</th>
+			</tr>
+			<tr>
+				<td>Laura</td>
+				<td>25 ans</td>
+				<td>New york</td>
+			</tr>
+			<tr>
+				<td>Eddy</td>
+				<td>32 ans</td>
+				<td>Moscou</td>
+			</tr>
+			<tr>
+				<td>Simon</td>
+				<td>55 ans</td>
+				<td>Bourg en Bresse</td>
+			</tr>
+		</table>
+	</section>
+	<section>
+		<table>
+			<tr>
+				<th>Prénom</th>
+				<td>Laura</td>
+				<td>Eddy</td>
+				<td>Simon</td>
+			</tr>
+			<tr>
+				<th>Age</th>
+				<td>25 ans</td>
+				<td>35 ans</td>
+				<td>55 ans</td>
+			</tr>
+			<tr>
+				<th>Destination</th>
+				<td>New york</td>
+				<td>Moscou</td>
+				<td>Bourg en Bresse</td>
+			</tr>
+			<caption>Tableau des voyageurs</caption>
+		</table>
+	</section>
+		<section>
+
+		<table>
+			<caption>Tarif des formules</caption>
+			<tr>
+				<th class="nodata"></th>
+				<th>Formule 1</th>
+				<th>Formule 2</th>
+				<th>Formule 3</th>
+				
+			</tr>
+			<tr>
+				<th>TV</th>
+				<td rowspan="2" class="form1">30 €</td>
+				<td rowspan="3" class="form2">45 €</td>
+				<td rowspan="4" class="form3">75 €</td>
+			</tr>
+			<tr>
+				<th>Téléphone</th>
+			</tr>
+			<tr>
+				<th>Presse</th>
+				<td></td>
+			</tr>
+			<tr>
+				<th>Internet</th>
+				<td></td>
+				<td></td>			
+			</tr>
+			<tr>
+				<th>Promo rentrée</th>
+				<td colspan="3" class="promo">30 €</td>
+			</tr>
+			
+		</table>
+	</section>
+</body>
+</html>

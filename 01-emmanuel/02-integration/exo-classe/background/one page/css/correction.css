@@ -1,0 +1,38 @@
+body{
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+section{
+    padding: 150px 15px;
+    height: 100vh;
+    box-sizing: border-box;
+}
+article{
+    /* background-color: red; */
+    max-width: 600px;
+    margin : 0 auto ;
+}
+#partie1{
+    background:url(../img/bureau.jpg) no-repeat;
+    background-size: cover;
+}
+#partie2{
+    background-color: dodgerblue;
+}
+#partie3{
+    background:url(../img/cafe.jpg) center no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+#partie4{
+    background: url(../img/photo.gif) no-repeat center #cf5151;
+}
+.contenu{
+    background-color: whitesmoke;
+}
+.couleur{
+    color: white;
+    text-shadow: 1px;
+}

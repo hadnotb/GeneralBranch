@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Open+Sans:ital@1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<!-- font-family: 'Lobster', cursive; -->
+<!-- font-family: 'Open Sans', sans-serif; -->
+<body>
+    <header>
+		<nav>
+			<a href="index.html">
+				<i class="fa fa-home"></i>
+				Accueil
+			</a>
+			<a href="#">
+				<i class="fa fa-calendar"></i>
+				Rendez-vous
+			</a>
+			<a href="#">
+				<i class="fa fa-book"></i>
+				L'équipe
+			</a>
+			<a href="#">
+				<i class="fa fa-picture-o"></i>
+				Album Photo
+			</a>
+			<a href="contact.html">
+				<i class="fa fa-envelope"></i>
+				Nous contacter
+			</a>
+		</nav>
+		<strong id="promo">OFFRE covid-19 : une coupe achetée, une autre pas gratuite !</strong>
+		<section id="presentation">
+			<h1>Bienvenue chez Bernie's BarberShop</h1>
+		</section>
+	</header>
+    <main class="principal">
+		
+		<table>
+			<caption>Quelques uns de nos prix</caption>
+			<th colspan="3">Entretien</th>
+			<tr>
+				<td>Taille de barbe</td>
+				<td>10 minutes</td>
+				<td>80 €</td>
+			</tr>
+			<tr>
+				<td>Coupe classique</td>
+				<td>40 minutes</td>
+				<td>120 €</td>
+			</tr>
+			<tr>
+				<td>Changer rien</td>
+				<td>0 minute</td>
+				<td>50 €</td>
+			</tr>
+			<tr>
+				<td>Couleur unie</td>
+				<td>2 minute</td>
+				<td>100 €</td>
+			</tr>
+		</table>
+		<table>
+			<th colspan="3">Relooking</th>
+			<tr>
+				<td>La nuque longue de Wadel</td>
+				<td>10 minutes</td>
+				<td>80 €</td>
+			</tr>
+			<tr>
+				<td>La moustache de Dali</td>
+				<td>10 minutes</td>
+				<td>120 €</td>
+			</tr>
+			<tr>
+				<td>Trou dans les cheveux</td>
+				<td>C'est cadeau !</td>
+				<td>50 €</td>
+			</tr>
+			<tr>
+				<td>Couleur "Tie And Die"</td>
+				<td>40 minutes</td>
+				<td>100 €</td>
+			</tr>
+			
+		</table>
+		<section id="info">
+			<h2>Pour réserver un créneau horraire, compléter ce formulaire :</h2>
+			<form>
+				<fieldset>
+					<legend>Vos coordonnées</legend>
+					<ul>
+						<li>
+							<label for="prenom">Votre prénom :</label>
+							<input type="text" id="prenom">
+						</li>
+						<li>
+							<label for="nom">Votre nom :</label>
+							<input type="text" id="nom">
+						</li>
+						<li>
+							<label for="mail">Votre mail :</label>
+							<input type="text" id="mail">
+						</li>
+					</ul>
+				</fieldset>
+				<fieldset>
+					<legend>Quelles sont les raisons de votre venue ?</legend>
+					<ul>
+						<li>
+							<label for="detente">J'ai pris un coup de vieux</label>
+							<input type="checkbox" id="detente">
+						</li>
+						<li>
+							<label for="medecin">J'ai trop d'argent</label>
+							<input type="checkbox" id="medecin">
+						</li>
+						<li>
+							<label for="ami">J'ai eu un accident de tondeuse</label>
+							<input type="checkbox" id="ami">
+						</li>
+					</ul>
+				</fieldset>
+				<fieldset>
+					<legend>Voulez-vous souscrire à notre programme de fidélité ?</legend>
+					<ul>
+						<li>
+							<label for="yes">Oui</label>
+							<input type="radio" name="subscribe" id="yes">
+						</li>
+						<li>
+							<label for="no">Non</label>
+							<input type="radio" name="subscribe" id="no">
+						</li>
+					</ul>
+				</fieldset>
+				<fieldset>
+					<legend>Comment avez-vous connu le Salon ?</legend>
+					<select name="reputation" id="reputation">
+						<option value="internet">Par internet</option>
+						<option value="ami">Par bouche à oreille</option>
+						<option value="pub">Par publicité</option>
+						<option value="other">Autre</option>
+					</select>
+				</fieldset>
+				<button type="submit">Envoyer</button>
+			</form>
+		</section>
+
+
+
+		<svg class="chain">
+			<path id="chain-path" fill="none">
+			</path>
+			<text>
+				<textpath xlink:href="#chain-path" startOffset="100%" style="text-anchor: end">
+					Coucou stp lachez moi
+				</textpath>
+			</text>
+		</svg>
+
+
+
+
+
+
+	</main>
+    <script src="https://kit.fontawesome.com/144d641a63.js" crossorigin="anonymous"></script>    
+</body>
+</html>

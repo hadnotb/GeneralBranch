@@ -1,0 +1,72 @@
+//CSS common Menus 
+.NavMenu{
+    display:flex;
+}
+
+//headers
+h1,h2,h3{
+    font-family: 'Fredoka One', cursive;
+}
+.h1-size{font-size:2em;}
+.h2-size{font-size:1.6em;}
+.h3-size{font-size: 1.2em;}
+
+// CSS des contenus généraux
+a:link,a:visited{
+    color:$altColor;
+}
+a:hover{
+    color: $altSecondColor;
+}
+
+
+
+.Button{
+    display: block;
+    text-decoration: none;
+    text-align:center;
+    max-width:250px;
+    padding:.4em .7em;
+    border-radius:10px;
+    border-color:transparent;
+    transition: .3s ease-out;
+}
+.Button:hover{
+    color:$defonceColor;
+    background-color: $secondColor;
+    border-color: $secondColor;
+}
+.std:link,.std:visited{    
+    color:$defonceColor;;
+    background-color: $firstColor;
+}
+.std:hover{
+    background-color: $secondColor;
+}
+.alt:link,.alt:visited{
+    color: $defonceColor;;
+    background-color: $altColor;
+}
+.alt:hover{
+    // color:rgb(146, 145, 145);
+    background-color: $altSecondColor;
+    border-color: $altSecondColor;
+}
+.outline:link,.outline:visited{
+    color:$firstColor;
+    background-color: transparent;
+    border:2px solid $firstColor;
+}
+.outline:hover{
+    color:$defonceColor;
+    background-color: $firstColor;
+}
+.light:link,.light:visited{
+    color:$defonceColor;
+    background-color: transparent;
+    border:2px solid $defonceColor;
+}
+.light:hover{
+    background-color: $defonceColor;
+    color:$firstColor;
+}

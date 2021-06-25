@@ -1,0 +1,29 @@
+table
+{
+    margin: 100px auto;
+    font-family: "Courier New", monospace;
+}
+
+table td
+{
+    height: 50px;
+    width: 50px;
+    background-color: lightblue;
+    text-align: center;
+    border: 1px solid black;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+table td.same-number
+{
+    background-color: midnightblue;
+    color: white;
+}
+
+table td:hover
+{
+    background-color: lightcyan;
+    color: red;
+    cursor: default;
+}

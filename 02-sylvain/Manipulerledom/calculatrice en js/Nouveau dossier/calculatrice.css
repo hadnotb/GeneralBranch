@@ -1,0 +1,34 @@
+
+#tableCalc {
+
+    background-color: #b5b5b5;
+    padding: 9px 6px;
+    border-radius: 9px;
+	box-shadow: 5px 5px 9px -4px rgba(0,0,0,0.95);
+	-webkit-box-shadow: 5px 5px 9px -4px rgba(0,0,0,0.95);
+	-moz-box-shadow: 5px 5px 9px -4px rgba(0,0,0,0.95);
+}
+
+#tableCalc td,
+#tableCalc th{
+    padding: 6px;
+}
+
+#tableCalc button{
+	width:100%;
+	background-color:#dedede;
+	border-radius: 8px;
+	border : 1px solid #919292;
+	padding : 3px 6px;
+	cursor:pointer;
+	transition: 0.5s;
+}
+
+#tableCalc button:hover{
+	background-color:#fff;
+}
+
+#iptCalc{
+	text-align : right;
+	padding-right:3px;
+}

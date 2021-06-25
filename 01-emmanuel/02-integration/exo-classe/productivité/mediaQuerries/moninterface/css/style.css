@@ -1,0 +1,171 @@
+body {
+  margin: 0;
+}
+
+.PageWrapper {
+  background-color: white;
+  margin: 0 auto;
+  font-family: "Century Gothic", helvetica, arial, sans-serif;
+}
+
+.SiteHeader {
+  background-color: white;
+}
+
+.SiteHeader-title {
+  color: #996CA5;
+}
+
+.SiteHeader-menu {
+  background-color: black;
+}
+
+.SiteHeader-menu-link {
+  padding: 0.4em;
+  text-align: center;
+  display: block;
+  text-decoration: none;
+  color: white;
+}
+
+.SiteHeader-menu-link:link, .SiteHeader-menu-link:visited {
+  color: white;
+}
+
+.SiteHeader-menu-link:hover {
+  background-color: #996CA5;
+}
+
+.MainContent-content {
+  padding: 1em;
+  background-color: #DC445D;
+}
+
+.MainContent-content h1 {
+  color: white;
+  text-align: center;
+}
+
+.MainContent-side {
+  padding: 1em;
+  background-color: #996CA5;
+}
+
+.MainContent-side-title {
+  color: white;
+  text-align: center;
+}
+
+.pic {
+  width: 100%;
+}
+
+.SiteFooter {
+  background-color: black;
+}
+
+.SiteFooter-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.SiteFooter-menu-link {
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  padding: 1em;
+}
+
+@media screen and (min-width: 461px) {
+  body {
+    background-color: black;
+  }
+  body .SiteHeader-title {
+    text-align: left;
+  }
+  body .SiteHeader-menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+}
+
+@media screen and (min-width: 650px) {
+  .MainContent-side {
+    overflow: hidden;
+  }
+  .pic {
+    float: left;
+    margin: 0 .3em .3em 0;
+    width: 40%;
+  }
+}
+
+@media screen and (min-width: 820px) {
+  .MainContent {
+    background-color: white;
+    color: black;
+    border: none;
+  }
+}
+
+@media screen and (min-width: 1050px) {
+  .MainContent {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .MainContent-side {
+    background-color: white;
+    width: 30%;
+    padding: 0;
+  }
+  .MainContent-side h2 {
+    background-color: #996CA5;
+    margin: 0;
+  }
+  .MainContent-content {
+    background-color: white;
+    width: 70%;
+    padding: 0;
+  }
+  .MainContent-content h1 {
+    background-color: #DC445D;
+    margin: 0;
+  }
+  .pic {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 1350px) {
+  .PageWrapper {
+    max-width: 1050px;
+    background-color: #996CA5;
+    padding: 1em;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  body {
+    background: url("../../img/floral-fond.jpg");
+  }
+  .SiteFooter-menu {
+    background-color: #3d1010;
+  }
+  .SiteFooter-menu-link {
+    text-decoration: underline;
+  }
+  .SiteFooter-menu-link:link, .SiteFooter-menu-link:visited {
+    color: white;
+  }
+  .SiteFooter-menu-link:hover {
+    background-color: #996CA5;
+  }
+}
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,63 @@
+body{
+    font-family: 'Londrina Solid', sans-serif;
+}
+.SiteHeader{   
+    background-color: #FFD700; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2em 0 0 0;
+    min-height: 200px;
+    &-img{
+        
+        height: 150px;
+    }
+    &-logo{
+        text-align: center;
+    }
+   
+    &-nav{
+        background-color: black;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+
+        
+        align-self: stretch;
+        &.burgerOn{
+            .SiteHeader-nav-link{
+                display: block;
+                &.burger{
+                    display: none;
+                }
+                // Pas compris ce qui se passe ici ?
+            }
+        }
+        &-link{
+            display: none;
+            &.burger{
+                display: block;
+            }
+            &:link,&:visited{
+                color: white;
+            }
+        }
+        
+
+    }
+    
+    
+}
+@media screen AND (min-width:500px){
+
+    .SiteHeader-nav{
+        flex-direction: row;
+        &-link{
+            display: block;
+            margin-right:2em;
+            &.burger,&.noBurger{
+                display:none;
+            }
+        }
+    }
+}

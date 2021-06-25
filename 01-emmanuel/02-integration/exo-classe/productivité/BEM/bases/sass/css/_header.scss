@@ -1,0 +1,30 @@
+header{
+    background-color: $firstColor;
+    color: $white;
+    padding: $commonSpace;
+    box-shadow: $shadow;
+        h1
+        {
+            color: $white;
+    
+        }
+        h2
+        {
+            color: $white;
+        }
+        a:link
+        {
+            color: $white;
+            text-decoration: underline;
+        }
+        a:visited
+        {
+            color: $bgColor;
+    
+        } 
+        a:hover
+        {
+            color: $altColor;
+            
+        }
+    }

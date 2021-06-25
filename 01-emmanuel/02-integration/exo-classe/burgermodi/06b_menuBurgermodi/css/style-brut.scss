@@ -1,0 +1,54 @@
+body{
+    margin:0;
+    font-family: "Londrina solid", sans-serif;
+}
+.SiteHeader{
+    text-align:center;
+    background-color: gold;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    padding:1em 0 0 0;
+    &-img{
+        width:150px;
+    }
+    &-nav{
+        align-self:stretch;
+        display:flex;
+        flex-direction: column;
+        background-color: black;
+        &.burgerOn{
+            .SiteHeader-nav-link{
+                display:block;
+                &.burger{
+                    display:none;
+                }
+            }
+        }
+        &-link{
+            display:none;
+            &.burger{
+                display:block;
+            }
+            &:link,&:visited{
+                color:white;
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+@media screen AND (min-width:500px){
+    .SiteHeader{
+        &-nav{
+            flex-direction:row;
+            &-link{
+                display:block;
+                margin-right:2em;
+                &.burger,&.noBurger{
+                    display:none;
+                }
+            }
+        }
+    }
+}

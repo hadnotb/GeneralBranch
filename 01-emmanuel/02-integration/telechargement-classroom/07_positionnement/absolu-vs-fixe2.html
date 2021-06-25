@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Document sans nom</title>
+<style type="text/css">
+	body{
+		margin:0;
+		paddin: 0;	
+		background-color:#ccc;	
+	}
+	#contenu{
+		width:750px;
+		margin:0 auto;
+		background-color:#fff;	
+		min-height:2000px;
+	}
+	#menu {
+		Background-color: #000;
+		color:#fff;	
+	}
+	#menu{
+		position:fixed;	
+		width:100%;
+		top:0px;
+		left:0px;
+	}
+	#contenu{
+		
+		margin-top:120px;
+		
+	}
+</style>
+</head>
+
+<body>
+	<div id="contenu">
+    
+    	<div id="menu">
+    	  <ul>
+    	    <li>menu1</li>
+    	    <li>menu2</li>
+    	    <li>menu3</li>
+    	    <li>menu4</li>
+  	      </ul>
+    	</div>
+      <p>Ici le <strong>menu</strong> est placé en &quot;fixed&quot; et le <strong>contenu</strong> a une marge haute pour ne pas être caché par le menu au chargement de la page.</p>
+      <p>Pour visualiser le chevauchement, la page doit avoir un contenu long (ici min-height:2000px;)</p>
+	</div>
+</body>
+</html>

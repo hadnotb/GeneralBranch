@@ -1,0 +1,22 @@
+.dark {
+  background-image: url(../img/maladeta.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.blue {
+  background-image: url(../img/neouvielle.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.red {
+  background-image: url(../img/ordesa.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.green {
+  background-image: url(/);
+}
+/*# sourceMappingURL=style.css.map */

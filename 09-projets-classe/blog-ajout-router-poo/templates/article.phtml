@@ -1,0 +1,46 @@
+<?php use App\Framework\UserSession;?>
+    <article>
+        
+                <div class = article>
+                
+                    <h3 class = "articleTitle"><?=$article['title'];?></h3>
+                    <p>Date de création : <?=(new DateTimeImmutable($article['created_at']))->format('d/m/Y');?></p>
+                    <div class = "articleContent"><?=$article['content'];?></div>
+                    <a href="<?=buildUrl('homepage', ['id' => intval($article['idCategorie'])])?>"><?= $article['libCategorie']?></a>   
+                </div>
+        
+        <?php if (UserSession::isAuthenticated()): ?>
+        <form class = "formCom" action="/add-comment" method="post">
+            <fieldset >
+                <legend>Ajouter un commentaire</legend>
+                <div>
+                    <label for="content">Commentaire</label>
+                    <textarea required id="content" name="content"></textarea>
+                </div>
+                <input type="submit" value="Envoyer">   
+            </fieldset>
+            <input type="hidden" name="article-id" value="<?=$article['idArticle'];?>">
+        </form>
+        <?php endif; ?>
+         <?php if ($comments): ?>
+            <ul>
+                <?php foreach ($comments as $comment): ?>
+                    <li>
+                        <h3>Ajouté le <?=(new DateTimeImmutable($comment['created_at']))->format('d/m/Y');?></h3>
+                        <p><?=$comment['content'];?></p>
+                    </li>
+                <?php endforeach; ?>
+            </ul>
+        <?php endif; ?>
+        
+                    
+               
+            
+
+
+    </article>
+       
+
+
+      
+  

@@ -1,0 +1,49 @@
+body{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: whitesmoke;
+}
+.carte{
+    background-color: white;
+    position: relative;
+    margin: 2em;
+    overflow: hidden;
+    &:hover{
+        ul {
+            transform:translateY(-100%)
+        }
+    }
+    ul{ 
+        position:absolute;
+        list-style-type: none;
+        font-family: 'Patua One', cursive;
+        background-color: rgba(0,0,0,.6);
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        top:180px;
+        transition: .3s;
+        transform: scaleY(100%);
+        .titre{
+            background-color: black;
+            color: white;
+            padding: .4em 0;
+            position: absolute;
+            width: 100%;
+            top:-30px;
+        }
+        .prix{
+            text-align: center;
+            font-size: 3em;
+            color: white;
+            font-family: 'Patua One', sans-serif;
+            
+            
+        }
+
+        
+    }
+}
+// .carte:hover ul{
+//     top : 65px;
+// }

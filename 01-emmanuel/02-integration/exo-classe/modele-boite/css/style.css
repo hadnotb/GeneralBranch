@@ -1,0 +1,105 @@
+body{
+    /* background-color: red; */
+}
+.Partie1-box.part1 h2
+{
+    padding: 15px;
+}
+.Partie1-box.part1 div
+{
+    margin: 40px;
+}
+.Partie1-box.part1 .gras
+{
+    padding: 15px;
+}
+.Partie1-box.part1 ul
+{
+    margin-left: -20px;
+}
+
+.Partie1-box.part2 
+{
+    padding : 40px;
+}
+.Partie1-box.part2 div
+{
+    margin: 40px;
+}
+.Partie1-box.part2 h2
+{
+    margin: -20px;
+}
+.Partie1-box.part3 h2
+{
+    margin-top: 40px;
+}
+.Partie1-box.part3 div
+{
+    margin-bottom: 40px;
+}
+.Partie1-box.part3
+{
+    padding-left: 40px;
+}
+
+/* PARTIEEEEEEEEEEEEEEEEEEEEEEEEEE  2222222222222222222222222222222222222222222222222222222222222222*/
+.Partie2-box.part1 h2
+{
+    margin: 40px;
+}
+.Partie2-box.part1 div
+{
+    background-color: rgb(235, 214, 214);
+    margin: 80px;
+
+}
+.Partie2-box.part2{
+
+    border: solid 5px blue ; 
+}
+.Partie2-box.part2 h2
+{
+    margin: 40px;
+}
+.Partie2-box.part2 div
+{
+    background-color: rgb(235, 214, 214);
+    margin: 80px;
+}
+.Partie2-box.part3 h2
+{
+    margin: 40px;
+}
+.Partie2-box.part3 div
+{
+    background-color: rgb(235, 214, 214);
+    margin: 80px;
+}
+
+/* PARTIE 333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333 */
+
+#part3 .part1{
+    border: 5px solid blue;
+    padding: 20px;
+    box-sizing: border-box;
+}
+ #part3 .part2{
+    border: 5px solid blue;
+    padding: 20px;
+    box-sizing: border-box; 
+}
+#part3 .part3{
+    border: 5px solid blue;
+    padding: 20px;
+    box-sizing: border-box;
+}
+#part4 article{
+
+    border: 5px solid blue;
+    padding: 20px;
+    box-sizing: border-box;
+
+}
+
+

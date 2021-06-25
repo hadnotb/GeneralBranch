@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+      <meta charset="utf-8">
+      <title>Image selector</title>
+      <meta name="description" content="Module JS1 - Exercice Icons">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,700,800&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+      <link href="./css/lib/normalize.css" rel="stylesheet">
+      <link href="./css/lib/layout.css" rel="stylesheet">
+      <link href="./css/lib/theme-corporate.css" rel="stylesheet">
+      <link href="./css/style.css" rel="stylesheet">
+      <link href="./css/range.css" rel="stylesheet">
+      <script src="js/app.js" type="module"></script>
+  </head>
+  <body>
+    <header class="banner">
+      <a class="banner-link" href="./">
+        <strong class="banner-title">Prêt à taux zéro</strong>
+        <small>Les travaux doivent représenter au moins 25% du coût total !</small>
+      </a>
+    </header>
+
+    <main class="project">
+        <section class="work-percentage-calculator">
+
+            <!-- Range input example -->
+            <div class="field-group">
+                <label for="example">Exemple de champ range</label>
+                <input type="range" value="5" min="0" max="10" step="1" name="example" id="example">
+            </div>
+
+            <div class="prixAchatSlider">
+                <label for="prixAchat">Prix d'achat</label>
+                <input class="input-range" type="range" value="500000" min="0" max="1000000" step="1000" name="prixAchat" id="prixAchat">
+                <output for="prixAchat" name=""></output>
+            </div>
+            <div class="coutTravauxSlider">
+                <label for="coutTravaux">Cout Travaux</label>
+                <input class="input-range" type="range" value="250000" min="0" max="500000" step="1000" name="coutTravaux" id="coutTravaux">
+                <output for = "coutTravaux" name=""></output>
+            </div>
+
+            <div>
+              <label for="result">Total</label>
+              <output id = "total" class="result"></output>
+            </div>
+
+            <div>
+              <label for="rate">Pourcentage</label>
+              <output  id = "rate" class="rate"></output>
+            </div>
+<!-- ///////////////////////////////////RECHERCHE///////////////////////////////////////// -->
+
+<!-- 
+<div class="price-slider"><span>from
+    <input type="number" value="5000" min="0" max="120000"/>    to
+    <input type="number" value="50000" min="0" max="120000"/></span>
+  <input value="25000" min="0" max="120000" step="500" type="range"/>
+  <input value="50000" min="0" max="120000" step="500" type="range"/>
+  <svg width="100%" height="24">
+    <line x1="4" y1="0" x2="300" y2="0" stroke="#212121" stroke-width="12" stroke-dasharray="1 28"></line>
+  </svg>
+</div> -->
+
+
+<!-- ///////////////////////////////////RECHERCHE///////////////////////////////////////// -->
+
+
+        </section>
+    </main>
+
+    <footer id="mentions" class="mentions">
+      <p><strong> &copy; Olivier Meunier - Tous&nbsp;droits&nbsp;réservés</strong>
+    </footer>
+
+    <!-- Affichage des ressources -->
+    <script src=".resources/js/resources.js" data-md=".resources/statement.md"></script>
+  </body>
+</html>

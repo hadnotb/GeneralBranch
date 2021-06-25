@@ -1,0 +1,47 @@
+body{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: whitesmoke;
+
+}
+.carte{
+    margin: 10px;
+    position:relative;
+    background-color: red;
+    width: 180px;
+    height: 180px;
+    ul{
+        list-style-type: none;
+        margin: 0;
+        padding:0;
+    }
+}
+.titre{
+    font-size: 1.1em;
+    font-family: 'Patua One', cursive;
+    position:absolute;
+    bottom: 35px;
+    left: 0px;
+    background-color: rgba(255, 255, 255, 0.644);
+    width: 100%;
+    padding:1em 0;
+    text-align: center;
+    line-height:25px;
+    color: red;
+}
+.prix{
+    font-family: 'Patua One', cursive;
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    top:10px;
+    right: 10px;
+    background-color: red;
+    line-height: 60px;
+    text-align: center;
+    border-radius: 50%;
+    text-align: center;
+    color: white;
+    font-size: 1.3em;
+
+}

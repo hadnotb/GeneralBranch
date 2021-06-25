@@ -1,0 +1,32 @@
+<section>
+    <h2>Modifier un article </h2>
+
+    <form action="<?=buildUrl('admin_article_edit');?>" method="POST">
+        <fieldset>
+            <div>
+                <label for="title">Titre</label>
+                <input type="text" id="title" name="title" value="<?=$article['title']?>">
+            </div>
+            <div>
+                <label for="content">Contenu</label>
+                <textarea id="content" name="content"><?=$article['content']?></textarea>
+            </div>
+            <div>
+                <label for="category">Catégorie</label>
+                <select id="category" name="category">
+                <?php foreach ($categories as $categorie):?>
+
+                    <option value="<?=$categorie['idCategorie'];?>" selected ='<?=$libCat?>'><?=$categorie['libCategorie'];?></option>
+
+                <?php endforeach;?>
+                    
+                </select>
+            </div>
+            <div>
+                <button type="submit">Ajouter</button>
+            </div>
+            
+            
+        </fieldset>
+    </form>
+</section>

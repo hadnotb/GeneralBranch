@@ -1,0 +1,48 @@
+body{
+	background-color: #ccc;
+	font-family: "Century Gothic", helvetica, arial, sans-serif;
+	text-align: center;
+	color: white;
+}
+.carte{
+	background-color: white;
+	width:180px;
+	height:180px;
+	margin:30px;
+	float:left;
+	position:relative;
+	overflow:hidden;
+	/*display:inline-block;
+	vertical-align: top;*/	
+}
+.carte ul,.carte li{
+	
+	margin:0;
+	padding:0;
+	list-style-type: none;
+}
+.carte ul{
+	position:absolute;
+	width:180px;
+	height:180px;
+	top:180px;
+	left:0;
+	background-color: rgba(0,0,0,0.6);
+	transition:all ease-in 0.3s;
+}
+.carte:hover ul{
+	top:65px;
+	}
+.carte ul .titre{
+	position:relative;
+	font-size: 1.2em;
+	top:-24px;
+	font-weight:bold;
+	text-shadow:1px 1px 1px black;
+	background-color:rgba(0,0,0,1) 
+}
+.carte ul .prix{
+	position:relative;
+	top:-20px;
+	font-size: 5em;
+}

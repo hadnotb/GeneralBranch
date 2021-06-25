@@ -1,0 +1,281 @@
+@import 'variable';
+
+body{
+    margin: 0;
+    font-family: "open SANS", sans-serif;
+}
+h1,h2,h3{
+    font-family: "ceviche one", sans-serif;
+    font-weight: normal;
+}
+.PageWrapper{
+    margin: 0 ;
+}
+.SiteHeader{
+    background-color: transparent;
+
+    &-logo{
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        width: 100%;
+        background-color: $firstColor;
+        
+    }
+    
+    &-navig{
+        // display: flex;
+        // flex-direction: column;
+        // justify-content: flex-end;
+        // align-items: center;
+        background-color: $firstDarkColor;
+
+        &-lien:link{
+            display:block;
+            background-color: $firstDarkColor;
+            text-align: center;
+            padding:.8em;
+            text-decoration: none;
+            color:$defonceColor;
+        }
+        &-lien:visited{
+            color:$defonceColor;
+        }
+        &-lien:hover{
+            background-color: $firstColor;
+        }
+    } 
+    
+    a{
+        
+        color: white;
+        text-decoration: none;
+    }
+    img{
+        max-width: 280px;
+        
+    } 
+}
+.imageHeader{
+        text-align: center;
+        padding: 4em 0;
+        width: 100%;
+}
+.Welcome{
+
+    height: 250px ;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px;
+    text-justify:auto ;
+
+    background-color: black;
+    text-align: center;
+    &-titre{
+        color: #BF0000;
+        
+    }
+    &-content{
+        color: white;
+        
+        
+    }
+
+}
+.MainContent{
+    // background:url(../img/fond.png);
+    // padding: 10px;
+    text-align: justify;
+    margin:0;
+
+    &-principal{
+        background:url(../img/fond.png);
+        padding-top: 50px;
+    }
+   
+    &-aside{
+        background-color: #bf0000;
+        padding: 10px;
+        color: white;
+        font-weight:bold;
+       
+        
+        h2{
+            // color:white;
+            strong{
+                color: #ff3939;
+            }
+            
+        }
+     
+    }
+    h2{
+        text-align: center;
+    }
+    button{
+        text-align: center;
+    }
+    strong{
+        color:$textColor;
+        font-weight: normal;
+    }
+   
+}
+
+.Navig-lien{
+
+    a:link{
+        display:block;
+        background-color: $firstDarkColor;
+        text-align: center;
+        padding:.8em;
+        text-decoration: none;
+        color:$defonceColor;
+    }
+    a:visited{
+        color:$defonceColor;
+    }
+    a:hover{
+        background-color: $firstColor;
+    }
+
+}
+.Com-titre-icone{
+    color : #ff3939;
+}
+.Art{
+    display:flex;
+    flex-direction:column;
+    border-top:$firstDarkColor dotted 10px;
+    padding: 10px;
+    &-titre{
+        color: $textColor;
+        text-align: left;
+        i{
+            color: #860000;
+        }
+    }
+    &-content{
+        text-align: justify;
+        
+        &-pic{
+            margin: 0;
+            padding: 0;
+           
+            &-image{
+                border-radius: 50%;
+                border: 5px solid $firstDarkColor;
+                max-width: 170px;
+                float: left;
+                margin-right: .4em;
+                // Que veut dire le point ?
+            }
+        }
+        
+    }
+    &-bouton{
+        display: block;
+        align-self: center;
+        color: white;
+        margin: 2em auto 1em;
+        padding: .7em;
+        text-decoration: none;
+        background-color: $firstDarkColor;
+        width: 50%;
+        border: none;
+        
+    }
+}
+
+@media screen AND (min-width:550px){
+
+
+
+    .SiteHeader{
+        background-color: transparent;
+        min-height: 250px;
+        &-logo{
+            background-color: $firstColor ;
+            border-top: 5px $firstDarkColor solid;
+            border-bottom: 5px $firstDarkColor solid;
+            margin: 8em 0 0;
+            padding: 1em;
+            width: 100%;
+            text-align: center;
+        }
+        &-navig{
+
+            min-height: 125px ;
+            display: flex;
+            justify-content: center;
+            margin-right: .5em;
+            background-color: white;
+            // Pourquoi il n'y a pas de flex direction ?
+            &-lien{
+                max-height: 2em;
+                border-radius: 0 0 10px 10px;
+                margin-right: .5em;
+            }
+            &-lien:link{
+                transition: all .3s ease-out;
+            }
+            &-lien:hover{
+                padding-top: 2em;
+            }
+        }
+    }
+
+
+    .MainContent{
+        &-principal{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 100px 1fr;
+            gap: 2em;
+            &-titre{
+                grid-column: 1/3;
+            }
+            &-art{
+                border :none;
+                display: flex;
+                flex-direction: column;
+                
+            }
+
+
+        }
+    }
+    .Art-bouton{
+        margin-top: auto;
+    }
+
+}
+@media screen AND (min-width:900px){
+    .Welcome{
+        margin-right: 5px;
+        margin-left: 5px;
+        margin-bottom: 30px;
+        border-radius: 25px;
+        border: solid 5px $firstDarkColor;
+    }
+    .MainContent{
+        display: grid;
+        grid-template-columns: 1fr 250px;
+        gap: 20px;
+        &-principal{
+            border: solid 5px $firstDarkColor;
+            margin-left: 5px;
+
+        }   
+        &-aside{
+            border: solid 5px $firstDarkColor;
+            margin-right: 5px;
+        }
+
+    }
+}
+
+
+
+

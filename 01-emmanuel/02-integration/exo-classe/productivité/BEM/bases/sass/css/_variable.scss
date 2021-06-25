@@ -1,0 +1,22 @@
+//Variable///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+$firstColor : dodgerblue ;
+$firstDarkColor: rgb(0, 3, 187);
+$altColor : orange;
+$bgColor : #ddd;
+$white : white;
+$commonSpace : 1.2em;
+$shadow:4px 4px 22px #333;
+
+
+
+@mixin blocmixin {
+
+    background-color: pink ;
+    color: $white ;
+    padding : $commonSpace ;
+    border-radius: 20px 20px 20px 0px;
+    margin: 2em 0 ;
+}
+
+

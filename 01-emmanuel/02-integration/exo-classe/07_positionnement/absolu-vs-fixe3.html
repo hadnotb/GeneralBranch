@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Document sans nom</title>
+<style type="text/css">
+	body{
+		margin:0;
+		paddin: 0;	
+		background-color:#ccc;	
+	}
+	#contenu{
+		width:750px;
+		margin:35px  0px 0px 320px;
+		background-color:#fff;	
+		min-height:2000px;
+	}
+	#menu {
+		Background-color: #000;
+		color:#fff;	
+	}
+	#menu{
+		position:fixed;	
+		width:250px;
+		top:35px;
+		left:35px;
+	}
+	#contenu{
+		
+		margin-top:35px;
+		
+	}
+</style>
+</head>
+
+<body>
+	<div id="contenu">
+    
+    	<div id="menu">
+    	  <ul>
+    	    <li>menu1</li>
+    	    <li>menu2</li>
+    	    <li>menu3</li>
+    	    <li>menu4</li>
+  	      </ul>
+    	</div>
+      <p>La même chose en mode télécommande flottante à gauche.</p>
+      <p>Attention toutefois au chevauchement en cas de fenêtre réduite.</p>
+      <p>Ici le <strong>menu</strong> est placé en &quot;fixed&quot; largeur 250 px et le <strong>contenu</strong> n'a plus besoin de marge  haute, en revanche une marge à droite ou gauche lui permettrait de réserver une place pour la télécommande.</p>
+      <p>Dans cette formule, nous avons perdu le centrage auto ... malheureusement avec HTML CSS, il faut souvent choisir en fonction de ses priorités ;-)</p>
+      <p>&nbsp;</p>
+	</div>
+</body>
+</html>

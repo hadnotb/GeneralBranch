@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Document sans nom</title>
+<style type="text/css">
+Body{
+	padding-top:50px;
+}
+div{
+	background-color:#cccccc;
+	margin-left:150px;
+	margin-bottom:25px;
+}
+
+
+
+
+</style>
+</head>
+
+<body>
+<div>
+  <p><strong>BLOC GRISE N°1</strong></p>
+ <div></div>
+ </div>
+
+<div class="version2">
+  <p><strong>BLOC GRISE N°2</strong></p>
+  <div>je viens du bloc#2</div></div>
+
+<div class="version3">
+  <p><strong>BLOC GRISE N°3 (en relatif)</strong>
+  </p>
+  <div>positionné en absolu dans un bloc en relatif</div>
+ </div>
+ 
+ <div>
+  <p><strong>BLOC GRISE N°1</strong> Ce bloc n'est pas victime de la sortie du flux du précédent car le bloc n°3 en relatif est bien sorti du flux, mais il réserve sa place initiale ce qui n'affecte pas les blocs environnants.</p>
+ <div></div>
+ </div>
+</body>
+</html>

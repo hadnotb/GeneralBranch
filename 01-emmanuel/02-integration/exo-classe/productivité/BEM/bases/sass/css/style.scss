@@ -1,0 +1,50 @@
+@import"variable" ;
+
+
+
+
+
+
+//BOODDDDDDYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYY
+
+body{
+
+    background-color: $bgColor;
+}
+
+h1, h2, h3{
+    color : $firstColor;
+}
+
+a{
+    &:link{
+        color: olivedrab ;
+        text-decoration: none;
+            
+    }
+    &:visited{
+        color: $firstDarkColor; 
+       
+    }
+    &:hover{
+
+        color: $altColor;
+      
+
+    }
+}
+section{
+
+    @include blocmixin ;
+}
+
+footer{
+    background-color: $altColor;
+    box-shadow: $shadow;
+    padding: $commonSpace;
+}
+.important{
+    background-color:adjust-color($color: #000000, $red: 1, $green: 2, $blue: 3, $hue: 0, $saturation: 0%, $lightness: 0%, $alpha: 1.0);
+}
+
+@import"header" ;

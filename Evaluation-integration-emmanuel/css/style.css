@@ -1,0 +1,150 @@
+body {
+  margin: 0 auto;
+  font-family: 'Poppins';
+}
+
+.Header {
+  background-image: url(../img/fond.jpg);
+  background-size: cover;
+}
+
+.Header-figure {
+  text-align: center;
+}
+
+.Header-titre {
+  text-align: center;
+  color: white;
+}
+
+.Header-nav {
+  text-decoration: none;
+  margin-top: 100px;
+  background-color: black;
+  text-align: center;
+}
+
+.MainContent {
+  background-image: url(../img/body-bg.png);
+}
+
+.MainContent-titreSection {
+  color: white;
+}
+
+.MainContent-produit-block {
+  background-color: white;
+  border-radius: 0 40px 40px 40px;
+}
+
+.MainContent-produit {
+  padding: 1em;
+}
+
+.ProduitBlock-figure {
+  text-align: center;
+  max-width: 100%;
+}
+
+.ProduitBlock-titre-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.MainContent-offres-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+}
+
+.OffreBlock-button {
+  background-color: black;
+  color: white;
+  width: 50%;
+  margin: 1em auto;
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+
+.offres {
+  margin: 0;
+  background-color: black;
+}
+
+.OffrePartout {
+  background-color: #ffd200;
+}
+
+.OffrePrepa {
+  background-color: #44b3e8;
+}
+
+.MainContent-services {
+  color: white;
+}
+
+@media screen and (min-width: 500px) {
+  .Header-nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  .Flex-produit {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .Flex-offres {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .Flex-services {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .MainContent-services-block {
+    margin-right: 10px;
+    margin-left: 5px;
+  }
+  .MainContent-produit-block {
+    margin-right: 10px;
+    min-width: 250px;
+  }
+}
+/*# sourceMappingURL=style.css.map */

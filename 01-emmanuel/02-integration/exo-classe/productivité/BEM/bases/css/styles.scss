@@ -1,0 +1,64 @@
+$bgColor:#666;
+$white : white;
+$commonSpace : 10px ;
+$typo:'Roboto', sans-serif;
+$mainColor :#FFD000;
+$firstdarkcolor :#FFA500;
+$largeSpace : 20px ;
+$bgLightColor:#aaa;
+
+body{
+    background-color:$bgColor;
+    margin: 0;
+    font-family: $typo;
+}
+
+.PageWrapper{
+
+    background-color: $white;
+    padding: $commonSpace;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.SiteHeader{
+
+    background-color: $mainColor;
+    padding: $largeSpace;
+    &-titlesLink{
+        color:$white ;
+        text-decoration: none;
+    }
+    &-h1{font-size: 1.4em;
+        font-weight: 900;}
+    &-h2{font-size: 1.2em;
+        font-weight: 300;} 
+}
+
+.BodyLayout{
+    display: grid;
+    grid-template-columns: 1fr 200px;
+    padding: $commonSpace 0 ;
+    gap: $commonSpace;
+    // &-mainContent {
+    //     // background-color: purple;
+    // }
+    
+
+}
+.Sidebar{
+    background-color: $bgLightColor;
+    padding: $commonSpace;
+    border: solid 4px $bgColor;
+    &-item{
+        background-color: #FFA500;
+        padding: $commonSpace;
+        margin-bottom: $commonSpace;  
+     }
+}
+
+.SiteFooter{
+    background-color: $firstColor;
+    color:$white;
+    padding:$largeSpace;
+}
+

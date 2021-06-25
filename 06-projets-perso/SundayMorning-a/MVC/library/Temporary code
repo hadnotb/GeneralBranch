@@ -1,0 +1,47 @@
+
+ARTICLE.PHTML -----------------------------------------
+
+<!-- <section class="MainContent">
+
+    <figure class="MainContent-mainPic">
+        <img class='MainContent-mainPic-img' src="<?php echo(IMAGE_URL . '/' . $images[0]); ?>" alt="">
+    </figure>
+
+    <figure class="MainContent-vigPic">
+        <?php foreach($images as $image):?>
+                <img src="<?php echo(IMAGE_URL . '/' . $image); ?>" alt="" class="ArticlePicture-articleimg" />
+        <?php endforeach ?>
+        <img src="<?php echo(IMAGE_URL . '/' . $image); ?>" alt="" class="ArticlePicture-articleimg" />
+    </figure>
+
+    <section class="MainContent-ArticleInfo">
+        
+        <p class="ArticleInfo-nomArticle"><?=$article['libArticle']?></h2>
+        <p class="ArticleInfo-prixArticle"><?=$article['prix']?></p>
+        
+       
+        <p class="ArticleInfo-coulArticle-titre">Couleur</p>
+        <p><?=$article['listcoul']?></p>
+        <img src="img/vignetteVerte.jpg" alt="" class="vignetNoire">
+        <img src="../public/img/VignetteVerte.jpg" alt="" class="vignetVerte">
+        <img src="img/VignetteJaune.jpg" alt="" class="vignetJaune">
+        <img src="../public/VignetteRouge.jpg" alt="" class="vignetRouge">
+            
+      
+        <div class="ArticleInfo-taiArticle">
+            <p class="ArticleInfo-taiArticle">Taille</p>
+            <p><?=$article['artail']?></p>
+            <img src="" alt="" class="taiVignet">
+            <img src="" alt="" class="taiVignet">
+            <img src="" alt="" class="taiVignet">
+            <img src="" alt="" class="taiVignet">
+            <img src="" alt="" class="taiVignet">
+        </div>
+        <button class ='addButton'>Ajouter au panier</button>
+        
+        <p class="ArticleInfo-detailsTitre">Details</p>
+        <p class="detailsContent"><?=$article['details']?></p>
+    
+    </section>
+
+</section> -->

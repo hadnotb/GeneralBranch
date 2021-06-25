@@ -1,0 +1,34 @@
+
+         <!-- <?php else : ?>  -->
+
+
+        <?php foreach ($category as $article): ?>
+              <h3 ><?=htmlspecialchars($article['libCategorie']);?></h3>
+              
+        <?php endforeach; ?>
+
+      <?php endif ; ?>         
+
+        <?php if ($article): ?>
+      <?php else: ?>      
+
+                <?php foreach ($articles as $article): ?>
+                    <li>
+                        <h3 ><?=htmlspecialchars($article['title']);?></h3>
+                        <p >Date de création : <?=(new DateTimeImmutable($article['created_at']))->format('d/m/Y');?></p>
+                        
+                        <div><?=htmlspecialchars(mb_substr($article['content'],0,150));?></div>
+
+                        <a href="<?=buildUrl('article', ['id' => intval($article['idArticle'])]);?>">Lire la suite</a>
+
+                        <a href="<?=buildUrl('category',['id' => intval($article['idCategorie'])])?>"><?= $article['libCategorie']?></a>
+                    </li>
+                <?php endforeach; ?>
+        <?php endif; ?>   
+
+
+Que nous reste il a faire ? -> Verification de l'email 
+                            -> Page mon compte 
+                            -> Mot de passe oublié 
+                            -> Champ confirmation mot de passe 
+                            -> Proteger les commentaires 

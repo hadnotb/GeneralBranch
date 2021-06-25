@@ -1,0 +1,181 @@
+@import"variable";
+
+// .PageWrapper {
+//     max-width: 450px;
+//     margin-left: auto;
+//     margin-right: auto;
+    
+//   }
+body{
+    margin: 0;
+}
+.PageWrapper {
+    background-color:white;
+    margin: 0 auto;
+    font-family: $typo;}
+  
+.SiteHeader {
+    background-color: white;
+        
+    &-title{
+        color:$mainColor;}
+    &-menu{
+        background-color:black;
+        &-link{
+            padding: 0.4em ;
+            text-align: center;
+            display: block;
+            text-decoration: none;
+            color: white;
+            &:link,&:visited{
+                color: white;
+            }
+            &:hover{
+                background-color: $mainColor;
+            }
+        }
+    }
+}
+.MainContent{
+
+    &-content {
+        padding : $commonpad ;
+        background-color: $altcolor;
+        h1{
+            color: white;
+            text-align: center;
+        }
+    }
+    &-side{
+        padding: $commonpad;
+        background-color: $mainColor;
+        &-title{
+            color: white;
+            
+            text-align: center;
+
+        }
+       
+        
+    }
+}
+.pic{width: 100%;}
+
+.SiteFooter{
+    background-color: black;
+    
+    &-menu{
+        display: flex;
+        justify-content: space-around;
+        
+        
+        &-link{
+                color: white;
+                text-decoration: none;
+                text-align: center;
+                padding:$commonpad;
+               
+                
+            }
+        }
+    }
+@media screen AND (min-width: 461px){
+
+    body{
+        background-color: rgb(0, 0, 0);
+        .SiteHeader{
+
+            &-title{
+                text-align: left;
+            }
+            
+            &-menu{
+                display: flex;
+                justify-content: space-evenly;
+            }
+        }
+        
+    }
+    
+}
+@media screen AND (min-width: 650px){
+
+    .MainContent-side{
+        overflow:hidden;
+    }
+    .pic{
+        float: left;
+        margin:0 .3em .3em 0;
+        width: 40%;}
+   
+    
+}
+@media screen AND (min-width:820px){
+    .MainContent{
+        background-color: white;
+        color:black;
+        border:none;
+        
+    }
+}
+
+@media screen AND (min-width:1050px){
+    
+    .MainContent{
+        display: flex;
+
+        &-side{
+            background-color: white;
+            width: 30%;
+            padding: 0;
+            h2{
+                background-color: $mainColor;
+                margin: 0;
+            }
+
+        }
+        &-content{
+            background-color: white;
+            width: 70%;
+            padding: 0;
+            h1{
+                background-color: $altcolor;
+                margin: 0;
+            }
+        }
+    }
+    .pic{
+        width :100%;
+    }
+
+
+
+}
+@media screen AND (min-width:1350px){
+    .PageWrapper{
+        max-width: 1050px;
+        background-color: $mainColor;
+        padding :1em;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    body{
+        background: url("../../img/floral-fond.jpg");
+        // background-repeat: space;
+    }
+    .SiteFooter{
+        
+        &-menu{
+            background-color: rgb(61, 16, 16);
+            &-link{
+                &:link,&:visited{
+                    color: white;
+                }
+                &:hover{
+                    background-color: $mainColor;
+                }
+                text-decoration: underline;
+            }
+        }
+    }
+}

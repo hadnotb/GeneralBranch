@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@700&display=swap" rel="stylesheet"> 
+    <style>
+        body{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-left:150px;
+}
+h1,h2,h3{
+    font-family: 'Baloo 2', cursive;
+}
+header{
+    position:fixed;
+    top:0;
+    left:0;
+    width:150px;
+    height:100vh;
+    display:flex;
+    flex-direction: column;    
+    color:white;
+    background-color: rgba(0,0,0,.7);
+    padding-left:1em;
+    box-sizing: border-box;
+    font-size: .8em;
+}
+header nav{
+    display: flex;
+    flex-direction: column;
+    
+}
+header a:link, header a:visited{
+    color:white;
+    text-decoration: none;
+}
+.gras{
+    background-color: tomato;
+}
+section{
+    min-height:100vh;
+}
+section:nth-child(even){
+    background-color: rgb(228, 228, 228);
+}
+article{
+    background-color:orange;
+}
+.Partie1-box{
+    border : 4px solid red;
+}
+.Partie1-box h2,.Partie1-box p,.Partie1-box ul,.Partie2-box h2,.Partie2-box p,.Partie2-box ul{
+    margin:0;
+    padding:0;
+    list-style-position: inside;
+}
+.Partie1-box div{
+    background-color: rgba(255, 255, 255, 0.555);
+}
+.Partie3-box{
+    width:500px;
+}
+.Partie4-box{
+    float:left;
+    width:33.33%;
+    height:200px;
+
+    
+}
+#part1 .part1 div p{
+    display:inline;
+}
+    </style>
+    <link rel="stylesheet" href="css/style-BlockVsInline.css">
+    <title>Block vs inline</title>
+</head>
+<body>
+    <header>
+        <h1>Block vs inline</h1>
+        <h2>Navigation</h2>
+        <nav>
+            <a href="#part1">Cas n°1</a>
+            <a href="#part2">Cas n°2</a>
+            <a href="#part3">Box-sizing v1</a>
+            <a href="#part4">Box-sizing v2</a>
+        </nav>
+        <div class="content">
+            <h2>Infos</h2>
+            <p>Dans cet exemple le menu de navigation de gauche et le CSS de base ne sont pas a prendre en compte.</p>
+            <p>Travaillez uniquement dans le fichier CSS vierge fourni</p>
+        </div>
+    </header>
+<!-- #####################################
+#################################
+###### -->
+    <section class="Partie1" id="part1">
+        <h2>Des blocks, des inlines et des inlines-blocks !</h2>
+        <article class="Partie1-box part1">
+            <h2 class="Partie1-box-h2">je suis un block</h2>
+            <div class="Partie1-box-content">
+                moi aussi .. un div même <p>moi aussi et même que je suis dans le div </p>
+            </div>
+        </article>
+        <article class="Partie1-box part2">
+            <h2 class="Partie1-box-h2">Je suis un block</h2>
+            <div class="Partie1-box-content">
+                <p>Dans cet long texte du bloc p 
+                    <em>Cette partie est enligne</em> 
+                    et on peut également dire que  
+                    <strong>Cette partie est en ligne</strong> 
+                </p>
+
+            </div>
+        </article>
+        <article class="Partie1-box part3">
+            <h2 class="Partie1-box-h2">Ce Titre est un block</h2>
+            <div class="Partie1-box-content">
+                <p>ce paragraphe est un block</p>
+                <a href="#">Ce lien est en ligne</a>
+            </div>
+        </article>
+    </section>
+    <!-- #####################################
+    #################################
+    ###### -->
+    <section class="Partie2"  id="part2">
+        <h2>La fusion des marges</h2>
+        <article class="Partie2-box">
+            <h2 class="Partie2-box-h2">Titre</h2>
+            <div class="Partie2-box-content">
+                <p>Dans cette boîte nous allons mettre: </p>
+                <ul>
+                    <li>un margin de 40px au titre </li>
+                    <li>un margin de 80px au div</li>
+                </ul>
+            </div>
+        </article>
+        <article class="Partie2-box">
+            <h2 class="Partie2-box-h2">Titre</h2>
+            <div class="Partie2-box-content">
+                <p>Dans cette boîte nous allons garder les réglages de la boite 1  mais donner une bordure à notre boîte : </p>
+                <ul>
+                    <li>un margin de 40px au titre </li>
+                    <li>un margin de 80px au div</li>
+                </ul>
+            </div>
+        </article>
+        <article class="Partie2-box">
+            <h2 class="Partie2-box-h2">Titre</h2>
+            <div class="Partie2-box-content">
+                <p>Dans cette boîte nous allons garder les réglages de la boite 1  mais donner un padding cette fois ci à notre boîte : </p>
+                <ul>
+                    <li>un margin de 40px au titre </li>
+                    <li>un margin de 80px au div</li>
+                </ul>
+            </div>
+        </article>
+    </section>
+    <!-- #####################################
+    #################################
+    ###### -->
+    <section class="Partie3" id="part3">
+        <h2>Le box-sizing</h2>
+        <p>Ici toutes nos boîtes ont une largeur de 500px ! <code>width:500px;</code></p>
+        <article class="Partie3-box">
+            <h2 class="Partie3-box-h2">Titre</h2>
+            <div class="Partie3-box-content">
+                <p>Cette boîte a une bordure de 5px et un padding de 20px</p>
+                <p>Elle est bien grande</p>
+            </div>
+        </article>
+        <article class="Partie3-box">
+            <h2 class="Partie3-box-h2">Titre</h2>
+            <div class="Partie3-box-content">
+                <p>Cette boîte n'a pas de réglage particuliers, c'est notre boîte étalon pour comprendre le box sizing</p>
+            </div>
+        </article>
+        <article class="Partie3-box">
+            <img src="" alt="" class="Partie3-box-img">
+            <h2 class="Partie3-box-h2">Titre</h2>
+            <div class="Partie3-box-content">
+                <p>Cette boîte a une bordure de 5px et un padding de 20px</p>
+                <p>Par contre son <code>box-sizing</code> vaut <code>border-box</code></p>
+            </div>
+        </article>
+    </section>
+    <!-- #####################################
+    #################################
+    ###### -->
+    <section class="Partie4" id="part4">
+        <h2>Le box-sizing v2</h2>
+        <p>Ici toutes nos boîtes ont une largeur de 33.33% ! <code>width:33.33%;</code></p>
+        <p>de plus elles sont en côte à côte  ! <code>float:left;</code></p>
+        <article class="Partie4-box">
+            <h2 class="Partie4-box-h2">Titre</h2>
+            <div class="Partie4-box-content">
+                <p>Cette boîte a une bordure de 5px et un padding de 20px</p>
+                <p>Elle est en <code>float:left;</code></p>
+            </div>
+        </article>
+        <article class="Partie4-box">
+            <h2 class="Partie4-box-h2">Titre</h2>
+            <div class="Partie4-box-content">
+                <p>Cette boîte a une bordure de 5px et un padding de 20px</p>
+                <p>Elle est en <code>float:left;</code></p>
+            </div>
+        </article>
+        <article class="Partie4-box">
+            <img src="" alt="" class="Partie4-box-img">
+            <h2 class="Partie4-box-h2">Titre</h2>
+            <div class="Partie4-box-content">
+                <p>Cette boîte a une bordure de 5px et un padding de 20px</p>
+                <p>Elle est en <code>float:left;</code></p>
+            </div>
+        </article>
+    </section>
+</body>
+</html>

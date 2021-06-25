@@ -1,0 +1,54 @@
+body {
+  background-color: #666;
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+.PageWrapper {
+  background-color: white;
+  padding: 10px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.SiteHeader {
+  background-color: #FFD000;
+  padding: 20px;
+}
+
+.SiteHeader-titlesLink {
+  color: white;
+  text-decoration: none;
+}
+
+.SiteHeader-h1 {
+  font-size: 1.4em;
+  font-weight: 900;
+}
+
+.SiteHeader-h2 {
+  font-size: 1.2em;
+  font-weight: 300;
+}
+
+.BodyLayout {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 200px;
+      grid-template-columns: 1fr 200px;
+  padding: 10px 0;
+  gap: 10px;
+}
+
+.Sidebar {
+  background-color: #aaa;
+  padding: 10px;
+  border: solid 4px #666;
+}
+
+.Sidebar-item {
+  background-color: #FFA500;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+/*# sourceMappingURL=styles.css.map */

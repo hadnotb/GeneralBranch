@@ -1,0 +1,31 @@
+body {
+    background-color: rgb(212, 133, 133);
+    color: rgb(0, 0, 0);
+    margin : 0 ;
+     
+}
+.siteHeader{
+    display: block;
+    
+    background-color: rgb(255, 255, 255);
+    height: 250px;
+   
+}
+
+.navMenu{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    
+    // &-link{
+
+    // }
+}
+.siteTitle{
+    justify-content: flex-start;
+    
+}
+tr, th, td{
+    border: 2px solid black;
+}

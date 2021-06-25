@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    
+</head>
+<body>
+    <section class ="main">
+        <h1>Nouvelle Tache</h1>
+        <form  class ="formulaire" action="index.php" method = "POST">
+            <label for="titre">Titre</label>
+            <input type="text" id="Titre" name="titre" value="<?=$titre??'';?>"><br><br>
+            <label for="deadline">Deadline</label>
+            <input type="date" name ="deadline" id ="Deadline"><br><br>
+            <input type="submit" value="Ajouter">
+
+        </form>
+        <article></article>
+    </section>
+     <!-- Affichage des erreurs le cas échéant --> 
+        <?php if (!empty($error)): ?>
+                <?php foreach ($error as $errors): ?>
+                    <p class="error"><?=$errors;?></p>
+                <?php endforeach; ?>
+        <?php endif;?>
+        <?php if(isset($success)):?>
+            <p class="success"><?=$success;?></p>
+        <?php endif;?>
+    <section class ="taches">
+        <h2>Taches</h2>
+        <?php if (!empty($mess)):?>
+            <form action="remove.php"method="POST">
+                    <ul>
+                        <?php foreach ($mess as $index => $mes): ?>
+                            <li>
+                                <input type="checkbox" name="tasks-to-delete[]" id="task-<?=$index;?>" value="<?=$index;?>">
+                                <label for="task-<?=$index;?>"><?=$mes['titre'];?> (Date limite : <?=$mes['deadline'];?>)<label>
+                            </li>
+                        <?php endforeach; ?>
+                    </ul> 
+                    <input type="submit" value="Supprimer">
+            </form>
+        <?php else:;?>
+        <p>votre todolist est vide pour l'instant</p>
+        <?php endif;?>
+    </section>    
+
+
+
+</body>
+</html>

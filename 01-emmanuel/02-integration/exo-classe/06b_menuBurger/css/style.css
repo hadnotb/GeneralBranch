@@ -1,0 +1,105 @@
+body {
+  font-family: 'Londrina Solid', sans-serif;
+}
+
+.SiteHeader {
+  min-height: 200px;
+  background-color: orange;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 2em 0 0 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.SiteHeader-img {
+  width: 150px;
+}
+
+.SiteHeader-logo {
+  padding: 1em;
+  text-align: center;
+}
+
+.SiteHeader-nav {
+  background-color: black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-item-align: stretch;
+      align-self: stretch;
+}
+
+.SiteHeader-nav.burgerOn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.SiteHeader-nav.burgerOn .SiteHeader-nav-link {
+  display: block;
+}
+
+.SiteHeader-nav.burgerOn .SiteHeader-nav-link.burger {
+  display: none;
+}
+
+.SiteHeader-nav-link {
+  color: white;
+  text-decoration: none;
+  padding: 1em;
+  display: none;
+}
+
+.SiteHeader-nav-link.burger {
+  display: block;
+}
+
+.SiteHeader-nav-link.noBurger {
+  display: none;
+}
+
+.MainContent {
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 2em;
+}
+
+@media screen and (min-width: 600px) {
+  .SiteHeader-nav {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .SiteHeader-nav.burgerOn .SiteHeader-nav-link.noBurger {
+    display: none;
+  }
+  .SiteHeader-nav-link {
+    display: block;
+  }
+  .SiteHeader-nav-link.burger {
+    display: none;
+  }
+}
+/*# sourceMappingURL=style.css.map */

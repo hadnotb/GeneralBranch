@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<h1>Salut tout le monde</h1>
+
+<?php if(isset($message)):?>
+<p><?php echo $message;?><p>
+<?php endif;?>    
+    <form action=" hello.php" method ="POST">
+        <div>
+            <label for="lastname" >Votre nom</label>
+            <input id="lastname" type="text" name ="lastname">
+        </div>
+        <div>
+            <label for="firstname" >Votre nom</label>
+            <input id="firstname" type="text" name ="firstname">
+        </div>
+        <input type= "submit" value="Valider">
+        <div>
+            <label for="city">Ville</label>
+            <select id="city" name="city">
+                <?php foreach($city as $index =>$val):?>
+                <option value ="<?php echo strtolower($index);?>"><?php echo $val;?></option>
+                <?php endforeach;?>
+            </select>
+        </div>
+        <div>
+        <input type="radio" id="masculin " name="sexe" value ="masculin" checked>
+        <label for ="masculin">Homme</label>
+        </div>
+        <div>
+        <input type="radio" id="feminin " name="sexe" value ="feminin">
+        <label for ="feminin">Femme</label>
+        </div>
+    </form>
+    
+</body>
+</html>

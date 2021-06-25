@@ -1,0 +1,124 @@
+body{
+    margin : 0;
+}
+#partie1
+{
+   min-height: 50px;
+   background: url("../img/bureau.jpg") no-repeat center; 
+   background-size: cover;/* on couvre la totalité du background avec l'image*/
+   padding: 50px;
+ 
+}
+
+#partie1 article{
+    
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: beige;
+    padding: auto;
+    
+}
+#partie1 h1{
+    padding-top: 1em;
+    padding-left: 1em;
+
+   
+}
+#partie1 p{
+    padding: 1em;
+    
+}
+/* 22222222222222222222222222222222222222222222222222222222222222222222222 */
+#partie2
+{
+   min-height: 50px;
+   background-color: rgba(38, 38, 248, 0.877);
+   background-size: cover;/* on couvre la totalité du background avec l'image*/
+   padding: 50px;
+ 
+}
+
+#partie2 article{
+    
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    /* background-color: beige; */
+    padding: auto;
+    
+}
+#partie2 h1{
+    padding-top: 1em;
+    padding-left: 1em;
+
+   
+}
+#partie2 p{
+    padding: 1em;
+    
+}
+
+/* 3333333333333333333333333333333333333333333333333333 */
+#partie3
+{
+   min-height: 50px;
+   background: url(../img/cafe.jpg) no-repeat center;
+   background-size: cover;
+   background-attachment: fixed;
+   padding: 50px;
+ 
+}
+
+#partie3 article{
+    
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: auto;
+    
+    
+}
+#partie3 h1{
+    padding-top: 1em;
+    padding-left: 1em;
+
+   
+}
+#partie3 p{
+    padding: 1em;
+    
+}
+
+/* 4444444444444444444444444444444444444444444444444444444444444444 */
+
+#partie4
+{
+   min-height: 50px;
+   background-color: rgb(197, 48, 48);
+   padding: 50px;
+ 
+}
+
+#partie4 article{
+    
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: auto;
+    
+}
+#partie4 h1{
+    padding-top: 1em;
+    padding-left: 1em;
+
+   
+}
+#partie4 p{
+    padding: 1em;
+    
+}
+.couleur{
+    color: white;
+}
+]

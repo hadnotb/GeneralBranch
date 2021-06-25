@@ -1,0 +1,52 @@
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  background-color: whitesmoke;
+}
+
+.carte {
+  background-color: white;
+  position: relative;
+  margin: 2em;
+  overflow: hidden;
+}
+
+.carte:hover ul {
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
+}
+
+.carte ul {
+  position: absolute;
+  list-style-type: none;
+  font-family: 'Patua One', cursive;
+  background-color: rgba(0, 0, 0, 0.6);
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  top: 180px;
+  -webkit-transition: .3s;
+  transition: .3s;
+  -webkit-transform: scaleY(100%);
+          transform: scaleY(100%);
+}
+
+.carte ul .titre {
+  background-color: black;
+  color: white;
+  padding: .4em 0;
+  position: absolute;
+  width: 100%;
+  top: -30px;
+}
+
+.carte ul .prix {
+  text-align: center;
+  font-size: 3em;
+  color: white;
+  font-family: 'Patua One', sans-serif;
+}
+/*# sourceMappingURL=design-survol-brut.css.map */

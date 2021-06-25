@@ -1,0 +1,148 @@
+@import 'variable';
+
+body{
+    margin: 0 auto;
+    font-family: 'Poppins';
+}
+
+.Header{
+
+    background-image: url(../img/fond.jpg);
+    background-size: cover;
+    
+    &-figure{
+        text-align: center;
+        
+        
+    }
+    &-titre{
+        text-align: center;
+        color: white;
+        
+        
+    }
+    &-nav{
+        text-decoration: none;
+        margin-top: 100px;
+        background-color: black;
+        text-align: center;
+    }
+
+
+
+}
+.MainContent{
+    background-image: url(../img/body-bg.png);
+    // padding:1em;
+    // display: flex;
+    // flex-direction: column;
+    &-titreSection{
+        color: white;
+        
+        
+    }
+
+    &-produit-block{
+
+        background-color: white;
+        border-radius: 0 40px 40px 40px ;
+        
+        
+    }
+
+}
+
+
+.MainContent-produit{
+
+    padding: 1em;
+    
+}
+
+.ProduitBlock-figure{
+
+    text-align: center;
+    max-width: 100%;
+    
+}
+.ProduitBlock-titre-info{
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.MainContent-offres{
+
+    &-block{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        
+        
+    }
+}
+.OffreBlock{
+    &-button{
+        background-color: black;
+        color: white;
+        width: 50%;
+        // margin-left: auto;
+        // margin-right: auto;
+        margin : 1em auto;
+        padding-top:  1em ;
+        padding-bottom:  1em ;
+         
+    }
+}
+.offres{
+    margin : 0;
+    background-color: black;
+}
+.OffrePartout{
+    background-color: rgb(255, 210, 0);
+}
+.OffrePrepa{
+    background-color: $couleuroffre2;
+}
+.MainContent-services{
+    color: white;
+}
+
+
+@media screen AND (min-width:500px){
+
+    .Header{
+
+        &-nav{
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+        }
+    }
+
+    .Flex-produit{
+
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    .Flex-offres{
+        display: flex;
+        flex-direction: row;
+    }
+    .Flex-services{
+        display: flex;
+        flex-direction: row;
+    }
+    
+    .MainContent-services-block{
+
+        margin-right: 10px;
+        margin-left: 5px;
+    }
+    .MainContent-produit-block{
+        margin-right: 10px;
+        min-width: 250px;
+    }
+}

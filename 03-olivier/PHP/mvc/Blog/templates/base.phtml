@@ -1,0 +1,43 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog bg du 13 <?=$pageTitle??'';?>  </title>
+    <!--                   Revoir ↑ syntaxe               -->
+    <link rel="stylesheet" href="<?=asset('css/style.css');?>"> <!--je ne comprend plus ce qui se passe ici -->
+</head>
+<body>
+    <header>
+        <section>
+            <h1>Bienvenu dans le blog du bg du 13</h1>
+        </section>
+        <nav>
+            <a href="">Article</a>
+            <a href="">Auteur</a>
+            <a href="">Categorie</a>
+            <a href="">Commentaire</a>
+            
+        </nav>
+    </header>
+    <section>
+        <div class="main">
+        <!-- On va insere ici les différent fichier templates -->
+        <?php include TEMPLATE_DIR . '/'. $template .'.phtml';?>
+        </div>
+        <div class="aside">
+        
+            
+        </div>
+    </section>
+    <footer>
+        <nav>
+            <a href=""></a>
+            <a href=""></a>
+            <a href=""></a>
+        </nav>
+    </footer>
+</body>
+</html>

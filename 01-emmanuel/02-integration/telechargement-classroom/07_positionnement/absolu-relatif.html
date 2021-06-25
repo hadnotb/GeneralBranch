@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Document sans nom</title>
+<style type="text/css">
+Body{
+	padding-top:50px;
+}
+div{
+	width: 500px;
+	height:350px;
+	background-color:#cccccc;
+	margin-left:150px;
+	margin-bottom:25px;
+}
+em{
+	color:#FF0000;	
+}
+
+.version1 em{
+		position:absolute;
+		top:25px;
+		left:35px;
+	
+}
+
+.version2 em{
+		position:relative;
+		top:25px;
+		left:35px;
+}
+
+.version3{
+		position:relative;
+		
+}
+.version3 em{
+	position:absolute;
+		top:25px;
+		left:35px;
+}
+
+
+
+</style>
+</head>
+
+<body>
+<div>
+  <p><strong>BLOC GRISE N°1</strong></p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam maximus tellus eget nisi semper, vitae luctus neque semper. <em>Donec erat odio, condimentum nec eros eget, lacinia congue lacus.</em> Nulla maximus sem magna, quis lobortis augue fringilla id. Praesent elementum ornare venenatis. Phasellus egestas a lacus at consequat. Nulla placerat et enim sed facilisis.</p>
+<p>Suspendisse varius orci at dui condimentum tristique. Maecenas consequat arcu tortor, in sollicitudin magna aliquet a. Duis porta, ligula vel aliquet pellentesque, nibh massa facilisis neque, eget aliquam magna mauris ac neque. 
+Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Donec et aliquet metus.</p></div>
+
+<div class="version1">
+  <p><strong>BLOC GRISE N°2</strong></p>
+  <p><strong>Dans ce bloc, le texte le em est en absolu.</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam maximus tellus eget nisi semper, vitae luctus neque semper. <em>Ce fragment de texte est positionné en absolu par rapport à la page, il provient du bloc grisé n°2</em> Nulla maximus sem magna, quis lobortis augue fringilla id. Praesent elementum ornare venenatis. Phasellus egestas a lacus at consequat. Nulla placerat et enim sed facilisis.</p>
+<p>Suspendisse varius orci at dui condimentum tristique. Maecenas consequat arcu tortor, in sollicitudin magna aliquet a. Duis porta, ligula vel aliquet pellentesque, nibh massa facilisis neque, eget aliquam magna mauris ac neque. 
+Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Donec et aliquet metus.</p></div>
+
+<div class="version2">
+  <p><strong>BLOC GRISE N°3</strong></p>
+  <p><strong>Dans ce bloc, le texte le em est en relatif</strong>. Nam maximus tellus eget nisi semper, vitae luctus neque semper. <em>Ce texte est positionné en relatif, il réserve sa place (espace vide et se décale par rapport a sa position initiale.</em> Nulla maximus sem magna, quis lobortis augue fringilla id. Praesent elementum ornare venenatis. Phasellus egestas a lacus at consequat. Nulla placerat et enim sed facilisis.</p>
+<p>Suspendisse varius orci at dui condimentum tristique. Maecenas consequat arcu tortor, in sollicitudin magna aliquet a. Duis porta, ligula vel aliquet pellentesque, nibh massa facilisis neque, eget aliquam magna mauris ac neque. 
+Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Donec et aliquet metus.</p></div>
+</body>
+</html>
