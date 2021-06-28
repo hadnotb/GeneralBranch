@@ -1,0 +1,10 @@
+-> Vérification de l'email grâce à un envoi d'e-mail à la personne pour valider en cliquant sur un lien.
+-> Page "Mon Compte"
+-> Mot de passe oublié
+-> Champ de confirmation du mot de passe
+
+-> Permettre l'affichage du formulaire d'ajout de commentaires uniquement si on est connecté. Si l'utilisateur est connecté, on l'associe au commentaire, et on ajoute ainsi le nom de sa personne. (if, isauthenticated...).
+Dans la table comment on ajoute l'id_user comme clé étrangère. Lors de l'insert into on va ajouter avec l'id user. 
+
+Modification de CommentModel InsertComment ajouter l'id du user dans la requête SQL, et l'affichage du commentaire.
+Modification du getAllComments(), effectuer une jointure avec la table user. 

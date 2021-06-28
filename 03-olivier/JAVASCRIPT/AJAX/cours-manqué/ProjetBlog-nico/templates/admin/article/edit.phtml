@@ -1,0 +1,29 @@
+<section>
+    <h2>Modifier un article</h2>
+   <!-- On construit le chemin relatif de l'url et l'id de l'article correspondant.-->
+    <form action="<?php echo buildUrl('edit-article', ['id' => $article['article_id']]);?>" method="POST">
+    <p>
+    
+    <label for="title">Nom de l'article : </label>
+    <!-- On récupère dans le nom, et dans la valeur le nom de l'article dans la bases de données (title) -->
+    <input type="text" name="title" id="title" value="<?=$article['title'];?>">
+    <br />
+    <label for="category">Catégorie : </label>
+    <!-- On récupère ici dans la boucle foreach les catégories provenant de la base de données qu'on peut ensuite choisir en option. -->
+    <select id="category" name="category" required>
+        <?php foreach ($categories as $category): ?>
+            <?php $selected = isset($selectedCategory) && $category['id'] == $selectedCategory ? 'selected' : ''; ?>
+           
+            <option <?=$selected?> value="<?=$category['id'];?>"><?=$category['label'];?></option>
+        <?php endforeach; ?>
+    </select>
+    <br />
+    <label for="content">Contenu : </label>
+    <br />
+    <!-- Dans le textarea, on récupère le contenu de l'article que l'on veut modifier. -->
+    <textarea name="content" id="content" cols="100" rows="20" ><?=$article['content']?></textarea>
+    <br />
+    <input type="submit" value="Modifier l'article">
+    </p>
+    </form>
+</section>

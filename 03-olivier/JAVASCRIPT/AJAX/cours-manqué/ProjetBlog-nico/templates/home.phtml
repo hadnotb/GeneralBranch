@@ -1,0 +1,17 @@
+    <h2>Les derniers articles</h2>
+    <?php foreach ($articles as $article) : ?>
+    <article>
+        <h3><?php echo $article['title']?></h3>
+        <p>Créé le : <?=(new DateTimeImmutable($article['created_at']))->format('d/m/Y');?></p> <!--Avec l'objet DateTimeImmutable, il est possible de changer le format de date pour passer du type américain (Année, Mois, Jour) au format français (Jour, Mois Année) grâce à format(d (day) (m) (month) (Y) (Year). -->
+        <!-- Affiche ici le nom de la personne qui a rédigé l'article : -->
+        <p>Écrit par : <?=$article['firstname']?> <?=$article['lastname']?></p>  
+        <p>Catégorie : <a href="<?php echo buildUrl('category', ['categoryId' => $article['category_id']]);?>"><?=$article['category_label'];?></a> </p>
+            <p><?= mb_substr($article['content'], 0, 150);?> [...]</p> 
+            <!-- Dans la construction du build URL, on écrit en premier la route, puis entre crochets ce que l'on veut (ici 'categoryId'), on prend en paramètre bien sûr la table catégorie sa colonne category_Id. -->
+            <!-- La fonctionnalité PHP nb_sbstr coupe un texte selon le nombre de caractères, ici, à partir de 150 caractères en partant de 0, on ne voit pas la suite. Il prend en paramètre la variable $article en prenant dans le tableau le contenu de la colonne SQL ['content']. -->
+         <!-- On fait une boucle foreach afin de parcourir tous les éléments provenant de la base de données , puis dans la variable $article passent tous les articles et enfin entre crochets on met la colonne de la base de données que l'on veut afficher. 
+         
+         Avec mb_substr, il est possible de couper un article en donnant en paramètre le premier élément de la chaîne de caractère que l'on veut conserver jusqu'au dernier, ici de 0 à 50. On verra apparaître ainsi les 150 premiers éléments de la chaîne de caractères.. -->
+         <a href="/article?id=<?=$article['article_id'];?>">Lire la suite</a> <!-- Permet de nous rendre sur la page article.php. ATTENTION ! afin d'éviter de confondre l'id de la catégorie, et l'id de l'article, il faut mettre un alias dans la requête SQL, ici, art.id AS article_id. -->
+         </article>
+    <?php endforeach ; ?>

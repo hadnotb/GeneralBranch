@@ -24,7 +24,18 @@ class CommentModel extends AbstractModel {
                 (content, created_at, idArticle,idUser) VALUES (?, NOW(), ?,?)';
         $database = new Database();
 
-        $database -> executeQuery($sql, [$content, $articleId,$idUser]);
+        return $this -> database -> insert($sql, [$content, $articleId,$idUser]);
         }
 
+    function getOneComment(int $commentId)
+        {
+                $sql = 'SELECT C.content, C.created_at, U.firstname, U.lastname
+                        FROM comment AS C
+                        INNER JOIN user AS U ON U.idUser = C.idUser
+                        WHERE C.id = ?';
+
+                $comment = $this->database->getOneResult($sql, [$commentId]);
+
+                return $comment;
+        }
 }

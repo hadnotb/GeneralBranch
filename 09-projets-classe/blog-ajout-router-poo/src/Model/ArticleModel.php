@@ -45,13 +45,13 @@ class ArticleModel extends AbstractModel {
         return $category;
 
    }
-   function insertArticle ($title,$content,$idCat){
+   function insertArticle ($title,$content,$idCat,$idUser){
 
-      $sql = 'INSERT INTO article (title,content,created_at,idCategorie)
-                Values (?,?,now(),?)';
+      $sql = 'INSERT INTO article (title,content,created_at,idCategorie,idUser)
+                Values (?,?,now(),?,?)';
 
         $database = new Database();
-        $database -> executeQuery($sql, [$title,$content,$idCat]);
+        $database -> executeQuery($sql, [$title,$content,$idCat,$idUser]);
    }
   
     

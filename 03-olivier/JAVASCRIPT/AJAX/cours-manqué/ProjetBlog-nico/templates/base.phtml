@@ -1,0 +1,59 @@
+<?php use App\Framework\UserSession; ?>
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <base href="<?=SITE_BASE_URL;?>/">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="<?=asset('css/style.css');?>"><!-- ATTENTION ! Tout part du fichier index.php par conséquent le chemin d'accès du fichier CSS par exemple même si on est sur la page base.phtml, elle doit correspondre à celui du fichier index.php par conséquent : on est bien dans le dossier public, on descend dans css puis dans style.css. -->
+    <title>Mon blog! <?=$pageTitle??'';?></title> <!--  Création d'une nouvelle variable en fonction du titre de l'article -->
+</head>
+<body>
+    <header>
+        <h1>Bienvenue sur mon blog !</h1>
+        <nav>
+            <!-- menu de navigation -->
+            <a href="<?= buildUrl('homepage');?>">Accueil</a>
+            <!-- Si l'utilisateur N'EST PAS connecté : alors le menu s'affiche ainsi :  -->
+            <?php if (!UserSession::isAuthenticated()): ?>
+            <a href="<?= buildUrl('signup');?>">Créer un compte</a>
+            <a href="<?= buildUrl('login');?>">Connexion</a>
+            <?php else:?>
+            <!-- Si l'utilisateur est connecté, alors cette partie du menu modifié apparaît pour lui. Lui permettant de se rediriger vers le logout pour se déconnecter. Cela provoque l'utilisation de l'objet UserSession, et l'apparition du nom de l'utilisateur ainsi que de son prénom.  -->
+            <span>Bienvenue <?=UserSession::getFirstname() . ' ' . UserSession::getLastname();?></span>
+            <a href="<?=buildUrl('logout');?>">Déconnexion</a>
+            <a href="<?=buildUrl('admin');?>">Administration</a>
+            <?php endif;?>
+        </nav>
+    </header>
+       <!--  On va maintenant afficher les messages flash, que ce soit les erreurs ou les succès. 
+    On peut les placer par exemple dans le template global base.phtml afin de les afficher sur n’importe quelle page du site. 
+
+    Attention : les messages flash doivent disparaître une fois affichés. On doit donc les supprimer de la session. On va donc plutôt les récupérer dans le contrôleur article.php puis on videra la session. On stockera les éventuels messages dans des variables $errors et $success que l’on parcourra dans le template base.phtml. -->
+    
+    <aside>
+    <!-- L'objet FlashBag permet de déclencher les fonctions stockées à l'intérieur. -->
+            <?php if (App\Framework\FlashBag::hasMessages('error')):?>
+                <?php foreach (App\Framework\FlashBag::fetchMessages('error') as $error):?>
+                    <p class="error-message"><?=$error;?></p>
+                <?php endforeach; ?>
+            <?php endif; ?>
+
+            <?php if (App\Framework\FlashBag::hasMessages('success')):?>
+                <?php foreach (App\Framework\FlashBag::fetchMessages('success') as $message):?>
+                    <p class="success-message"><?=$message;?></p>
+                <?php endforeach; ?>
+            <?php endif; ?>
+        </aside>
+
+    <main>
+    <!-- Inclusion du template -->
+    <?php include TEMPLATE_DIR . '/' . $template . '.phtml'; ?> <!-- C'est ici que vont s'afficher les différents templates la page d'accueil avec la liste d'articles provenant de la base de données et ce qui va avec, comme les pages articles elles-mêmes et leur contenu, leur titre, leur date, venant aussi de la base de données. -->
+    </main>
+
+    <footer>
+    </footer>
+</body>
+</html>

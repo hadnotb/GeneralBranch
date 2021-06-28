@@ -6,6 +6,10 @@ use App\Framework\Database;
 
 class UserModel extends AbstractModel{
     
+
+    const ROLE_USER = 'USER';
+    const ROLE_EDITOR = 'EDITOR';
+    const ROLE_ADMIN = 'ADMIN';
        
     protected $firstname ='bibi'; 
     protected $lastname ='bobo';
@@ -18,7 +22,7 @@ class UserModel extends AbstractModel{
                 (firstname,lastname,email,password,created_at) VALUES (?,?,?,?, NOW())';
         $database = new Database();
 
-        $database -> executeQuery($sql, [$firstname, $lastname, $email, $password]);
+         return $this->database->insert($sql, [$firstname, $lastname, $email, $password]);
         }
    
    public  function getUserByEmail($email){
@@ -85,7 +89,31 @@ class UserModel extends AbstractModel{
 
         // Si tout est ok, on retourne l'utilisateur
         return $user;
-        }    
+        }
+        
+        public function addRole($userId,$role){
+                
+                $sql = 'INSERT INTO user_role (idUser, idRole) 
+                VALUES (?, (SELECT idRole FROM role WHERE role_label = ?))';
+
+                $this->database->insert($sql, [$userId, $role]);
+
+        }
+        public function getRole($idUser){
+
+                $sql = 'SELECT  ro.role_label
+                        From  user_role ur
+                        INNER JOIN role ro on ro.idRole = ur.idRole
+                        Where ur.idUser = ?';
+
+                $role = $this->database -> getAllResults($sql,[$idUser]);
+                return array_map(function($item){
+                        return $item['role_label'];
+    
+                    },$role);
+                    
+                
+        }
 
 
 }

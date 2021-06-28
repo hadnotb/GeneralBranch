@@ -1,6 +1,6 @@
 <?php use App\Framework\UserSession;?>
+<section id="page-article">
     <article>
-        
                 <div class = article>
                 
                     <h3 class = "articleTitle"><?=$article['title'];?></h3>
@@ -10,7 +10,7 @@
                 </div>
         
         <?php if (UserSession::isAuthenticated()): ?>
-        <form class = "formCom" action="/add-comment" method="post">
+        <form id="add-comment-form" class = "formCom" action="/add-comment" method="post">
             <fieldset >
                 <legend>Ajouter un commentaire</legend>
                 <div>
@@ -35,12 +35,12 @@
         
                     
                
-            
+         
 
-
+                    
     </article>
        
+    </section>
 
-
-      
+    <script src="<?=asset('js/article.js')?>"></script>   
   

@@ -1,0 +1,28 @@
+<h2>Tableau de bord</h2>
+
+<nav>
+        <h3><a href="<?php echo buildUrl('add-article');?>">Ajouter un article</a></h3>
+</nav>
+
+<table>
+    <tr>
+        <th>Id de l'article</th>
+        <th>Date</th>
+        <th>Auteur</th>
+        <th>Titre</th>
+        <th colspan="2">Gérer les articles</th>
+    </tr>
+    <?php foreach ($articles as $article) : ?>
+    <!-- On saisit ici la ligne de l'article grâce à son id situé en base de données. -->
+    <tr id="article-<?=$article['article_id'];?>">
+    <td><?php echo $article['article_id']?></td>
+    <td><?=(new DateTimeImmutable($article['created_at']))->format('d/m/Y');?></td>
+    <td><?=$article['firstname']?> <?=$article['lastname']?></td>
+    <td><?php echo htmlspecialchars($article['title'])?></td>
+    <!-- Création de la route qui permet la modification de l'article en fonction de son URL grâce à la fonction buildUrl -->
+    <td><a href="<?php echo buildUrl('edit-article', ['id' => $article['article_id']]);?>" title="Modifier">Modifier</a></td>
+    <td><a class="delete-button" href="<?php echo buildUrl('delete-article', ['id' => $article['article_id']]);?>" title="Supprimer">Supprimer</a></td>
+    </tr>
+    <?php endforeach ; ?>
+</table>
+<script src="<?=asset('js/admin.js');?>"></script>

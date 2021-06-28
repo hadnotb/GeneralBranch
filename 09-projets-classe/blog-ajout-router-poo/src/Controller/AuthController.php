@@ -18,15 +18,21 @@ class AuthController extends AbstractController{
             $password = $_POST['password'];
             $user = $userModel -> checkCredentials($email,$password);
             
+           
         
             if($user == false){
         
                  FlashBag::addFlash('Identifiant incorrect', 'error');
             }
             else{
-
-                UserSession::register($user['idUser'],$user['firstname'],$user['lastname'],$user['email']);
                 
+                $roles = $userModel ->getRole($user['idUser']);
+                dump($roles);
+                
+            
+                
+                UserSession::register($user['idUser'],$user['firstname'],$user['lastname'],$user['email'],$roles);
+                dump($_SESSION);
                 FlashBag::addFlash('Bonjour '. $user['firstname']. ', merci de vous etre connecté');
 
                 header('Location: ' . buildUrl('homepage'));

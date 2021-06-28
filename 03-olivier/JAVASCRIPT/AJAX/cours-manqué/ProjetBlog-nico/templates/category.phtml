@@ -1,0 +1,13 @@
+<?php foreach ($articles as $article) : ?>
+    <article>
+        <h3><?php echo $article['title']?></h3>
+        <p><?=(new DateTimeImmutable($article['created_at']))->format('d/m/Y');?></p> <!--Avec l'objet DateTimeImmutable, il est possible de changer le format de date pour passer du type américain (Année, Mois, Jour) au format français (Jour, Mois Année) grâce à format(d (day) (m) (month) (Y) (Year). -->
+       
+        <p>Catégorie : <a href="<?php echo buildUrl('category', ['categoryId' => $article['category_Id']]);?>"><?=$article['label'];?></a> </p>
+            <p><?= mb_substr($article['content'], 0, 150);?> [...]</p> <!-- La fonctionnalité PHP nb_sbstr coupe un texte selon le nombre de caractères, ici, à partir de 150 caractères en partant de 0, on ne voit pas la suite. Il prend en paramètre la variable $article en prenant dans le tableau le contenu de la colonne SQL ['content']. -->
+         <!-- On fait une boucle foreach afin de parcourir tous les éléments provenant de la base de données , puis dans la variable $article passent tous les articles de la catégorie et enfin entre crochets on met la colonne de la base de données que l'on veut afficher. On construit l'URL à partir de la catégorie. On prend en paramètre la table category, la clé categoryId qui est la route provenant de index.php, puis dans la variable $article on récupère la colonne category_Id de la table article et à la suite le label à savoir, le titre de la catégorie. Ensuite, le contenu de l'article par le content. 
+         
+         Avec mb_substr, il est possible de couper un article en donnant en paramètre le premier élément de la chaîne de caractère que l'on veut conserver jusqu'au dernier, ici de 0 à 50. On verra apparaître ainsi les 150 premiers éléments de la chaîne de caractères.. -->
+         <a href="/article?id=<?=$article['article_id'];?>">Lire la suite</a> <!-- Permet de nous rendre sur la page article.php. ATTENTION ! afin d'éviter de confondre l'id de la catégorie, et l'id de l'article, il faut mettre un alias dans la requête SQL, ici, art.id AS article_id. -->
+         </article>
+<?php endforeach ; ?>

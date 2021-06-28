@@ -10,7 +10,7 @@ class UserSession {
             session_start();
         }
     }
-    static public function register($idUser,$firstname,$lastname,$email)
+    static public function register($idUser,$firstname,$lastname,$email,$role)
     {
         SELF::sessionCheck();
         // if (!array_key_exists('user', $_SESSION) || is_null($_SESSION['user'])) 
@@ -31,7 +31,8 @@ class UserSession {
             'userId' => $idUser,
             'firstname' => $firstname,
             'lastname' => $lastname,
-            'email' => $email
+            'email' => $email,
+            'role' =>$role
         ];
     }
     static public function isAuthenticated(){

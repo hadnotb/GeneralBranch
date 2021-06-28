@@ -1,0 +1,60 @@
+body
+{
+    margin: 10px;
+    padding: 10px;
+    background-image:url('../IMG/cesar-couto-27HiryxnHJk-unsplash.jpg');
+    background: cover, no-repeat;
+    font-family: 'calibri';
+}
+h1, h2, h3, p, a, span
+{
+    color: rgb(0, 21, 139);
+    text-align:justify;
+}
+article 
+{
+    border: 1px white solid;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+article li
+{
+    list-style: none;
+}
+legend, label
+{
+    color: darkblue;
+    text-align:justify;
+    margin: 10px;
+}
+input
+{
+    margin: 10px;
+    padding: 5px;
+    background-color: white;
+    color: black;
+}
+table
+{
+    text-align:center;
+    color: darkblue;
+    border: solid darkblue 1px;
+    margin-top: 10px;
+}
+th
+{
+    border: solid darkblue 1px;
+    padding: 10px;
+}
+tr
+{
+    border: solid darkblue 1px;
+    padding: 10px;
+}
+
+td
+{
+    border: solid darkblue 1px;
+    padding: 10px;
+}

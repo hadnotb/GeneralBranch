@@ -1,0 +1,13 @@
+.error {
+    color: crimson;
+    padding: 5px;
+    border:1px solid crimson;
+    border-radius: 5px;
+}
+
+.success {
+    color: forestgreen;
+    padding: 5px;
+    border:1px solid forestgreen;
+    border-radius: 5px;
+}

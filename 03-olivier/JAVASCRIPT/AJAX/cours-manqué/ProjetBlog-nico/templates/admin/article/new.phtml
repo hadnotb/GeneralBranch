@@ -1,0 +1,27 @@
+<section>
+    <h2>Rédiger un article</h2>
+    <!-- On donne le nom de la route vers quel page de traitement doit s'effectuer l'insertion du nouvel article dans le buildUrl qui construit l'URL vers la page correspondante. Cette route a été préalablement établie dans le fichier routes.php dans la variable $routes.  -->
+    <form action="<?php echo buildUrl('add-article');?>" method="POST">
+    <p>
+    <!-- Le for du label doit correspondre au id de l'input. Enfin, le name correspond à ce qui sera transmis en $_POST [''] sur la page de traitement du formulaire.  -->
+    <label for="title">Nom de l'article : </label>
+    <input type="text" name="title" id="title" >
+    <br />
+    <label for="category">Catégorie : </label>
+    <!-- On récupère la totalité des catégories via la boucle foreach qui récupère dans ArticleController le tableau associatif contenant les catégories dans la clé categories qui revient ici en variable $categories que l'on parcourt en boucle foreach pour chaque catégorie correspondante dans la base de données. LE NOM DE LA CLÉ DEVIENT UNE VARIABLE ICI. -->
+    <select id="category" name="category" required>
+        <?php foreach ($categories as $category): ?>
+            <?php $selected = isset($selectedCategory) && $category['id'] == $selectedCategory ? 'selected' : ''; ?>
+            <!-- Dans option value="", le $category prend en paramètre la colonne de la base de données correspondante à la table category, ici id, puis label, à savoir, le nom de la catégorie. -->
+            <option <?=$selected?> value="<?=$category['id'];?>"><?=$category['label'];?></option>
+        <?php endforeach; ?>
+    </select>
+    <br />
+    <label for="content">Contenu : </label>
+    <br />
+    <textarea name="content" id="content" cols="100" rows="20"></textarea>
+    <br />
+    <input type="submit" value="Ajouter un nouvel article">
+    </p>
+    </form>
+</section>

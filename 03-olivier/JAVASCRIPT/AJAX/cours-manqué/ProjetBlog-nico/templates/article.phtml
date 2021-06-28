@@ -1,0 +1,42 @@
+<article>
+        <h2><?= $article['title'];?></h2>
+        <p>Écrit par : <?=$article['firstname']?> <?=$article['lastname']?></p> <!-- Affichage du titre de l'article à partir de la base de données via la variable $article. -->
+        <p>Date de Création : <?= (new DateTimeImmutable($article['created_at']))->format('d/m/Y') ;?><p>
+        <p>Catégorie : <?=$article['category_label'];?></p> <!-- Affichage de la date de création l'article à partir de la base de données via la variable $article. -->
+        <p><?= $article['content'];?></p> <!-- Affichage du contenu de l'article à partir de la base de données via la variable $article. -->
+
+
+        <!-- Création du formulaire d'ajout de commentaires -->
+        <!-- Le formulaire d'ajout de commentaire ne s'affiche que si l'on est connecté... -->
+<?php if (App\Framework\UserSession::isAuthenticated()):?>
+        <form action="/add-comment" method="post" id="add-comment-form">
+            <fieldset>
+                <legend>Ajouter un commentaire</legend>
+                <div>
+                    <label for="content">Commentaire</label>
+        <!-- On terminera en ajoutant de la validation côté client, grâce à l’attribut HTML required sur le champ content : -->
+                    <textarea required id="content" name="content"></textarea>
+                </div>
+                <input type="hidden" name="article-id" value="<?=$article['article_id'];?>"> <!-- Permet de nous rendre sur la page article.php. ATTENTION ! afin d'éviter de confondre l'id de la catégorie, et l'id de l'article, il faut mettre un alias dans la requête SQL, ici, art.id AS article_id dans value. -->
+                <input type="submit" value="Envoyer">
+            </fieldset>
+        </form>
+<?php else: ?>
+    <!-- Sinon, on invite l'utilisateur à se connecter pour que le formulaire d'ajout de commentaires puisse apparaître. -->
+    <p><a href="<?=buildUrl('login');?>">Connectez-vous</a> pour ajouter un commentaire.</p>
+<?php endif; ?>
+    </article>
+    
+<!-- Affichage des commentaires -->
+<?php if ($comments): ?>
+    <ul>
+        <?php foreach ($comments as $comment): ?>
+            <li>
+            <!-- On récupère dans la base de données le nom, le prénom et la date du commentaire dans le format français, ainsi que son contenu. -->
+                <h3>Ajouté par <?=htmlspecialchars($comment['firstname'] . ' ' . $comment['lastname']);?> le <?=(new DateTimeImmutable($comment['created_at']))->format('d/m/Y');?></h3>
+                <p><?=$comment['content'];?></p>
+            </li>
+        <?php endforeach; ?>
+    </ul>
+<?php endif; ?>
+<script src="<?=asset('js/article.js');?>"></script>

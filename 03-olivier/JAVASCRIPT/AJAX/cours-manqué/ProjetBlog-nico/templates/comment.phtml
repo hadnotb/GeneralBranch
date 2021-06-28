@@ -1,0 +1,5 @@
+<li>
+<!-- On récupère dans la base de données le nom, le prénom et la date du commentaire dans le format français, ainsi que son contenu. -->
+    <h3>Ajouté par <?=htmlspecialchars($comment['firstname'] . ' ' . $comment['lastname']);?> le <?=(new DateTimeImmutable($comment['created_at']))->format('d/m/Y');?></h3>
+        <p><?=$comment['content'];?></p>
+</li>

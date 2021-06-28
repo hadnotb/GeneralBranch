@@ -37,8 +37,9 @@ class AccountController extends AbstractController{
         
         
         
+                $userId = $userModel->insertUser($firstname, $lastname, $email, $hash); 
                 
-                $userModel -> insertUser($firstname,$lastname,$email,$hash);
+                $userModel->addRole($userId, UserModel::ROLE_USER);
         
                 FlashBag::addFlash('Votre compte a bien été pris en compte ;)');
                 header('Location: ' . buildUrl('homepage'));

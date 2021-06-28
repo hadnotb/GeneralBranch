@@ -1,0 +1,31 @@
+<section>
+    <h2>Dashboard</h2>
+
+    <nav>
+        <a href="<?= buildUrl('admin_article_new')?>">Ajouter un article</a>
+    </nav>
+
+    <table> 
+        <thead class ='tableauHead'>
+            <th>Article n=°</th>
+            <th>Date de création</th>
+            <th>Titre</th>
+            <th>Auteur</th>
+            <th>Modifier</th>
+        </thead>
+        <tbody>
+            <?php foreach ($articles as $article): ?>
+                <tr>
+                    <td><?=intval($article['idArticle']);?></td>
+                    <td><?=(new DateTimeImmutable($article['created_at']))->format('d/m/Y');?></td>
+                    <td><?=htmlspecialchars($article['title']);?></td>
+                    <td><?=$article['firstname']?></td>
+                    <td>
+                        <a href="<?=buildUrl('admin_article_edit', ['id' => $article['idArticle']]);?>" title="Modifier"><i class="far fa-edit"></i></a>
+                        <a href="" title="Supprimer"><i class="far fa-trash-alt"></i></a>
+                    </td>
+                </tr>
+            <?php endforeach; ?>
+        </tbody>
+    </table>
+</section>

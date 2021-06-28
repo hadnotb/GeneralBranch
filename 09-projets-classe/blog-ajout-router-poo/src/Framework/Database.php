@@ -48,5 +48,13 @@ class Database{
 
         return $results;
     }
+
+    function insert(string $sql, array $params = [])
+    {
+        $pdoStatement = $this->pdo->prepare($sql);
+        $pdoStatement->execute($params);
+
+        return $this->pdo->lastInsertId();
+    }
     
 }
