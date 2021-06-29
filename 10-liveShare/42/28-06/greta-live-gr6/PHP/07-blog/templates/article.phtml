@@ -1,0 +1,5 @@
+<article>
+    <h2><?= $article['title'];?></h2>
+    <small><?= (new DateTimeImmutable($article['created_at']))->format('d/m/Y') ;?></small>
+    <p><?= $article['content'];?></p>
+</article>

@@ -1,0 +1,37 @@
+body {
+  background-color: #d48585;
+  color: black;
+  margin: 0;
+}
+
+.siteHeader {
+  display: block;
+  background-color: white;
+  height: 250px;
+}
+
+.navMenu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.siteTitle {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+tr, th, td {
+  border: 2px solid black;
+}
+/*# sourceMappingURL=style.css.map */

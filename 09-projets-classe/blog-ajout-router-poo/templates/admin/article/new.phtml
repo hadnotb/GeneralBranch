@@ -1,3 +1,6 @@
+<?php use App\Framework\UserSession;?>
+<?php if (UserSession::hasRole('ADMIN','EDITOR')):?>
+
 <section>
     <h2>Rédiger un article</h2>
 
@@ -25,7 +28,14 @@
             <div>
                 <button type="submit">Ajouter</button>
             </div>
-            
+            <div>
+                <label for="img">Select image:</label>
+                <input type="file" id="img" name="img" accept="image/*">
+                <input type="submit">
+            </div>
         </fieldset>
     </form>
 </section>
+<?php else : ?>
+<?php header('Location: ' . buildUrl('homepage'));?>
+<?php endif?>

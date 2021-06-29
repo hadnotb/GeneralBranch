@@ -1,0 +1,123 @@
+
+         <!-- <?php else : ?>  -->
+
+
+        <?php foreach ($category as $article): ?>
+              <h3 ><?=htmlspecialchars($article['libCategorie']);?></h3>
+              
+        <?php endforeach; ?>
+
+      <?php endif ; ?>         
+
+        <?php if ($article): ?>
+      <?php else: ?>      
+
+                <?php foreach ($articles as $article): ?>
+                    <li>
+                        <h3 ><?=htmlspecialchars($article['title']);?></h3>
+                        <p >Date de création : <?=(new DateTimeImmutable($article['created_at']))->format('d/m/Y');?></p>
+                        
+                        <div><?=htmlspecialchars(mb_substr($article['content'],0,150));?></div>
+
+                        <a href="<?=buildUrl('article', ['id' => intval($article['idArticle'])]);?>">Lire la suite</a>
+
+                        <a href="<?=buildUrl('category',['id' => intval($article['idCategorie'])])?>"><?= $article['libCategorie']?></a>
+                    </li>
+                <?php endforeach; ?>
+        <?php endif; ?>   
+
+
+Que nous reste il a faire ? -> Verification de l'email 
+                            -> Page mon compte 
+                            -> Mot de passe oublié 
+                            -> Champ confirmation mot de passe 
+                            -> Proteger les commentaires 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                            / public function edit()
+//     {          
+//         if(!UserSession::hasRole('ADMIN','EDITOR')){
+//             http_response_code(403);
+//             echo "Accés interdit";
+//             exit;
+//         }    
+//         $id = $_GET['id'];
+        
+        
+        
+        
+        
+//         if(!empty($_POST))
+//         {
+
+//             // On récupère les données du formulaire
+//             if(!UserSession::hasRole('ADMIN','EDITOR')){
+//                 http_response_code(403);
+//                 echo "Accés interdit";
+//                 exit;
+//             }
+           
+//             $title = trim($_POST['title']);
+//             $content = trim($_POST['content']);
+//             $$idCat = intval($_POST['category']);
+//             $userId = UserSession::getId();
+            
+//             $img=trim($_FILES['img']['name']);
+            
+//             if(!$title){FlashBag::addFlash('Titre obligatoire','error');}
+//             if(!FlashBag::hasMessages('error'))
+//             {
+//                 if ($_FILES['img'] && $_FILES['img']['error'] == 0)
+//                 {
+
+//                     if($_FILES['img']['size'] <= 1000000)
+//                     {
+
+//                         $infosfichier = pathinfo($_FILES['img']['name']);
+//                         dump($infosfichier);
+//                         $extension_upload = $infosfichier['extension'];
+//                         dump($extension_upload);
+//                         $extensions_autorisees = array('jpg', 'jpeg', 'gif', 'png');
+//                         if (in_array($extension_upload,$extensions_autorisees))
+//                         {
+
+//                             move_uploaded_file($_FILES['img']['tmp_name'],PROJECT_BASE_DIR."/public/img"."/".$img);
+//                         }
+//                     }
+                
+//                 }
+//                 $articleModel = new ArticleModel;
+//                 $articleModel -> editArticle($title,$content,$idCat,$img,$id);    
+//                 // $article = $ArticleModel -> getOneArticle($id);
+//                 // $categoryModel = new CategoryModel;
+//                 // $categories = $categoryModel -> getAllCategorie();
+//                 // $articlemodel = new ArticleModel;
+//                 // $articlemodel -> editArticle($title,$content,$categoryId,$userId,$img);
+                
+//                 $this -> redirect('admin');
+//             }
+
+//             // return $this->render('admin/article/edit',[
+//             // 'article' => $article,
+//             // 'categories' => $categories
+//             // ]);
+
+//         }
+    
+
+//     }

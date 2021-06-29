@@ -12,7 +12,12 @@ class ArticleController extends AbstractController{
     public function new()
     {   
         if($_POST)
-        {
+        {   
+            if(!UserSession::hasRole('ADMIN','EDITOR')){
+                http_response_code(403);
+                echo "Accés interdit";
+                exit;
+            }
             $title = trim($_POST['title']);
             $content = trim($_POST['content']);
             $categoryId = intval($_POST['category']);
@@ -36,7 +41,11 @@ class ArticleController extends AbstractController{
     }
     public function edit()
     {          
-            
+        if(!UserSession::hasRole('ADMIN','EDITOR')){
+            http_response_code(403);
+            echo "Accés interdit";
+            exit;
+        }    
         $id = $_GET['id'];
         // $title = $_GET['title'];
         // dump($title);

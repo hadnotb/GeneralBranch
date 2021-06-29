@@ -1,3 +1,6 @@
+<?php use App\Framework\UserSession;?>
+<?php if (UserSession::hasRole('ADMIN','EDITOR')):?>
+
 <section>
     <h2>Modifier un article </h2>
 
@@ -30,3 +33,6 @@
         </fieldset>
     </form>
 </section>
+<?php else : ?>
+<?php header('Location: ' . buildUrl('homepage'));?>
+<?php endif?>

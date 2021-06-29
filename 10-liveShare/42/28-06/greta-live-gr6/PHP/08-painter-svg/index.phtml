@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painter SVG POO</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Paniter SVG</h1>
+    </header>
+    <main>
+        <svg width="1200" height="600" id="painter">
+            <!-- Appel des fonctions PHP pour dessiner les formes géométriques --> 
+            <?= genRectangle(10, 100, 150, 100, 'crimson', 0.8); ?>
+            <?= genSquare(250, 100, 100, 'forestgreen', 0.5); ?>
+            <?= genEllipse(100, 200, 25, 100, 'orange', 1); ?>
+            <?= genCircle(500, 300, 50, 'darkblue', 0.5); ?>
+            <?= genTriangle(240, 25, 50, 650, 200, 104, 'yellow', 0.9); ?>
+            <?= genPolygon([410, 95, 620, 120, 740, 350, 600, 400], 'red', 0.7); ?>
+        </svg>
+    </main>
+</body>
+</html>

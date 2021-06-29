@@ -1,0 +1,41 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: .625em; /* équivalence "10px" sur l'élément racine */
+    font-size: calc(1em * .625); /* IE9-IE11 math fixing. See http://bit.ly/1g4X0bX */
+}
+
+body {
+    font-size: 1.4em; /* taille de base pour tous les éléments équivalent 14px */
+    font-family: 'Roboto', sans-serif;
+}
+
+.work-percentage-calculator {
+    width: 100%;
+    max-width: 600px;
+    margin-left:auto;
+    margin-right: auto;
+    padding-top: 50px;
+}
+
+.work-percentage-calculator label {
+    display: block;
+}
+
+.work-percentage-calculator .field-group {
+    margin: 0 0 25px 0;
+}
+
+.work-percentage-calculator label {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.range-value {
+    display: block;
+    width: 150px;
+    border-radius:0.5rem;
+    font-size: 2rem;
+}

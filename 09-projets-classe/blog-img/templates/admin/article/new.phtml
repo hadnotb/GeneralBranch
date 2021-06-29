@@ -1,0 +1,44 @@
+<?php use App\Framework\UserSession;?>
+<?php if (UserSession::hasRole('ADMIN','EDITOR')):?>
+
+<section>
+    <h2>Rédiger un article</h2>
+
+    <form action="<?=buildUrl('admin_article_new');?>" method="POST"  enctype="multipart/form-data">
+        <fieldset>
+            <div>
+                <label for="title">Titre</label>
+                <input type="text" id="title" name="title" value="">
+            </div>
+            <div>
+                <label for="content">Contenu</label>
+                <textarea id="content" name="content"></textarea>
+            </div>
+            <div>
+                <label for="category">Catégorie</label>
+                <select id="category" name="category">
+                <?php foreach ($categories as $categorie):?>
+
+                    <option value="<?=$categorie['idCategorie'];?>"><?=$categorie['libCategorie'];?></option>
+
+                <?php endforeach;?>
+                    
+                </select>
+            </div>
+           
+            <div>
+                <label for="img">Select image:</label>
+                <input type="file" id="img" name="img" accept="image/*">
+                
+                
+                
+            </div> 
+            <div>
+                <button type="submit">Ajouter</button>
+            </div>
+        </fieldset>
+    </form>
+</section>
+<?php else : ?>
+<?php header('Location: ' . buildUrl('homepage'));?>
+<?php endif?>
