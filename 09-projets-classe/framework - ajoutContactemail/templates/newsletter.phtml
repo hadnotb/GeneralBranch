@@ -1,0 +1,27 @@
+<section>
+
+
+    <form class="newsletter-form" action="<?=buildUrl('newsletter');?>" method="POST">
+        <fieldset>
+            <legend>Abonnez vous a la newsletter</legend>
+            
+            <div>
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" value="<?=htmlspecialchars($email);?>" required>
+            </div>
+            <div>
+                <label for="">Ou avez vous connu ce site ?</label> 
+
+                <Select name ="origins">
+                    <option value="3">Publicité a la TV </option>
+                    <option value="2">Recherche sur internet </option>
+                    <option value="1">Un ami m'en a parler </option>
+                </Select> 
+            </div>
+            <input type="submit" value="S'abonner">
+            
+        </fieldset>
+    
+        
+    </form>
+</section>
