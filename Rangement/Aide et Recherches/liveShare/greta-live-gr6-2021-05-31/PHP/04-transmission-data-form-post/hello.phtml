@@ -1,0 +1,70 @@
+<?php
+
+/**
+ * Ici on est dans le fichier de template : on a tout le code HTML et quelques bouts de code PHP
+ * On cherche à avoir le moins de code PHP possible ici. On peut avoir des boucles, des conditions, 
+ * et principalement des echo pour intégrer des données dans le code HTML
+ */
+
+ ?>
+ 
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bienvenue PHP</title>
+</head>
+<body>
+    <header>
+        <h1>Introduction à PHP !</h1>
+    </header>
+    <main>
+        <section>
+            <h2>Transmission via le corps de la requête dans un formulaire en POST</h2>
+            <form action="hello.php" method="POST">
+                <div>
+                    <label for="lastname">Votre nom</label>
+                    <input type="text" id="lastname" name="lastname">
+                </div>
+                <div>
+                    <label for="firstname">Votre prénom</label>
+                    <input type="text" id="firstname" name="firstname">
+                </div>
+                <div>
+                    <label for="city">Votre ville</label>
+                    <select id="city" name="city">
+                        <!-- Résultat attendu 
+                        <option value="0">Aix-en-Provence</option>
+                        <option value="1">Marseille</option>
+                        <option value="2">Paris</option>
+                        -->
+
+                        <!-- construction dynamique des options de la liste déroulante à partir du tableau de ville $cities -->
+                        <?php foreach ($cities as $index => $city): ?>
+                            <option value="<?=$index;?>"><?=$city;?></option>
+                        <?php endforeach; ?>
+                    </select>
+                </div>
+                <div>
+                    <input type="radio"id="masculin" name="sexe" value="masculin" checked>
+                    <label for="masculin">Homme</label>
+                </div>
+                <div>
+                    <input type="radio"id="feminin" name="sexe" value="féminin">
+                    <label for="feminin">Femme</label>
+                </div>                 
+                <input type="submit" value="Valider">
+            </form>
+        </section>
+
+        <!-- si la variable $message est définie... -->
+        <?php if (isset($message)): ?>
+
+            <!-- ...on affiche le message ! -->
+            <p><?php echo $message; ?></p>
+        <?php endif; ?>
+    </main>
+</body>
+</html>

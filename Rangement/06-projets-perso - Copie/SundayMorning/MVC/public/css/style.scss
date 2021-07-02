@@ -1,0 +1,106 @@
+@import"variable";
+
+@font-face {
+    font-family: "Apercu";
+    src: url("font/apercu/apercu_regular.ttf") format("truetype");
+    font-weight: 400;
+   }
+  
+   @font-face {
+    font-family: "Apercu";
+    src: url("font/apercu/apercu_bold.ttf") format("truetype");
+    font-weight: 800;
+   }
+  
+   @font-face {
+    font-family: "Apercu";
+    src: url("font/apercu/apercu_regular_italic.ttf") format("truetype");
+    font-weight: 400;
+    font-style: italic;
+}
+
+body{
+    margin: auto;
+    font-family: "Apercu";
+    font-weight: 400;
+}
+
+.SiteHeader{
+    margin: 0;
+    padding: 1em;
+    background-color: $firstColor;
+    min-height: 100px;
+    
+    
+    &-background{
+        text-align: center;
+    }
+    &-logo{
+        margin-top: 18px;
+        width: 100px;
+    }
+    &-nav-link{
+
+        text-decoration: none;
+        line-height: 25px;
+
+    }
+    // &-bars{
+    //     margin-right: auto;
+    //     margin-left: auto;
+    // }
+    
+}  
+
+// .fas{
+//     .fa-bars{
+//         text-align: center;
+
+//     }
+// }          
+      
+#MenuBars{
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    &:hover
+    {
+        color:red;
+    }   
+    &:visited
+    {
+        color: black;
+    }
+
+    
+}
+#MenuLink{
+    display: none;
+    text-align: center;
+    &:visited
+    {
+        color: black;
+    }
+}
+#MenuClose{
+    display: none;
+    text-align: center;
+    &:visited
+    {
+        color: black;
+    }
+    
+
+
+}
+
+@media screen and (min-width : 600px){
+
+    #MenuBars,#MenuClose{
+        display: none;
+    }
+    #MenuLink{
+        display: inline-block;
+    }
+
+}

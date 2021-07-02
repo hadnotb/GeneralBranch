@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sunday Morning Aix</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="<?=asset('css/style.css');?>">
+</head>
+<body class = "PageWrapper">
+    <header class = 'SiteHeader'>
+        <div class ='SiteHeader-background'>
+            <svg  class = 'SiteHeader-logo' viewBox="0 0 322 143" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M322 143H298.112C298.6 126.729 295.412 110.536 288.739 95.3766C282.065 80.2174 272.04 66.3992 259.255 54.7376C246.47 43.076 231.185 33.8073 214.301 27.4785C197.417 21.1497 179.277 17.8891 160.951 17.8891C142.626 17.8891 124.486 21.1497 107.602 27.4785C90.718 33.8073 75.4326 43.076 62.6479 54.7376C49.8631 66.3992 39.8379 80.2174 33.1642 95.3766C26.4904 110.536 23.3032 126.729 23.7907 143H0C0 105.074 16.9625 68.7014 47.1558 41.8837C77.3492 15.066 118.3 0 161 0C203.7 0 244.651 15.066 274.844 41.8837C305.038 68.7014 322 105.074 322 143V143Z" fill="#26231E"/>
+            </svg>
+        </div>
+        
+        <a id="MenuBars" href="#" class="SiteHeader-bars"><i class="fas fa-bars"></i></a>    
+        <nav id="Menu" class = 'SiteHeader-nav'>
+            <a id="MenuClose" href="#" class="SiteHeader-nav-link noBurger"><i class="fas fa-times"></i></a>
+            <a id="MenuLink" href="#" class="SiteHeader-nav-link">Nouveautés </a>
+            <a id="MenuLink"href="#" class="SiteHeader-nav-link">Marques</a>
+            <a id="MenuLink" href="#" class="SiteHeader-nav-link">Promos</a>
+            <a id="MenuLink" href="#" class="SiteHeader-nav-link">Categorie</a>
+        </nav>
+    </header>
+<main class = "Principal">
+    <?php include TEMPLATE_DIR . '/' . $template . '.phtml';?>
+</main>
+<aside>
+    
+</aside>
+    <script src="<?=asset('js/main.js');?>"></script>
+</body>
+</html>

@@ -1,0 +1,10 @@
+
+
+Bibliotheque de mail php : 
+    -PHPMailer
+    -Swift Mailer ou Symfony/Mailer
+
+REcup template mail "Mailchimp"
+
+
+

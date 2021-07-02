@@ -48,6 +48,8 @@ class ArticleController extends AbstractController{
                             move_uploaded_file($_FILES['img']['tmp_name'],PROJECT_BASE_DIR."/public/img"."/".$img);
                         }
                     }
+                    // Recuperer le poid avec filesize ou path-info
+                    // 
                 
 
                 }

@@ -16,7 +16,8 @@ $routes = [
     'article' => [
         'path' => '/article',
         'controller' => 'Article',
-        'method' => 'index'
+        'method' => 'index',
+        'isParam' => true
     ]
 
 ];

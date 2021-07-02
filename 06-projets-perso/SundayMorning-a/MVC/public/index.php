@@ -5,7 +5,7 @@ require __DIR__ . '/../library/functions.php';
 
 
 $path = $_SERVER['PATH_INFO'] ?? '/';
-
+dump($path);
 
 $routes = [];
 $routes = [
@@ -17,8 +17,6 @@ $routes = [
                 'controller'=>'article.php',
              'isParam' => true],
                 
-
-
 "categorie"=> ['path' => '/categorie',
                     'controller' => 'categorie.php'],
 
@@ -42,7 +40,7 @@ foreach ($routes as $route) {
     $curPath = $path;
     $isParam = (isset($route['isParam']) && $route['isParam']);
     if($isParam) {
-        $getParams = explode('/', $path);
+        $getParams = explode('/', $path); 
         $curPath = '/' . $getParams[1];
     }
 

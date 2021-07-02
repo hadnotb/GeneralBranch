@@ -1,0 +1,7 @@
+-Ouvrir PhpMyAdmin et importer la base de donnée présente dans le dossier "migrations".
+-Ouvrir le dossier Framework dans un editeur de code.
+-Ouvrir le fichier "config.php" et entrer les informations nécéssaire pour la connexion a la base de donnée dans les guillemet vide.
+-Installer 'composer'(Logiciel qui gere les package PHP).
+-Ouvrir l'invite de commande et se placer dans le dossier racine "framework" puis taper : "composer require symfony/var-dumper" pour telecharger la librairie var-dumper.
+-Ouvrir une nouvelle fenetre de l'invite de commande et taper : "php -S localhost:8000 -t public" pour lancer le serveur interne et placer la porte :8000 dans le dossier public.
+-Taper : "localhost:8000" dans un navigateur : vous etes sur la page d'accueil.

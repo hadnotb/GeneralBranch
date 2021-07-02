@@ -1,0 +1,1 @@
+INSERT INTO `couleur` (`idCouleur`, `libCouleur`) VALUES ('1', 'Noir'), ('2', 'Blanc'), ('3', 'Bleu'), ('4', 'Rouge');

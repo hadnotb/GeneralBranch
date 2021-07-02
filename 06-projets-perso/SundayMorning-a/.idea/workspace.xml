@@ -2,11 +2,28 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9d8371ef-474a-4890-9b0b-a2c0c04c1f18" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../Sunday-Morning-Framework/11-framework-start/public/css/font/apercu/apercu_bold.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Sunday-Morning-Framework/11-framework-start/public/css/font/apercu/apercu_regular.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Sunday-Morning-Framework/11-framework-start/public/css/font/apercu/apercu_regular_italic.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Sunday-Morning-Framework/11-framework-start/public/css/style.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Sunday-Morning-Framework/11-framework-start/public/css/style.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Sunday-Morning-Framework/11-framework-start/public/css/variable.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Sunday-Morning-Framework/11-framework-start/public/css/variable.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Sunday-Morning-Framework/11-framework-start/public/css/variable.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Sunday-Morning-Framework/11-framework-start/app/routes.php" beforeDir="false" afterPath="$PROJECT_DIR$/../Sunday-Morning-Framework/11-framework-start/app/routes.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Sunday-Morning-Framework/11-framework-start/public/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/../Sunday-Morning-Framework/11-framework-start/public/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Sunday-Morning-Framework/11-framework-start/public/js/admin.js" beforeDir="false" afterPath="$PROJECT_DIR$/../Sunday-Morning-Framework/11-framework-start/public/js/admin.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Sunday-Morning-Framework/11-framework-start/public/js/article.js" beforeDir="false" afterPath="$PROJECT_DIR$/../Sunday-Morning-Framework/11-framework-start/public/js/article.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Sunday-Morning-Framework/11-framework-start/src/Controller/ArticleController.php" beforeDir="false" afterPath="$PROJECT_DIR$/../Sunday-Morning-Framework/11-framework-start/src/Controller/ArticleController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Sunday-Morning-Framework/11-framework-start/src/Framework/Router.php" beforeDir="false" afterPath="$PROJECT_DIR$/../Sunday-Morning-Framework/11-framework-start/src/Framework/Router.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Sunday-Morning-Framework/11-framework-start/src/Model/ArticleModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/../Sunday-Morning-Framework/11-framework-start/src/Model/ArticleModel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Sunday-Morning-Framework/11-framework-start/templates/article.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/../Sunday-Morning-Framework/11-framework-start/templates/article.phtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/SundayMorning.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/SundayMorning.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MVC/controller/article.php" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/controller/article.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MVC/controller/home.php" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/controller/home.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MVC/public/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/public/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/php.ini" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/php.ini.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../09-projets-classe/blog-img/src/Controller/Admin/ArticleController.php" beforeDir="false" afterPath="$PROJECT_DIR$/../../09-projets-classe/blog-img/src/Controller/Admin/ArticleController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../10-liveShare/Blog-2021-06-29/greta-live-gr6/PHP/10-blog-v2/config-example.php" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -14,7 +31,7 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/MVC/composer.json</pharConfigPath>
   </component>
   <component name="FUSProjectUsageTrigger">
@@ -47,23 +64,51 @@
         </counts>
       </usages-collector>
     </session>
+    <session id="-176639511">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="2" />
+          <entry key="project.open.time.0" value="2" />
+          <entry key="project.opened" value="2" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="php" value="2" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="PHP" value="2" />
+        </counts>
+      </usages-collector>
+    </session>
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/MVC/controller/article.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="289">
-              <caret line="17" column="20" selection-start-line="17" selection-start-column="20" selection-end-line="17" selection-end-column="20" />
+              <caret line="23" column="14" selection-start-line="23" selection-start-column="14" selection-end-line="23" selection-end-column="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/MVC/public/index.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1071">
+              <caret line="63" selection-start-line="63" selection-end-line="63" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/stubs/PDO/PDO.php">
+        <entry file="file://$PROJECT_DIR$/MVC/src/Framework/AbstracModel.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1607">
-              <caret line="1173" column="20" selection-start-line="1173" selection-start-column="20" selection-end-line="1173" selection-end-column="20" />
+            <state relative-caret-position="204">
+              <caret line="12" column="1" lean-forward="true" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -94,11 +139,11 @@
       <path value="$PROJECT_DIR$/MVC/vendor/symfony/polyfill-php80" />
     </include_path>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="260" />
-    <option name="y" value="20" />
-    <option name="width" value="1400" />
-    <option name="height" value="1000" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="614" />
+    <option name="y" value="10" />
+    <option name="width" value="1013" />
+    <option name="height" value="1037" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -106,28 +151,40 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
-              <item name="SundayMorning" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SundayMorning" type="462c0819:PsiDirectoryNode" />
+              <item name="SundayMorning-a" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SundayMorning-a" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="SundayMorning" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SundayMorning" type="462c0819:PsiDirectoryNode" />
+              <item name="SundayMorning-a" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SundayMorning-a" type="462c0819:PsiDirectoryNode" />
               <item name="MVC" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="SundayMorning" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SundayMorning" type="462c0819:PsiDirectoryNode" />
+              <item name="SundayMorning-a" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SundayMorning-a" type="462c0819:PsiDirectoryNode" />
               <item name="MVC" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
+              <item name="library" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="SundayMorning" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SundayMorning" type="462c0819:PsiDirectoryNode" />
+              <item name="SundayMorning-a" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SundayMorning-a" type="462c0819:PsiDirectoryNode" />
+              <item name="MVC" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SundayMorning-a" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SundayMorning-a" type="462c0819:PsiDirectoryNode" />
+              <item name="MVC" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="rsx" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SundayMorning-a" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SundayMorning-a" type="462c0819:PsiDirectoryNode" />
               <item name="MVC" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
             </path>
@@ -135,6 +192,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -166,23 +224,21 @@
       <option name="presentableId" value="Default" />
       <updated>1623654646843</updated>
       <workItem from="1623654647968" duration="2001000" />
+      <workItem from="1625225045566" duration="582000" />
+      <workItem from="1625230217871" duration="964000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2001000" />
+    <option name="totallyTimeSpent" value="3547000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="614" y="10" width="1013" height="1037" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info id="Favorites" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23504722" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" />
-      <window_info anchor="bottom" id="Terminal" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" />
@@ -190,10 +246,15 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="right" id="Database" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="9" />
+      <window_info anchor="bottom" id="Terminal" order="10" />
+      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Database" order="3" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -203,17 +264,31 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/MVC/controller/article.php">
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/stubs/PDO/PDO.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="20" selection-start-line="17" selection-start-column="20" selection-end-line="17" selection-end-column="20" />
+        <state relative-caret-position="46">
+          <caret line="1173" column="20" selection-start-line="1173" selection-start-column="20" selection-end-line="1173" selection-end-column="20" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/stubs/PDO/PDO.php">
+    <entry file="file://$PROJECT_DIR$/MVC/controller/article.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1607">
-          <caret line="1173" column="20" selection-start-line="1173" selection-start-column="20" selection-end-line="1173" selection-end-column="20" />
+        <state relative-caret-position="289">
+          <caret line="23" column="14" selection-start-line="23" selection-start-column="14" selection-end-line="23" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MVC/public/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1071">
+          <caret line="63" selection-start-line="63" selection-end-line="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MVC/src/Framework/AbstracModel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="1" lean-forward="true" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
         </state>
       </provider>
     </entry>

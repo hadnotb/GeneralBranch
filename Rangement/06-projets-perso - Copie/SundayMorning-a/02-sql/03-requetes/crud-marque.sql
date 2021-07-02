@@ -1,0 +1,1 @@
+INSERT INTO `marque` (`idMarque`, `libMarque`) VALUES ('1', 'Levi\\\'s'), ('2', 'Vans'), ('3', 'Volcom'), ('4', 'Lacoste');

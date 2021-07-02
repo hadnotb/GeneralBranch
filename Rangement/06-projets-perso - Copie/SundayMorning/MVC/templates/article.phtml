@@ -1,0 +1,35 @@
+<section class ="MainContent">
+    <?=dump('allller')?>
+    <div class="MainContent-ArticlePicture">
+        <?php foreach($images as $image):?>
+            <img src="<?php echo(IMAGE_URL . '/' . $image); ?>" alt="" class="ArticlePicture-articleimg" />
+        <?php endforeach ?>
+    </div>
+    <h1>HELLOO</h1>
+    <div class="MainContent-ArticleInfo">
+       <h2 class="ArticleInfo-titreArticle">Titre</h2>
+       <p class="ArticleInfo-prixArticle"></p>
+    </div>
+    <div class="ArticleInfo-coulArticle">
+        <h2 class="ArticleInfo-coulArticle-titre">Couleur</h2>
+        <img src="" alt="" class="coulVignet">
+        <img src="" alt="" class="coulVignet">
+        <img src="" alt="" class="coulVignet">
+        <img src="" alt="" class="coulVignet">
+        <img src="" alt="" class="coulVignet">
+    </div>
+    <div class="ArticleInfo-taiArticle">
+        <h2 class="ArticleInfo-taiArticle">Taille</h2>
+        <img src="" alt="" class="taiVignet">
+        <img src="" alt="" class="taiVignet">
+        <img src="" alt="" class="taiVignet">
+        <img src="" alt="" class="taiVignet">
+        <img src="" alt="" class="taiVignet">
+    </div>
+    <button class ='addButton'></button>
+    <div>
+        <h2 class="ArticleInfo-detailsTitre">Details</h2>
+        <p class="detailsContent"></p>
+    </div>
+
+</section>

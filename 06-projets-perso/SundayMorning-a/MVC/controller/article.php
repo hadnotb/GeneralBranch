@@ -23,6 +23,8 @@ $pdo = new PDO($dsn, DB_USER, DB_PASSWORD, [
 
 $idArt = $getParams[2];
 
+dump($getParams);
+
 $sql = 'call Sp_modelArticleLire(:idArt)';
 
 $pdoStatement = $pdo->prepare($sql);
@@ -31,8 +33,7 @@ $articles = $pdoStatement->fetchAll();
 $article = $articles[0];
 $images = explode(";", $article["imgLst"]);
 $template = 'article';
-dump($article);
-dump($images);
+
 include TEMPLATE_DIR . '/base.phtml';
 
 // return render ('article');

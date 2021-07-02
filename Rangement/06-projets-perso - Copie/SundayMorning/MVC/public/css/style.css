@@ -1,0 +1,66 @@
+body {
+  margin: auto;
+}
+
+.SiteHeader {
+  margin: 0;
+  padding: 1em;
+  background-color: #FFE542;
+  min-height: 100px;
+}
+
+.SiteHeader-background {
+  text-align: center;
+}
+
+.SiteHeader-logo {
+  margin-top: 18px;
+  width: 100px;
+}
+
+.SiteHeader-nav-link {
+  text-decoration: none;
+  line-height: 25px;
+}
+
+#MenuBars {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+}
+
+#MenuBars:hover {
+  color: red;
+}
+
+#MenuBars:visited {
+  color: black;
+}
+
+#MenuLink {
+  display: none;
+  text-align: center;
+}
+
+#MenuLink:visited {
+  color: black;
+}
+
+#MenuClose {
+  display: none;
+  text-align: center;
+}
+
+#MenuClose:visited {
+  color: black;
+}
+
+@media screen and (min-width: 600px) {
+  #MenuBars, #MenuClose {
+    display: none;
+  }
+  #MenuLink {
+    display: inline-block;
+  }
+}
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projet Todolist</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Todolist</h1>
+    </header>
+    <main>
+        <section class="task-add-form">
+
+            <!-- Affichage des erreurs le cas échéant --> 
+            <?php if (!empty($errors)): ?>
+                <?php foreach ($errors as $error): ?>
+                    <p class="error"><?=$error;?></p>
+                <?php endforeach; ?>
+            <?php endif; ?>
+
+            <!-- Affichage du message de succès le cas échéant --> 
+            <?php if (isset($success)): ?>
+                <p class="success"><?=$success;?></p>
+            <?php endif; ?>
+
+            <!-- formulaire d'ajout d'une tâche --> 
+            <form action="index.php" method="POST">
+                <div>
+                    <label for="title">Titre</label>
+                    <input type="text" id="title" name="title" value="<?=$title??'';?>">
+                </div>
+                <div>
+                    <label for="deadline">Deadline</label>
+                    <input type="date" id="deadline" name="deadline" value="<?=$deadline??'';?>">
+                </div>
+                <input type="submit" value="Enregistrer">
+            </form>
+            
+        </section>
+
+        <section class="task-list">
+
+            <h2>Liste des tâches</h2>
+
+            <!-- liste des tâches -->
+            <?php if (!empty($tasks)): ?>
+
+                <!-- on inclut la liste des tâches dans un formulaire de suppression -->
+                <form action="remove.php" method="POST">
+                    <ul>
+                        <?php foreach ($tasks as $index => $task): ?>
+                            <li>
+                                <input type="checkbox" name="tasks-to-delete[]" id="task-<?=$index;?>" value="<?=$index;?>">
+                                <label for="task-<?=$index;?>"><?=$task['title'];?> (Date limite : <?=$task['deadline'];?>)</label>
+                            </li>
+                        <?php endforeach; ?>
+                    </ul>
+                    <input type="submit" value="Supprimer">
+                </form>
+            <?php else: ?>
+                <p>Votre todolist est vide pour l'instant !</p>
+            <?php endif; ?>
+        </section>
+    </main>
+</body>
+</html>

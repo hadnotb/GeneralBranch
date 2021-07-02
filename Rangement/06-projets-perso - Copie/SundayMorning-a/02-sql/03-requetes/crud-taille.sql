@@ -1,0 +1,1 @@
+INSERT INTO `taille` (`idTaille`, `libTaille`) VALUES ('1', 'XS'), ('2', 'S'), ('3', 'M'), ('4', 'L'), ('5', 'Xl'), ('6', 'XXL');

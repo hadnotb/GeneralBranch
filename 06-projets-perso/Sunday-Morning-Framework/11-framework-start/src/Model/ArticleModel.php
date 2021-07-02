@@ -8,9 +8,11 @@ class ArticleModel extends AbstractModel {
 
     function getOneArticle(int $id): array
     {
+
         $sql = 'call Sp_modelArticleLire(:idArt)'; 
-        $article = $this ->database ->getOneResult($sql,[$id]);
+        $article = $this ->database ->getOneResult($sql,['idArt'=> $id]);
         return $article;
 
     }
+
 }

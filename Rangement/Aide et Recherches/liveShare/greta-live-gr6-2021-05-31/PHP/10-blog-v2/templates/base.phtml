@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--title>Mon blog! <?=isset($pageTitle)?$pageTitle:'';?></title-->
+    <title>Mon blog! <?=$pageTitle??'';?></title>
+    <link rel="stylesheet" href="<?=asset('css/style.css');?>">
+</head>
+<body>
+    <header>
+        <h1>Bienvenue sur mon blog !!</h1>
+        <nav>
+            <!-- menu de navigation -->
+        </nav>
+    </header>
+    <main>
+        <aside>
+            <?php if (hasMessages('error')):?>
+                <?php foreach (fetchMessages('error') as $error):?>
+                    <p class="error-message"><?=$error;?></p>
+                <?php endforeach; ?>
+            <?php endif; ?>
+
+            <?php if (hasMessages('success')):?>
+                <?php foreach (fetchMessages('success') as $message):?>
+                    <p class="success-message"><?=$message;?></p>
+                <?php endforeach; ?>
+            <?php endif; ?>
+        </aside>
+
+        <?php include TEMPLATE_DIR . '/' . $template . '.phtml'; ?>
+    </main>
+    <footer></footer>
+</body>
+</html>

@@ -1,0 +1,34 @@
+PageWrapper
+    SiteHeader
+        background
+            headerlogo
+        nav
+            navLink*?
+    Principal
+        MainContent
+            ArticlePicture
+                articleimg * 5
+            ArticleInfo
+                titreArticle
+                prixArticle
+                CoulArticle
+                    coulVignet*?
+                TaiArticle
+                    img*?
+                addButton
+                detailsTitre
+                    detailsContent
+        AsideContent
+            titreAside
+            imgAside *?
+    SiteFooter
+        footerLogo
+        account
+        help
+        about
+
+
+        
+            
+
+            

@@ -4,7 +4,7 @@ namespace App\Framework;
 
 class Router {
 
-    // Stocke le tableau de routes
+    // Stock le tableau de routes
     private $routes;
 
     /**
@@ -22,7 +22,10 @@ class Router {
     public function match(string $path)
     {
         // On parcours le tableau de routes stocké dans la propriété 'routes' de l'objet courant ($this)
+
         foreach ($this->routes as $route) {
+
+
 
             // Si le chemin de la route correspond à celui que l'on cherche... 
             if ($path == $route['path']) {
