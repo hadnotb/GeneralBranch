@@ -29,18 +29,26 @@
 <section class="ForYou">
     <h2 class="ForYou-title">Pourrait vous plaire</h2>
     <svg>Barre du dessous</svg>
-    
-      
+    <div class="ForYou-Carroussel">
+    <button type="button" class="slick-prev-fy">Previous</button>    
     <div class="slider-forYou">
-        <?php if ($articles): ?>
+    <?php if ($articles): ?>
                 <?php foreach ($articles as $product): ?>
-                    <figure class="forYouItem" >
-                        <img class="forYouImg"  src="<?php echo(IMAGE_URL . '/' . $product["img"]); ?>" alt="">
-                        <a href=""></a>
-                        </img> 
+                    <figure class="Product-figure">
+                        <img class="Product-figure-img" src="<?php echo(IMAGE_URL . '/' . $product["img"]); ?>" alt="">
+                            <a href=""></a>
+                        </img>
+                        <div class="Product-figure-info">
+                            <h2 class="Product-figure-info-titre"><?= $product['libArticle']?><br><?= $product['libMarque']?></h2>
+                            <h2 class="Product-figure-info-prix"><?= $product['prix']?> €</h2>
+                            <!-- <h2 class="Product-figure-info-marque"><?= $product['libMarque']?></h2> -->
+                        </div>
+                        
                     </figure>
                 <?php endforeach; ?>
-        <?php endif; ?>
+
+            
+            <?php endif; ?>
     </div>
     
 </section>

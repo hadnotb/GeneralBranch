@@ -1,0 +1,30 @@
+<Section class="LayoutConnect"> 
+    <svg>Logo Sunday</svg>
+    <div class="Connect">
+        <div class="Connect-form">
+            <form action="<?=buildUrl('login');?>" method="POST" class="form-connection">
+
+                <div class="Connect-form-field email ">
+                    <label class ="email-lab" for="mail">Adresse mail</label>
+                    <input  class ="email-input" type="email" name="email" id="email" required>
+                </div>
+
+                <div class="Connect-form-field mdp">
+                    <label class="mdp-lab" for="password">Mot de passe</label>
+                    <input class="mdp-input" type="password" name="password" id="password">
+                    <a class="mdp-forget" href="">Mot de passe oublié</a>
+                </div>
+
+                <input class ="form-connection connect"type="submit" value="Connectez-vous">
+            </form>
+            <button><i>COnnect with gogole</i></button>
+            <button><i>COnnect with fakebook</i></button>
+        </div>  
+    </div>
+    <div class="SignIn">
+        <p>Vous n'avez pas encore de compte ?</p>
+        <button>
+            <p>Creer un compte !</p>
+        </button>
+    </div>
+</Section>
