@@ -1,0 +1,54 @@
+<?php use App\Framework\FlashBag;?>
+<?php use App\Framework\UserSession;?>
+<!doctype html>
+<html lang="fr">
+<head>
+   <meta charset="UTF-8">
+   <title>Blog - <?=$pageTitle;?></title>
+   <link rel="preconnect" href="https://fonts.gstatic.com">
+   <link href="https://fonts.googleapis.com/css2?family=Limelight&display=swap" rel="stylesheet"> 
+   <link rel="stylesheet" href="<?=asset('css/style.css');?>">
+</head>
+<body>
+<header class = 'siteHeader'>
+<h1 class ='siteTitle'>Blog du mich mich </h1>
+
+
+<div class ="nav">
+    <nav class ='navMenu'>
+        <a href="<?= buildUrl('homepage')?>">HOME</a>
+        <?php if (UserSession::isAuthenticated()):?>
+        
+            <a href="<?= buildUrl('logout')?>">LOGOUT</a>
+    
+        <?php else :?>
+            <a href="<?= buildUrl('signup')?>">SIGNUP</a>
+            <a href="<?= buildUrl('login')?>">LOGIN</a>
+        <?php endif; ?>
+        <a href="<?= buildUrl('category')?>">CATEGORIE</a> 
+        <a href="<?= buildUrl('article')?>">ARTICLE</a>
+    </nav>
+</div>
+</header>
+
+<aside>
+   <?php if (FlashBag::hasMessages('error')):?>
+       <?php foreach (FlashBag::fetchMessages('error') as $error):?>
+           <p class="error-message"><?=$error;?></p>
+       <?php endforeach; ?>
+   <?php endif; ?>
+
+   <?php if (FlashBag::hasMessages('success')):?>
+       <?php foreach (FlashBag::fetchMessages('success') as $message):?>
+           <p class="success-message"><?=$message;?></p>
+       <?php endforeach; ?>
+   <?php endif; ?>
+</aside>
+<main>
+   <?php include TEMPLATE_DIR . '/' . $template . '.phtml';?>
+</main>
+
+</body>
+</html>
+
+

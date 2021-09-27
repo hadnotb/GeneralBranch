@@ -1,0 +1,13 @@
+            
+            
+
+        <?php if ($category): ?>
+              <h3 class ='titreCat' ><?=htmlspecialchars($category[0]['libCategorie']);?></h3>
+            <?php foreach ($category as $article): ?>
+              
+                <h4 ><?=htmlspecialchars($article['title']);?></h4>
+                <p >Date de création : <?=(new DateTimeImmutable($article['created_at']))->format('d/m/Y');?></p>
+            <?php endforeach; ?>
+        <?php endif ; ?>             
+
+                   
