@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avatar SVG</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Avatar SVG</h1>
+        </header>
+        <main class="row">
+            <div class="avatar-container col-4">
+                <?=$svg;?>
+            </div>
+
+            <section class="col-4">
+                <form action="index.php" method="POST">
+
+                    <!-- Choix de la taille de l'avatar -->
+                    <div>
+                        <label class="form-label" for="size">Taille de l'avatar</label>
+                        <select class="form-select" id="size" name="size">
+                            <?php for ($i = 1; $i < 10; $i++): ?>
+                                <option <?= $i==$size ? 'selected' : '';?> value="<?=$i;?>"><?=$i;?></option>
+                            <?php endfor; ?>
+                        </select>
+                    </div>
+
+                    <!-- Choix du nombre de couleurs -->
+                    <div>
+                        <label class="form-label" for="nb-colors">Nombre de couleurs</label>
+                        <select class="form-select" id="nb-colors" name="nb-colors">
+                            <?php for ($i = 1; $i < 10; $i++): ?>
+                                <option <?= $i==$nbColors ? 'selected' : '';?> value="<?=$i;?>"><?=$i;?></option>
+                            <?php endfor; ?>
+                        </select>
+                    </div>
+
+                    <!-- Bouton de soumission --> 
+                    <button class="btn btn-primary mt-3" type="submit">Générer</button>
+                </form>
+            </section>
+        </main>
+    </div>
+</body>
+</html>

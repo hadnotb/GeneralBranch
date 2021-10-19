@@ -2,11 +2,9 @@
     <button id="boutonTrier" onclick="showCategoryList();">Trier</button>
     <aside id = 'Category' class = 'Category'>
         <h2 class="Category-titles"><a class="Category-titles-link" href="">Nouvelle collection</a></h2>
-        
+    
         <h2 class="Category-titles"><a class="Category-titles-link" href="">Promotions</a></h2>
         
-    
-
         <section class="Category-titles-cat">
             <input type="checkbox" name="cat" id="cat" class="css-checkbox">
             <label for="cat" class="css-label">
@@ -87,14 +85,13 @@
                 <?php foreach ($products as $product): ?>
                     <figure class="Product-figure">
                         <img class="Product-figure-img" src="<?php echo(IMAGE_URL . '/' . $product["img"]); ?>" alt="">
-                            <a href=""></a>
                         </img>
+                        <a href="" class="Product-figure-link">Buy</a>
                         <div class="Product-figure-info">
                             <h2 class="Product-figure-info-titre"><?= $product['libArticle']?><br><?= $product['libMarque']?></h2>
                             <h2 class="Product-figure-info-prix"><?= $product['prix']?> €</h2>
                             <!-- <h2 class="Product-figure-info-marque"><?= $product['libMarque']?></h2> -->
                         </div>
-                        
                     </figure>
                 <?php endforeach; ?>
 
