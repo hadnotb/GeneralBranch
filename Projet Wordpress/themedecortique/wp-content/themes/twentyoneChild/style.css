@@ -1,0 +1,13 @@
+/*
+Theme Name: Le wordPress qui met la press
+Description: le theme qui met la pression garcon
+Author: Créateur du thème Toto
+Author URI: http://monsite.com
+Template: twentytwentyone
+Text Domain: toto-enfant
+*/
+
+body{
+    background: rgb(132,132,224);
+    background: linear-gradient(90deg, rgba(132,132,224,1) 15%, rgba(35,84,201,1) 47%, rgba(203,143,219,1) 78%, rgba(0,212,255,1) 100%);
+}

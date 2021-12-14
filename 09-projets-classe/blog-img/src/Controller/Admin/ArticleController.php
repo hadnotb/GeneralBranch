@@ -13,8 +13,6 @@ class ArticleController extends AbstractController{
     {   
         if($_POST)
         {   
-            
-           
             if(!UserSession::hasRole('ADMIN','EDITOR')){
                 http_response_code(403);
                 echo "Accés interdit";
@@ -44,7 +42,6 @@ class ArticleController extends AbstractController{
                         $extensions_autorisees = array('jpg', 'jpeg', 'gif', 'png');
                         if (in_array($extension_upload,$extensions_autorisees))
                         {
-
                             move_uploaded_file($_FILES['img']['tmp_name'],PROJECT_BASE_DIR."/public/img"."/".$img);
                         }
                     }

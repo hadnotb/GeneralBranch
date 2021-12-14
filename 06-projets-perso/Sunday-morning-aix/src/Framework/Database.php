@@ -55,8 +55,15 @@ class Database {
     {
         $pdoStatement = $this->pdo->prepare($sql);
         $pdoStatement->execute($params);
-
         return $this->pdo->lastInsertId();
+    }
+
+    function getResults(string $sql, array $params = [])
+    {
+        $pdoStatement = $this->executeQuery($sql, $params);
+        $results = $pdoStatement->fetchAll();
+
+        return $results;
     }
 
 }

@@ -23,7 +23,7 @@ async function onSubmitAddCommentForm(event)
     const response = await fetch(url, options);
     const htmlComment = await response.text();
 
-    console.log(htmlComment);
+    
 
     // Lors de la réception de la réponse, on insère simplement le code HTML reçu en haut de la liste des commentaires
 }

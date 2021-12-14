@@ -1,55 +1,104 @@
- function AppBurger(){
 
-    this.breakPoint = 600;
-    this.construct = function(){
-        this.initMenu();
-    };
-    let links = document.querySelectorAll('#MenuLink');
-   
-    let menuBars =document.getElementById('MenuBars');
-    let menuClose =document.getElementById('MenuClose');
-    let menu =document.getElementById('Menu');
-    menuBars.addEventListener('click',function(){
-        menuBars.style.display = 'none';
-        menuClose.style.display ='block';
-        // link.style.display  = "block";
-        for(let link of links){
-            link.style.display ='block';
-        }
-    });
-    menuClose.addEventListener("click",function(){
-        menuBars.style.display = 'block';
-        menuClose.style.display ='none';
-        for(let link of links){
-            link.style.display ='none';
-        }
-    });
-    let that = this;
-    let curwiwidth = window.innerWidth;
-    window.addEventListener('resize', function(){
-        
-        if(window.innerWidth  > that.breakPoint ) {
-            menuBars.style.display = 'none';
-            menuClose.style.display = 'none';
-            for(let link of links){
-                link.style.display ='block';
-            }
 
-        } else if (window.innerWidth !== curwiwidth ){
+// FONCTIONS //////////////// 
+async function onClickDelete(event)
+{
+    // On annule le comportement par défaut du navigateur
+    event.preventDefault();
+    
+    // On affiche une boîte de dialogue de confirmation et on récupère la réponse de l'internaute
+    const confirmed = window.confirm('Êtes-vous certain de vouloir supprimer cet article ?');
 
-            menuBars.style.display = 'block';
-            menuClose.style.display = 'none';
-            for(let link of links){
-                link.style.display ='none';
-            }
-           
+    // Si l'internaute confirme effectivement la suppression
+    if (confirmed) {
+
+        // VERSION 1 : redirection, on change de page
+        // On redirige l'internaute vers la suppression en allant chercher le href du lien cliqué
+        // window.location.replace(this.href);
+
+        // VERSION 2 : on envoie une requête AJAX avec la fonction fetch
+        const response = await fetch(this.href);
+        const id = await response.text();
+
+        // Lors de la récéption de la réponse, on récupère l'id de l'article supprimé pour supprimer le <tr> correspondant
+        if(id > 0) {
+            let target = this.getAttribute('data-target');
+            const trElement = document.getElementById(target + '-' + id);
+            trElement.remove();
+        } else {
+            alert('Erreur');
         }
-    });
+    }
 }
+
+
+// CODE PRINCIPAL //////////////////
+const deleteLinks = document.querySelectorAll('.Delete-button');
+
+for (let link of deleteLinks) {
+
+    link.addEventListener('click', onClickDelete);
+}
+
+
+
+
+//  function AppBurger(){
+
+//     this.breakPoint = 600;
+//     this.construct = function(){
+//         this.initMenu();
+//     };
+//     let links = document.querySelectorAll('#MenuLink');
+   
+//     let menuBars =document.getElementById('MenuBars');
+//     let menuClose =document.getElementById('MenuClose');
+//     let menu =document.getElementById('Menu');
+//     menuBars.addEventListener('click',function(){
+//         menuBars.style.display = 'none';
+//         menuClose.style.display ='block';
+//         // link.style.display  = "block";
+//         for(let link of links){
+//             link.style.display ='block';
+//         }
+//     });
+//     menuClose.addEventListener("click",function(){
+//         menuBars.style.display = 'block';
+//         menuClose.style.display ='none';
+//         for(let link of links){
+//             link.style.display ='none';
+//         }
+//     });
+//     let that = this;
+//     let curwiwidth = window.innerWidth;
+//     window.addEventListener('resize', function(){
+        
+//         if(window.innerWidth  > that.breakPoint ) {
+//             menuBars.style.display = 'none';
+//             menuClose.style.display = 'none';
+//             for(let link of links){
+//                 link.style.display ='block';
+//             }
+
+//         } else if (window.innerWidth !== curwiwidth ){
+
+//             menuBars.style.display = 'block';
+//             menuClose.style.display = 'none';
+//             for(let link of links){
+//                 link.style.display ='none';
+//             }
+           
+//         }
+//     });
+// }
 function showSearchBar(){
     
-    let searchBar = document.getElementById("search-bar");
-  searchBar.classList.toggle("not-hidden");
+    // let searchBar = document.getElementById("search-bar");
+    // let research  = document.getElementById("submit-search");
+    // searchBar.classList.toggle("not-hidden");
+    // research.classList.toggle("not-hidden");
+    let searchBubble =document.querySelector('.Search-bubble');
+    searchBubble.classList.toggle("not-hidden");
 }
 
 function showCategoryList(){
@@ -63,8 +112,69 @@ function showCategoryList(){
     }   
 }
 
+let bars = document.querySelector('.SiteHeader-nav-menu-bars');
 
-let appBurger = new AppBurger();
+
+
+
+
+
+
+
+function showMenu(){
+
+    
+    let windowSize = window.innerWidth;
+    let link = document.querySelectorAll('#Menu-link');
+    let bars = document.getElementById('bars');
+    let times = document.getElementById('times');
+    let menu = document.getElementById('SiteHeaderMenu');
+    let shopCart = document.getElementById('shopping-cart-logo');
+    let timesImg = document.getElementById('times-icon');
+   
+    bars.addEventListener('click',function(){
+        bars.style.display = 'none';
+        times.style.display ='block';
+        times.style.position='relative';
+        times.style.margin = '0 auto';
+        
+        if(windowSize>600){
+            menu.style.display = 'flex';
+            times.style.zIndex = '2';
+            times.style.top = '335px';
+            times.style.left = '-225px';
+        }
+        else{
+            menu.style.display = 'block';
+            times.style.left = '0px';
+            times.style.transform ='rotate(-90deg)';
+            shopCart.style.position ='relative';
+            shopCart.style.top='-10px';
+            shopCart.style.left = '-4px';
+            
+        }
+        
+        
+        // link.style.display  = "block";
+        for(let links of link){
+            links.style.display ='block';
+        }
+    });
+    times.addEventListener("click",function(){
+        bars.style.display = 'block';
+        times.style.display ='none';
+        // times.style.position='static';
+        menu.style.display = 'none';
+        for(let links of link){
+            links.style.display ='none';
+        }
+    });
+
+}
+
+
+showMenu();
+
 
  
 
@@ -128,17 +238,17 @@ let appBurger = new AppBurger();
 //     slidesVisible: 3
 // })
 
-$('.slider').slick({
-    prevArrow: $('.slick-prev'),
-    nextArrow: $('.slick-next')
-});
+// $('.slider').slick({
+//     prevArrow: $('.slick-prev'),
+//     nextArrow: $('.slick-next')
+// });
 
-$('.slider-forYou').slick({
-    infinite: true,
-    slidesToShow: 3,
-    slidesToScroll: 3
+// $('.slider-forYou').slick({
+//     infinite: true,
+//     slidesToShow: 3,
+//     slidesToScroll: 3
 
-});
+// });
 
 
 

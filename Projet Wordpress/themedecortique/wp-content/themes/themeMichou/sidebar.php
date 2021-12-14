@@ -1,0 +1,3 @@
+
+<aside class="SiteMain-info">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, velit eius. Nesciunt, perferendis officia, quia aut voluptate exercitationem minima quibusdam suscipit voluptatibus ipsa debitis magnam. Excepturi, corporis aliquid quis adipisci repudiandae nostrum quae minima aut distinctio blanditiis, sed maxime neque repellat odit quasi sapiente. Cum omnis odio ducimus et ipsam.</aside>
+	

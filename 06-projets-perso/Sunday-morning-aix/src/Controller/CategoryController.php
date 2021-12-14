@@ -55,10 +55,12 @@ class CategoryController extends AbstractController {
         }
 
         if($catId){
-            $products = $categoryModel -> getProductbyCat($catId);
+            // $products = $categoryModel -> getProductbyCat($catId);
+            $products = $categoryModel -> getProductbyCat(1);
+  
         }
         
-
+       
 
 
         return $this-> render('category', [
@@ -75,10 +77,11 @@ class CategoryController extends AbstractController {
         
         $categoryModel = new CategoryModel;
         
-        if($_POST['searchBar'] AND !empty($_POST['searchBar'])){
+        if(!empty($_POST['searchBar'])){
             // TODO Essayer de gerer l'espace dans une recherche
             $toSearch = htmlspecialchars(strtolower(trim($_POST['searchBar'])));
             $results = $categoryModel -> getArticlebySearch($toSearch);
+            
        
         }
         if(!$results){
@@ -86,7 +89,8 @@ class CategoryController extends AbstractController {
             echo "404 NOT FOUND";
             exit;
         }
-        return $this->render('Category',[
+        
+        return $this->render('search',[
             "products" => $results
         ]);
     }

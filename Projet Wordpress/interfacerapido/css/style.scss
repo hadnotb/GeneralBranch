@@ -1,0 +1,154 @@
+body{
+    background: rgb(253,220,235);
+    background: radial-gradient(circle, rgba(253,220,235,0.7792250689338236) 0%, rgba(195,185,255,0.7680205871411064) 51%, rgba(195,220,249,0.7848273098301821) 100%); 
+    padding:0;
+    margin:0;
+    font-family: 'Zen Kurenaido', sans-serif;
+}
+
+.SiteHeader{
+
+    &-title{
+        width: 100%;
+        text-align: center;
+        padding: 10px 0;
+        margin: 0;
+    }
+    &-bar{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(122, 175, 255, 0.877);
+        &-user{
+            display: none;
+        }
+    }
+    ul{
+        padding: 0;
+        margin: 0;
+        li{
+            text-align: center;
+            list-style-type: none;
+            padding: 10px;
+            a{
+                text-decoration: none;
+            }
+        }
+        li:hover{
+                a{
+                    color: white;
+                }
+        }
+    }
+    
+}
+.SiteMain{
+    max-width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    &-info{
+        order: 2;
+    }
+    &-content{
+        &-part{
+            background-color: rgba(122, 175, 255, 0.877);
+            border-radius: 50px;
+            width: 300px;
+            padding: 20px;
+            margin: 30px;
+            box-shadow: 15px 10px 10px rgba(126, 124, 124, 0.651);
+        }
+    }
+}
+.SiteFooter{
+    background-color: rgba(122, 175, 255, 0.877);
+    display: flex;
+    flex-direction: column;
+   
+    &-section{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        padding: 5px;
+    }
+}
+#burgerIcon{
+    display: none;
+}
+@media screen and (min-width: 650px) {
+    #burgerIcon{
+        display: block;
+    }
+   .SiteHeader{
+
+       &-bar{
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          padding: 0 20px;
+          
+          &-navBar{
+              position: absolute;
+              display: none;
+              width: 200px ;
+              top:95px;
+              left: 10px;
+              background-color:rgba(122, 175, 255, 1);
+              ul{
+                display: flex;
+                flex-direction: column;
+              }
+                &::after{
+                    content: '';
+                    position: absolute;
+                    background-color:rgba(122, 175, 255, 1); 
+                    width: 30px;
+                    height: 30px;
+                    top: 0;
+                    left:10px;
+                    transform: rotate(45deg);
+                }  
+            }
+           
+
+           &-user{
+            display: block;
+           }
+            
+        }
+   } 
+
+   .SiteMain{
+       &-info{
+         width: 20%;
+       }
+       &-content{
+           display: flex;
+           flex-wrap: wrap;
+           width: 70%;
+
+           
+       }
+   }
+
+   .SiteFooter{
+       
+       display: flex;
+       flex-direction: row;
+       justify-content: space-around;
+       &-section{
+           width: 20%;
+           display: flex;
+           flex-direction: column;
+
+       }
+   }
+}
+
+.appair{
+
+    display: block;
+}

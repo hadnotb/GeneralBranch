@@ -1,0 +1,30 @@
+<div class="Admin-listing-size">
+    
+        <table class="Admin-listing-size-table">
+            <thead class="Admin-listing-size-head">
+                <tr>
+                    <td>Libélé de la taille</td>
+                   
+                </tr>
+            </thead>
+            <tbody class="Admin-listing-size-body">
+                <?php foreach($sizes as $size):?>
+                    <tr id='brand-<?php $size['idTaille']?>'>
+                        <td><?= $size['libTaille']?></td>
+                    </tr>
+                <?php endforeach ?>
+            </tbody>
+        </table>
+    </div>
+
+<form action="<?=buildUrl('addSize');?>" method="post">
+    <fieldset>
+        <legend>Ajouter une Taille</legend>
+        <div class="form-field">
+            <label for="sizeName">Taille</label>
+            <input type="text" name="sizeName" id="sizeName">
+        </div>
+        <input type="submit" value="Ajouter">
+    
+    </fieldset>
+</form>

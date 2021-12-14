@@ -1,14 +1,14 @@
-$submitButton = document.getElementById('submit-button-generate');
+// $submitButton = document.getElementById('submit-button-generate');
 
 
-function onSubmitGenerate(){
+// function onSubmitGenerate(){
 
     
-}
+// }
 
 
 
 
 
 
-$submitButton.addEventListener('click',onSubmitGenerate());
+// $submitButton.addEventListener('click',onSubmitGenerate());

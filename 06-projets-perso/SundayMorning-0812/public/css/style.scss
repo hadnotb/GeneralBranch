@@ -1,0 +1,406 @@
+@import"variable";
+
+@font-face {
+    font-family: "Apercu";
+    src: url("font/apercu/apercu_regular.ttf") format("truetype");
+    font-weight: 400;
+   }
+  
+   @font-face {
+    font-family: "Apercu";
+    src: url("font/apercu/apercu_bold.ttf") format("truetype");
+    font-weight: 800;
+   }
+  
+   @font-face {
+    font-family: "Apercu";
+    src: url("font/apercu/apercu_regular_italic.ttf") format("truetype");
+    font-weight: 400;
+    font-style: italic;
+}
+
+// ------------------------------------HEADER----------------------------------
+// *{
+//     border:solid 1px black;
+// }
+body{
+    margin:0;
+    box-sizing: border-box;
+    font-family: "Apercu";
+    font-weight: 400;
+    color: black;
+   
+}
+
+.SiteHeader{
+    position:relative;
+    background-color: $firstColor;
+    
+    &-logo{
+        &-img{
+            width: 80vw;
+            display:block;
+            margin: 0 auto;
+            padding: 30px;
+        }
+    }
+    &-nav{
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+
+        &-search{
+            position: relative;
+            order:3;
+            background-color: $firstColor;
+
+            & button{
+                border: none;
+                background-color: $firstColor;
+                font-size: x-large;
+                margin-bottom: 10px;
+                
+                &:hover{
+                    transform: scale(1.1);
+                }
+            } 
+        }
+        
+       
+       
+        &-menu{
+            position:relative;
+            margin-bottom: 10px;
+
+            &-bars{
+                font-size: x-large;
+                margin-bottom: 10px;
+                position: relative;
+                left: -1px;
+                &:hover{
+                    transform: scale(1.1);
+                }
+            }
+
+            &-links{
+                text-align: center;
+                // margin-bottom: 5px;
+                
+            }
+            
+            &-cross{
+                position:absolute;
+                right:50%;
+                display: none;
+            }
+            &-link{
+               display: none;
+               text-decoration: none;
+               color:black;  
+               &:hover{
+                transform: scale(1.1);
+                } 
+            }
+        }
+    }
+}
+
+// .Search-bar{
+//     display:none;
+// }
+// .Search-submit{
+//     display:none;
+// }
+.Search-bubble{
+    display: none;
+    position: absolute;
+    border: solid 1px black;
+    right: -139px;
+    bottom: -65px;
+    background-color: black;
+    width: 250px ;
+    min-height: 60px;
+    border-radius: 5px;
+    &::after{
+        content:'';
+        width: 15px;
+        height: 15px;
+        position: absolute;
+        transform: rotate(45deg);
+        background-color: black;
+        top: -7px;
+        left:90px;
+        z-index:2;
+    }
+    
+
+}
+.not-hidden{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+#times{
+    text-align: center;
+}
+
+.Basket{
+        &-icone{
+        text-decoration: none;
+        color: black;
+        font-size: x-large;
+        margin-bottom: 20px;
+
+        
+        
+        
+        &:hover{
+            transform: scale(1.1);
+        }
+    }
+}
+// div.SiteHeader-nav-menu-links.showMenu{
+//     display:flex;
+//     flex-direction: column;
+// }
+
+// let bars= document.getElementById('bars');
+    // let times=document.getElementById('times');
+    // let menu = document.getElementById('SiteHeaderMenu');
+    // bars.style.display.toggle ='none'
+
+
+// #############################################Plus-minus display for Category Page #######################################
+.css-label{cursor : pointer;}  
+.css-checkbox{display:none;}
+.Minus{display: none;}
+.css-checkbox:checked + .css-label .Minus{
+    display: inline-block;
+}
+.css-checkbox:checked + .css-label .Plus{
+      display: none;  
+}
+.inputList{
+    display: none;
+}
+.css-checkbox:checked ~  .inputList{
+    display: block;
+}
+// ################################################PageArticleIndividuel###################################################################
+
+.Article{
+    &-mainPic{
+        
+        &-img{
+            margin: 0 auto;
+            width: 80vw;
+        }
+    }
+    &-vigPic{
+        
+        &-img{
+            margin: 0 auto;
+            width: 50px;
+        }
+    }
+    &-info{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        &-couleur{
+            &-container{
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+                align-items: center;
+            }
+            
+        }
+    }
+}
+.product-thumbnail{
+    width: 70px;
+}
+
+
+// Admin:::::::::::::::::::::::::::::::::::::
+
+.Admin-listing{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &-table{
+
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+        
+        th{
+            padding:20px;
+        }
+        td{
+            padding: 20px;
+        }
+        border-radius: 15px;
+        border-collapse: collapse;
+        
+        box-sizing: border-box;
+      
+        margin: 0;
+        padding: 0;
+        
+
+    }
+    &-head{
+        
+        
+        th{
+           background-color:  #FFE542;
+            
+        }
+
+        th:first-child {
+            border-top-left-radius:15px
+            
+        }
+        th:last-child {
+            border-top-right-radius: 15px;
+        }
+
+        
+       
+    }
+    &-body{
+        tr td:nth-last-child(-n+2){
+            &:hover{
+                background-color:#ffe64291;
+            }
+
+        }
+        td{
+            margin: auto;
+            text-align: center;
+        }
+
+        tr:nth-child(even){
+            background-color: rgba(255, 237, 119, 0.493);
+        }
+
+        i{
+            color: black;
+        }
+    }    
+}
+
+
+
+
+
+
+@media screen and (min-width : 600px){
+
+    .SiteHeader{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        background-color: white;
+        
+        &-logo{
+           &-img{
+               width: 80%;
+               padding: 5px;
+               
+           }
+        }
+        &-nav{
+            width: 30%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+            &-search{
+                order:-1;
+                background-color: white;
+                & button{
+                    background-color: white;
+                    &:hover{
+                        color:$firstColor;
+                    }
+                }
+            }
+            
+            &-menu{
+                &-bars{
+                    &:hover{
+                        color:$firstColor;
+                    }
+                }
+                &-cross{
+                    &:hover{
+                        color:$firstColor;
+                    }
+                }
+                position:relative;
+                &-links{
+                    position:absolute;
+                }                   
+            }
+        }
+    }
+    .Basket-icone{
+        &:hover{
+            color: $firstColor;
+        }
+    }
+
+    #boutonTrier{
+        display: none;
+    }
+    .Category{
+        display: block;
+    }
+    .PageCategory{
+        
+        display: flex;
+        
+        flex-wrap: wrap;
+    }
+    .Category{
+        width: 25%;
+    }
+    .Product{
+        width: 75%;
+        display: grid ;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        gap: 5%;
+    }
+    .Article{
+        display: flex;
+        flex-wrap: wrap;
+        &-mainPic{
+            width: 35%;
+            &-img{
+                width: 100% ;
+            }
+        }
+        &-vigPic{
+            
+            order: -1;
+            width: 15%;
+            
+            &-img{
+                width: 100%;
+            }
+        }
+        &-info{
+            width: 40%;
+            
+        }
+    }
+
+}
+
+// Admin:::::::::::::::::::::::::::::::::::::

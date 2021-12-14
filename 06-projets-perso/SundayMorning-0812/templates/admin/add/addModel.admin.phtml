@@ -1,0 +1,44 @@
+
+<form action="<?=buildUrl('addModel');?>" method="post" enctype="multipart/form-data">
+    <fieldset>
+        <legend>Ajouter un model</legend>
+        <div class="form-field">
+            <label for="productName">Nom du produit</label>
+            <input type="text" name="productName" id="productName">
+        </div>
+        <div class="form-field">
+            <label for="productPrice">Prix du produit </label>
+            <input type="number" name="productPrice" id="productPrice" min="1" max="800" value="">
+        </div>
+        <div class="form-field">
+            <label for="productDescription">Description du produit</label>
+            <input type="text" name="productDescription" id="productDescription">
+        </div>
+        <div class="form-field">
+            <div>
+                <label for="productThumbnail">Select image:</label>
+                <input type="file" id="productThumbnail" name="productThumbnail" accept="image/*">
+                <label for="productThumbnailVig">Selectionnez les vignette de variations</label>
+                
+            </div> 
+            
+        </div>
+        <div class="form-field">
+            <label for="productCategory">Catégorie</label>
+            <select id="productCategory" name="productCategory" required>
+                <?php foreach ($categories as $category): ?>
+                    <option value="<?=$category['idCategorie'];?>"><?=$category['libCategorie'];?></option>
+                <?php endforeach; ?>
+            </select>
+        </div>
+        <div class="form-field">
+            <label for="productBrand">Marque</label>
+            <select id="productBrand" name="productBrand" required>
+                <?php foreach ($brands as $brand): ?>
+                    <option value="<?=$brand['idMarque'];?>"><?=$brand['libMarque'];?></option>
+                <?php endforeach; ?>
+            </select>
+        </div>
+        <input type="submit" value="Ajouter">
+    </fieldset>
+</form>

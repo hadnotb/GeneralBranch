@@ -6,18 +6,19 @@
     </div>
     <div class="NewCollection-product">
     <button type="button" class="slick-prev">Previous</button>
-    <div class="slider">
-        <div class="img-div div1">
-            <img src="img/a.jpg" alt=""> 
+        <div class="slider">
+            <div class="img-div div1">
+                <img src="img/a.jpg" alt=""> 
+            </div>
+            <div class="img-div div2">
+                <img src="img/b.jpg" alt="">
+            </div>
+            <div class="img-div div3">
+                <img src="img/c.jpg" alt="">
+            </div>
         </div>
-        <div class="img-div div2">
-            <img src="img/b.jpg" alt="">
-        </div>
-        <div class="img-div div3">
-            <img src="img/c.jpg" alt="">
-        </div>
-    </div>
     <button type="button" class="slick-next">Next</button> 
+   
 </section>
 
 <section class="HomeNav">
@@ -33,17 +34,8 @@
     <button type="button" class="slick-prev-fy">Previous</button>    
     <div class="slider-forYou">
     <?php if ($articles): ?>
-                <?php foreach ($articles as $product): ?>
-                    <figure class="Product-figure">
-                        <img class="Product-figure-img" src="<?php echo(IMAGE_URL . '/' . $product["img"]); ?>" alt="">
-                            <a href=""></a>
-                        </img>
-                        
-                    </figure>
-                <?php endforeach; ?>
-
-            
-            <?php endif; ?>
+          
+    <?php endif; ?>
     </div>
     
 </section>

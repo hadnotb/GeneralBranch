@@ -1,0 +1,35 @@
+<form action="<?=buildUrl('addArticle');?>" method="post" class="Form">
+    <fieldset class="Form-fieldset">
+        <legend class="Form-fieldset-title">Ajouter un article </legend>
+        <div class="Form-field">
+            <label for="articleModel" class="Form-field-lib">Model</label>
+            <select id="articleModel" name="articleModel" required class="Form-field-select">
+                <?php foreach ($models as $model): ?>
+                    <option value="<?=$model['idModel'];?>" class="Form-field-option"><?=$model['libModel'];?></option>
+                <?php endforeach; ?>
+            </select>
+        </div>
+        <div class="Form-field">
+            <label for="articleColor" class="Form-fieldset-title">Couleur</label>
+            <select id="articleColor" name="articleColor" required>
+                <?php foreach ($colors as $color): ?>
+                    <option value="<?=$color['idCouleur'];?>"><?=$color['libCouleur'];?></option>
+                <?php endforeach; ?>
+            </select>
+        </div>
+        <div class="Form-field">
+            <label for="articleSize" class="Form-field-lib">Taille</label>
+            <select id="articleSize" name="articleSize" class="Form-field-select" required>
+                <?php foreach ($sizes as $size): ?>
+                    <option value="<?=$size['idTaille'];?>"><?=$size['libTaille'];?></option>
+                <?php endforeach; ?>
+            </select>
+        </div>
+        <div class="Form-field">
+            <label for="articleNombre" class="Form-field-lib">Nombre d'articles</label>
+            <input type="number" name="articleNombre" id="articleNombre" min="100" max="50000" step ='100' class="Form-field-input">
+        </div>
+        <input type="submit" value="Ajouter" class="Form-submit">
+    </fieldset>
+</form>
+<!-- ATTRIBUT ACTION ?? -->

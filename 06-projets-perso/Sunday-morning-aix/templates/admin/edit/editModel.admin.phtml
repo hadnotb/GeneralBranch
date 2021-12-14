@@ -1,0 +1,81 @@
+
+<form action="<?=buildUrl('editModel',['model_id' =>$idMod]);?>" method="post" enctype="multipart/form-data">
+    <fieldset>
+    
+        <legend>Modifier un model</legend>
+        <div class="form-field">
+            <label for="productName">Nom du produit</label>
+            <input type="text" name="productName" id="productName" value="<?=$productName?>">
+        </div>
+        <div class="form-field">
+            <label for="productPrice">Prix du produit </label>
+            <input type="number" name="productPrice" id="productPrice" min="1" max="800" value="<?=$prix?>">
+        </div>
+        <div class="form-field">
+            <label for="productDescription">Description du produit</label>
+            <input type="text" name="productDescription" id="productDescription" value="<?=$desc?>">
+        </div>
+        <div>
+                <label for="productThumbnail">Select image:</label>
+                <input type="file" id="productThumbnail" name="productThumbnail" accept="image/*" value="<?=$imgPat?>">
+                <label for="productThumbnailVig">Selectionnez les vignette de variations</label>
+                
+            </div> 
+        <div class="form-field">
+            <label for="productCategory">Catégorie</label>
+            <select id="productCategory" name="productCategory" required>
+                <?php foreach ($categories as $category): ?>
+                    <?php $selected = isset($selectedCategory) && $category['idCategorie'] == $idCategorie ? 'selected' : ''; ?>
+                    <option <?=$selected?> value="<?=$category['idCategorie'];?>"><?=$category['libCategorie'];?></option>
+                <?php endforeach; ?>
+            </select>
+        </div>
+        <div class="form-field">
+            <label for="productBrand">Marque</label>
+            <select id="productBrand" name="productBrand" required>
+                <?php foreach ($brands as $brand): ?>
+                    <option value="<?=$brand['idMarque'];?>"><?=$brand['libMarque'];?></option>
+                <?php endforeach; ?>
+            </select>
+        </div>
+    </fieldset>
+    <fieldset>
+        <legend>Ajouter a la gallerie</legend>
+        <table class="Admin-listing-table">
+            <thead class="Admin-listing-head">
+                <tr>
+                    <th>Image Principale</th>
+                    <th>Image Associé</th>
+                    <th>Editer</th>
+                    <th>Supprimer</th>
+                </tr>
+            </thead>
+            <tbody class="Admin-listing-body">
+                
+                    <tr id='color-<?php $model['idModel']?>'>
+                        
+                        <td><img class="model-thumbnail" src="<?=IMAGE_URL . '/' . $model['img'];?>" alt=""></td>
+                        <td>
+                            <!--<?php foreach($images as $image):?>
+                            <?php endforeach?>-->
+                        </td>
+                        <td>
+                            <form action="<?=buildUrl('editModel')?>" method="POST">
+                                <label for="files">Select files:</label>
+                                <input type="file" id="image1" name="image[]" multiple><br><br> 
+                                <input type="submit">
+                            </form> 
+                        </td>
+                        <td><a class='Delete-button' data-target="color" href="<?=buildUrl('deleteColor',['color_id' => $color['idCouleur']])?>"><i class="fas fa-trash-alt"></i></a></td>
+                    </tr>
+                
+
+            </tbody>
+        </table>
+    </fieldset>
+</form>
+
+
+<div class="Admin-listing">
+</div>
+

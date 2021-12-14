@@ -1,0 +1,105 @@
+<?php use App\Framework\UserSession; ?>
+<?php use App\Framework\FlashBag;?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sunday Morning Aix</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/> -->
+    <link rel="stylesheet" href="<?=asset('css/style.css');?>">
+    <link rel="stylesheet" href="<?=asset('css/category.css');?>">
+    <link rel="stylesheet" href="<?=asset('css/login.css');?>">
+    <link rel="stylesheet" href="<?=asset('css/home.css');?>">
+
+</head>
+<body class = "PageWrapper">
+    <header class = 'SiteHeader'>
+
+        <a href="" class="SiteHeader-logo">
+            <img src="img/sundayMorningLogo-svg.svg" alt="" class="SiteHeader-logo-img">
+        </a>
+
+        <section class="SiteHeader-nav">
+            <form action="" class="SiteHeader-nav-search">
+                <button class="Search-button fa fa-search" type="button" onclick ="showSearchBar();"></button>
+                <div class="Search-bubble">
+                    <input id="search-bar" type="text" class="Search-bar" type="search" value="" name="searchBar">
+                    <input type="submit" id="submit-search" class='Search-submit' value='Rechercher'>
+                </div>
+                
+            </form>
+
+            <div class="Siteheader-nav-basket Basket">
+                <a href="" class="Basket-icone fas fa-shopping-basket"></a>
+                <section class="Basket-content"></section>
+            </div>
+
+            <div class="SiteHeader-nav-menu">
+
+                <i class="SiteHeader-nav-menu-bars fas fa-bars" id='bars'></i>
+                <i class="SiteHeader-nav-menu-cross fas fa-times" id='times'></i>
+
+                <div class="SiteHeader-nav-menu-links" id='SiteHeaderMenu'>
+                    <a href="<?=buildUrl('category');?>" class="SiteHeader-nav-menu-link" id="Menu-link">Catalogue</a>
+                    <a href="<?=buildUrl('shop');?>" class="SiteHeader-nav-menu-link" id="Menu-link">La boutique</a>
+                    <a href="#" class="SiteHeader-nav-menu-link" id="Menu-link">Langue</a>
+                    <a href="<?=buildUrl('login');?>" class="SiteHeader-nav-menu-link" id="Menu-link">Connexion</a>
+                    <a href="#" class="SiteHeader-nav-menu-link" id="Menu-link">Faq et Réclamation</a>
+                </div>
+            </div>
+        </section>
+        
+    </header>
+<main class = "Layout">
+    <?php include TEMPLATE_DIR . '/' . $template . '.phtml';?>
+
+    <aside>
+            <?php if (App\Framework\FlashBag::hasMessages('error')):?>
+                <?php foreach (App\Framework\FlashBag::fetchMessages('error') as $error):?>
+                    <p class="message error-message"><?=htmlspecialchars($error);?></p>
+                <?php endforeach; ?>
+            <?php endif; ?>
+
+            <?php if (App\Framework\FlashBag::hasMessages('success')):?>
+                <?php foreach (App\Framework\FlashBag::fetchMessages('success') as $message):?>
+                    <p class="message success-message"><?=htmlspecialchars($message);?></p>
+                <?php endforeach; ?>
+            <?php endif; ?>
+        </aside>
+</main>
+
+<footer class="SiteFooter">
+    <form class = "SiteFooter-newsLetterForm NewsLetterForm" action="">
+        <label class ="NewsLetterForm-lab" for="newsletter">Newsletter</label>
+        <input class ="NewsLetterForm-input" type="email" name="newsletter" class="newsletter">
+        <!-- Trouver comment transfomer utiliser un svg dans un i -->
+        <button class ="NewsLetterForm-button" type="submit">TODO ICON</button> 
+    </form>
+    <a class ="SiteFooter-a" class ='' href="">Livraison et retour</a>
+    <a class ="SiteFooter-a" href="">Mentions Légale</a>
+    <a class ="SiteFooter-a" href="">Conditions générales de ventes</a>
+    <a class ="SiteFooter-a" href="">Paiement Sécurisé</a>
+
+    <div class="SiteFooter-user-rsx">
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href=""><i class="fab fa-facebook"></i></a>
+    </div>
+
+</footer>
+    <script src="https://code.jquery.com/jquery-3.0.0.js"></script>
+    <script src="https://code.jquery.com/jquery-migrate-3.3.2.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+    <script src="<?=asset('js/main.js');?>"></script>
+    
+</body>
+
+
+
+
+</html>

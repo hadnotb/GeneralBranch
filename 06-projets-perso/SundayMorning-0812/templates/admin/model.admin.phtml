@@ -1,0 +1,39 @@
+<div class="Admin-listing">
+        <h2><a href="<?= buildUrl('addModel')?>">AJOUTER UN MODELE</a></h2>
+    
+
+        <table class="Admin-listing-table">
+            <thead class="Admin-listing-head">
+                <tr>
+                    <th>Nom du Produit</th>
+                    <th>Prix du Produit</th>
+                    <th>Description</th>
+                    <th>Thumbnail</th>
+                    <th>Date de création</th>
+                    <th>Date de modification</th>
+                    <th>Categorie</th>
+                    <th>Editer</th>
+                    <th>Supprimer</th>
+                </tr>
+            </thead>
+            <tbody class="Admin-listing-body">
+                        <?php ?>
+                <?php foreach($models as $model):?>
+                    
+                    <tr id='model-<?php print $model['idModel']?>'>
+                        <td><?= $model['libModel']?></td>
+                        <td><?= $model['prix']?></td>
+                        <td><?= $model['details']?></td>
+                        <td><img class="model-thumbnail" src="<?=IMAGE_URL . '/' . $model['imgPath'];?>" alt=""></td>
+                        
+                        <td></td>
+                        <td></td>
+                        <td><?= $model['libCategorie']?></td>
+                        <td><a class ='Edit-button'href="<?= buildUrl('editModel',['model_id' =>$model['idModel']])?>"><i class="far fa-edit"></i></a></td>
+                        <td><a class='Delete-button' data-target="model" href="<?=buildUrl('deleteModel',['model_id' => $model['idModel']])?>"><i class="fas fa-trash-alt"></i></a></td>
+                    </tr>
+                    <?php endforeach ?>
+
+            </tbody>
+        </table>
+    </div>

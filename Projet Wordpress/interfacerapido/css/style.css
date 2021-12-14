@@ -1,0 +1,193 @@
+body {
+  background: #fddceb;
+  background: radial-gradient(circle, rgba(253, 220, 235, 0.779225) 0%, rgba(195, 185, 255, 0.768021) 51%, rgba(195, 220, 249, 0.784827) 100%);
+  padding: 0;
+  margin: 0;
+  font-family: 'Zen Kurenaido', sans-serif;
+}
+
+.SiteHeader-title {
+  width: 100%;
+  text-align: center;
+  padding: 10px 0;
+  margin: 0;
+}
+
+.SiteHeader-bar {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: rgba(122, 175, 255, 0.877);
+}
+
+.SiteHeader-bar-user {
+  display: none;
+}
+
+.SiteHeader ul {
+  padding: 0;
+  margin: 0;
+}
+
+.SiteHeader ul li {
+  text-align: center;
+  list-style-type: none;
+  padding: 10px;
+}
+
+.SiteHeader ul li a {
+  text-decoration: none;
+}
+
+.SiteHeader ul li:hover a {
+  color: white;
+}
+
+.SiteMain {
+  max-width: 80%;
+  margin: 0 auto;
+  padding: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.SiteMain-info {
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
+}
+
+.SiteMain-content-part {
+  background-color: rgba(122, 175, 255, 0.877);
+  border-radius: 50px;
+  width: 300px;
+  padding: 20px;
+  margin: 30px;
+  -webkit-box-shadow: 15px 10px 10px rgba(126, 124, 124, 0.651);
+          box-shadow: 15px 10px 10px rgba(126, 124, 124, 0.651);
+}
+
+.SiteFooter {
+  background-color: rgba(122, 175, 255, 0.877);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.SiteFooter-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding: 5px;
+}
+
+#burgerIcon {
+  display: none;
+}
+
+@media screen and (min-width: 650px) {
+  #burgerIcon {
+    display: block;
+  }
+  .SiteHeader-bar {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding: 0 20px;
+  }
+  .SiteHeader-bar-navBar {
+    position: absolute;
+    display: none;
+    width: 200px;
+    top: 95px;
+    left: 10px;
+    background-color: #7aafff;
+  }
+  .SiteHeader-bar-navBar ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .SiteHeader-bar-navBar::after {
+    content: '';
+    position: absolute;
+    background-color: #7aafff;
+    width: 30px;
+    height: 30px;
+    top: 0;
+    left: 10px;
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+  }
+  .SiteHeader-bar-user {
+    display: block;
+  }
+  .SiteMain-info {
+    width: 20%;
+  }
+  .SiteMain-content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    width: 70%;
+  }
+  .SiteFooter {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .SiteFooter-section {
+    width: 20%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.appair {
+  display: block;
+}
+/*# sourceMappingURL=style.css.map */

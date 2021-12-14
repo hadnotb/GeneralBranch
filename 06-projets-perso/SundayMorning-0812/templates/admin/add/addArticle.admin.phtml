@@ -1,0 +1,35 @@
+<form action="<?=buildUrl('addArticle');?>" method="post">
+    <fieldset>
+        <legend>Ajouter un article </legend>
+        <div class="form-field">
+            <label for="articleModel">Model</label>
+            <select id="articleModel" name="articleModel" required>
+                <?php foreach ($models as $model): ?>
+                    <option value="<?=$model['idModel'];?>"><?=$model['libModel'];?></option>
+                <?php endforeach; ?>
+            </select>
+        </div>
+        <div class="form-field">
+            <label for="articleColor">Couleur</label>
+            <select id="articleColor" name="articleColor" required>
+                <?php foreach ($colors as $color): ?>
+                    <option value="<?=$color['idCouleur'];?>"><?=$color['libCouleur'];?></option>
+                <?php endforeach; ?>
+            </select>
+        </div>
+        <div class="form-field">
+            <label for="articleSize">Taille</label>
+            <select id="articleSize" name="articleSize" required>
+                <?php foreach ($sizes as $size): ?>
+                    <option value="<?=$size['idTaille'];?>"><?=$size['libTaille'];?></option>
+                <?php endforeach; ?>
+            </select>
+        </div>
+        <div class="form-field">
+            <label for="articleNombre">Nombre d'articles</label>
+            <input type="number" name="articleNombre" id="articleNombre" min="1" max="800" >
+        </div>
+        <input type="submit" value="Ajouter">
+    </fieldset>
+</form>
+<!-- ATTRIBUT ACTION ?? -->

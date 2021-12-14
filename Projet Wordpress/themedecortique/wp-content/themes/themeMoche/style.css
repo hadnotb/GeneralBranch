@@ -1,0 +1,153 @@
+/*
+Theme name: Mon thème complet
+Theme URI: http://www.monsite.net/theme-complet.html
+Author: Emmanuel ADINARAYANIN
+Author URI: http://www.monsite.net
+Description: C'est un thème complet pour WordPress 5
+Version: v0.1
+Tags: simple,complet,blanc,gris
+*/
+
+/* Styles généraux */
+body {
+	margin: 0;
+	padding: 0;
+	font: .8em Verdana, Arial, Helvetica, sans-serif;
+}
+
+/* Le conteneur principal */
+#conteneur {
+	width: 960px;
+	margin: 0 auto;
+}
+
+/* Styles pour le titre et le slogan */
+#titreSlogan {
+	border-top: 1px solid gray;
+}
+#titreSlogan a {
+	text-decoration: none;
+}
+
+/* Les barres des menus */
+#menuPrincipal, #menuSecondaire {
+	border-top: 1px solid gray;
+	height: 30px;
+}
+#menuSecondaire {
+	border-bottom: 1px solid gray;
+}
+#menuPrincipal ul, #menuSecondaire ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+#menuPrincipal a, #menuSecondaire a {
+	text-decoration: none;
+}
+#menuPrincipal li, #menuSecondaire li {
+	position: relative;
+	float: left;
+	width: 120px;
+	padding: 5px;
+	background-color: #fff;
+}
+#menuPrincipal ul ul, #menuSecondaire ul ul {
+	display: none;
+}
+#menuPrincipal ul li:hover ul, #menuSecondaire ul li:hover ul {
+	display: block;
+	position: absolute;
+	left: 0;
+	top: 20px;
+}
+
+/* Contenu de la page d'accueil */
+#articles {
+	display: table-cell;
+	width: 739px;
+	padding: 10px;
+	border-right: 1px solid gray;
+}
+#articles div img {
+	border: 5px solid gray;
+}
+#articles p.wp-caption-text {
+	font-variant: small-caps;
+	color: gray;
+}
+div.unArticle h2 {
+	font-variant: small-caps;
+	color: gray;
+}
+
+/* Colonne latérale droite */
+#colonneDroite {
+	display: table-cell;
+	width: 189px;
+	padding-left: 10px;
+}
+#colonneDroite ul {
+	margin-left: 0;
+	padding-left: 0;
+	list-style: none;
+}
+
+/* Pied de page */
+#piedDePage {
+	padding: 5px;
+	border-top: 1px solid gray;
+}
+#piedDePage p.textePDP {
+	font-size: .75em;
+	font-variant: small-caps;
+}
+
+/* Les styles pour les articles seuls */
+#articleSeul {
+	display: table-cell;
+	width: 739px;
+	padding: 10px;
+	border-right: 1px solid gray;
+}
+#articleSeul p.motsCles {
+	font-variant: small-caps;
+	color: gray;
+}
+#articleSeul div.precSuiv {
+	margin-bottom: 30px;
+}
+#articleSeul div.articlePrec {
+	float: left;
+}
+#articleSeul div.articleSuiv {
+	float: right;
+}
+#commentaires {
+	border-top: thin dotted gray;
+}
+
+/* Les styles pour les pages de contenu */
+
+#pages, #categories, #motsCles, #archives, #recherche, #auteur, #erreur404 {
+	display: table-cell;
+	width: 739px;
+	padding: 10px;
+	border-right: 1px solid gray;
+}
+
+/* Pour la page des catégories */
+#categories h2 a {
+	text-decoration: none;
+	font-variant: small-caps;
+}
+
+/* Styles pour les articles seuls */
+#articleSeul ul.post-meta {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+#articleSeul span.post-meta-key {
+	font-weight: bold;
+}
