@@ -46,6 +46,9 @@ class CategoryAdminController extends AbstractController{
 
     public function addCategory(){
         include LIBRARY_DIR .'/adminCheck.php';
+
+        $categories = $this -> categoryModel -> getCategories();
+    
         if (!empty($_POST)) {
 
             $categoryName = trim($_POST['categoryName']);
@@ -68,7 +71,9 @@ class CategoryAdminController extends AbstractController{
             }
             
         }
-        return $this->render('admin/add/addCategory.admin');
+        return $this->render('admin/add/addCategory.admin',[
+            'cats' => $categories
+        ]);
     }
 
     public function editCategory(){

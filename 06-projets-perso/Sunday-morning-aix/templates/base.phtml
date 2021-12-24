@@ -1,6 +1,8 @@
 <?php use App\Framework\UserSession; ?>
 <?php use App\Framework\FlashBag;?>
 
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,8 +21,7 @@
 </head>
 <body class = "PageWrapper">
     <header class = 'SiteHeader'>
-
-        <a href="" class="SiteHeader-logo">
+        <a href="<?=buildUrl('homepage');?>" class="SiteHeader-logo">
             <!-- <img src="" alt="" class="SiteHeader-logo-img"> -->
             <svg id ='main-logo-svg' class="SiteHeader-logo-img" width="332" height="40" viewBox="0 0 332 40" fill="" xmlns="http://www.w3.org/2000/svg">
                 <path d="M36.33 15.3941C35.48 13.3941 34.17 12.3941 32.33 12.3941C30.14 12.3941 28.75 13.5041 28.75 15.4641C28.75 17.5841 30.75 18.1541 33.35 18.8341C36.35 19.6341 39 20.5441 39 24.0041C39 28.3441 36.27 30.3341 32.41 30.3341C28.55 30.3341 25.77 28.3341 25 24.4341L27.33 23.5241C28.04 26.1941 29.57 27.9541 32.41 27.9541C34.82 27.9541 36.5 26.7541 36.5 24.3441C36.5 22.2741 34.97 21.8441 31.99 21.1141C29.17 20.4041 26.25 19.5241 26.25 15.5441C26.25 12.3941 28.44 10.0041 32.33 10.0041C33.6848 9.95552 35.0195 10.3432 36.1374 11.1101C37.2553 11.877 38.0975 12.9826 38.54 14.2641L36.33 15.3941Z" fill="black"/>
@@ -61,7 +62,11 @@
                     <a href="<?=buildUrl('category');?>" class="SiteHeader-nav-menu-link" id="Menu-link">Catalogue</a>
                     <a href="<?=buildUrl('shop');?>" class="SiteHeader-nav-menu-link" id="Menu-link">La boutique</a>
                     <a href="#" class="SiteHeader-nav-menu-link" id="Menu-link">Langue</a>
-                    <a href="<?=buildUrl('login');?>" class="SiteHeader-nav-menu-link" id="Menu-link">Connexion</a>
+                    <?php if (!UserSession::isAuthenticated()): ?>
+                        <a href="<?=buildUrl('login');?>" class="SiteHeader-nav-menu-link" id="Menu-link">Connexion</a>
+                    <?php else: ?>
+                        <a href="<?=buildUrl('logout');?>" class="SiteHeader-nav-menu-link" id="Menu-link">Deconnexion</a>
+                    <?php endif; ?>
                     <a href="#" class="SiteHeader-nav-menu-link" id="Menu-link">Faq et Réclamation</a>
                 </div>
             </div>
@@ -109,6 +114,8 @@
     <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
     <script src="<?=asset('js/main.js');?>"></script>
+    <script src="<?=asset('js/carousel.js');?>"></script>
+
     
 </body>
 

@@ -32,6 +32,8 @@ async function onClickDelete(event)
 }
 
 
+
+
 // CODE PRINCIPAL //////////////////
 const deleteLinks = document.querySelectorAll('.Delete-button');
 
@@ -102,7 +104,8 @@ function showSearchBar(){
 }
 
 function showCategoryList(){
-    let catList = document.getElementById("Category");
+    let catList = document.getElementById("Category-list");
+    
     catList.classList.toggle("showCategory");
     let button = document.getElementById('boutonTrier');
     if(button.innerHTML === "Trier"){
@@ -141,8 +144,8 @@ function showMenu(){
         if(windowSize>600){
             menu.style.display = 'flex';
             times.style.zIndex = '2';
-            times.style.top = '335px';
-            times.style.left = '-225px';
+            times.style.top = '0px';
+            times.style.left = '-10px';
         }
         else{
             menu.style.display = 'block';

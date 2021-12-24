@@ -62,6 +62,12 @@ class UserSession {
         self::sessionCheck();
         return array_key_exists('user', $_SESSION) && isset($_SESSION['user']);
     }
+    static function isAdmin()
+    {
+        self::sessionCheck();
+        
+        return array_key_exists('admin', $_SESSION) && isset($_SESSION['admin']);
+    }
 
     static function logout()
     {

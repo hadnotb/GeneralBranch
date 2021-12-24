@@ -30,7 +30,7 @@ class ColorAdminController extends AbstractController{
 
     public function addColor(){
         include LIBRARY_DIR .'/adminCheck.php';
-
+        $colors = $this -> categoryModel -> getColors();
 
         if (!empty($_POST)) {
         
@@ -39,7 +39,7 @@ class ColorAdminController extends AbstractController{
         }
 
         return $this->render('admin/add/addColor.admin',[
-            
+            'colors'=> $colors
         ]);
     }
     public function editColor(){

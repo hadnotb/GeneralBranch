@@ -40,7 +40,7 @@ class AuthController extends AbstractController {
                 FlashBag::addFlash('Connexion réussie','success');
                 
                 // Redirection
-                $this->redirect('homepage');
+                $this->redirect('admin');
                 
             }
         }

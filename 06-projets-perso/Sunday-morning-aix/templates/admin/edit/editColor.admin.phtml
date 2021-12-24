@@ -1,10 +1,12 @@
-<form action="<?=buildUrl('editColor',['color_id' => $colorId]);?>" method="post">
-    <fieldset>
+<form action="<?=buildUrl('editColor',['color_id' => $colorId]);?>" method="post" class="Form">
+    <fieldset class="Form-fieldset">
         <legend>Modifer une Categorie</legend>
         <div class="form-field">
-            <label for="colorName">Nom de la Catégorie</label>
-            <input type="text" name="colorName" id="colorName" value='<?=$color?>'>
+            <label for="colorName" class="Form-field-lib">Nom de la Catégorie</label><br>
+            <input type="text" name="colorName" id="colorName" class="Form-field-input" value='<?=$color?>'>
         </div>
-        <input type="submit" value="Modifier">
+        <div class="Form-submit">
+             <input type="submit" value="Modifier" class="Form-button">
+         </div> 
     </fieldset>
 </form>

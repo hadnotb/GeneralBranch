@@ -1,10 +1,12 @@
-<form action="<?=buildUrl('editBrand',['brand_id' => $brandId]);?>" method="post">
-    <fieldset>
+<form action="<?=buildUrl('editBrand',['brand_id' => $brandId]);?>" method="post" class="Form">
+    <fieldset class="Form-fieldset">
         <legend>Modifer une Categorie</legend>
         <div class="form-field">
-            <label for="brandName">Nom de la Catégorie</label>
-            <input type="text" name="brandName" id="brandName" value='<?=$brand?>'>
+            <label for="brandName" class="Form-field-lib">Nom de la Catégorie</label><br>
+            <input type="text" name="brandName" id="brandName" class="Form-field-input" value='<?=$brand?>'>
         </div>
-        <input type="submit" value="Modifier">
+        <div class="Form-submit">
+             <input type="submit" value="Modifier" class="Form-button">
+         </div> 
     </fieldset>
 </form>

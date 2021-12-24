@@ -56,8 +56,8 @@ class CategoryController extends AbstractController {
 
         if($catId){
             // $products = $categoryModel -> getProductbyCat($catId);
-            $products = $categoryModel -> getProductbyCat(1);
-  
+            $products = $categoryModel -> getProductbyCat($catId);
+            
         }
         
        

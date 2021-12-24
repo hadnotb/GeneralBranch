@@ -13,7 +13,6 @@ class ArticleController extends AbstractController
     {
 
 
-        
         // Si il existe une clef idArticle dans l'url
         if(!isset($_GET["idArticle"])) {
             return;
@@ -23,16 +22,26 @@ class ArticleController extends AbstractController
         // Recuperation d'un Article avec l'id de l'url
         
         $article = $articleModel->getOneArticleInfo($_GET["idArticle"]);
+        
        
         
         // On ranges les valeurs des clefs image et couleur dans une variable 
         $images = $article['imgLst'];
+        
         $couleur = $article['listcoul'];
+        
         $taille = $article['artail'];
+        
+        dump($article);
+
         // On l'explode pour créer un tableau avec chacune des valeurs
         $couleurArray = explode(';',$couleur);
+        $couleurUnique = array_unique($couleurArray);
         $imageArray =explode(';', $images);
+        $imageUnique = array_unique($imageArray);
         $tailleArray =explode(';', $taille);
+        $tailleUnique = array_unique($tailleArray);
+        
 
 
         
@@ -42,9 +51,9 @@ class ArticleController extends AbstractController
         return $this->render('article',[
 
             'article' => $article,
-            'images' => $imageArray,
-            'couleur' => $couleurArray,
-            'taille' => $tailleArray
+            'images' => $imageUnique,
+            'couleur' => $couleurUnique,
+            'taille' => $tailleUnique
          ]);
 
     }

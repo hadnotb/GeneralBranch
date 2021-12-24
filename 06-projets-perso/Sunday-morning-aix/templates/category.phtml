@@ -1,6 +1,6 @@
 <section class="PageCategory"> 
     <button id="boutonTrier" onclick="showCategoryList();">Trier</button>
-    <aside id = 'Category' class = 'Category'>
+    <aside id ="Category-list" class ='Category-list'>
         <h2 class="Category-titles"><a class="Category-titles-link" href="">Nouvelle collection</a></h2>
     
         <h2 class="Category-titles"><a class="Category-titles-link" href="">Promotions</a></h2>
@@ -84,16 +84,21 @@
     <section class="Product">
             <?php if ($products): ?>
                 <?php foreach ($products as $product): ?>
+                    
                     <figure class="Product-figure">
-                        <img class="Product-figure-img" src="<?php echo(IMAGE_URL . '/' . $product["img"]); ?>" alt="">
-                        </img>
-                        <a href="" class="Product-figure-link">Buy</a>
-                        <div class="Product-figure-info">
-                            <h2 class="Product-figure-info-titre"><?= $product['libModel']?><br><?= $product['libMarque']?></h2>
-                            <h2 class="Product-figure-info-prix"><?= $product['prix']?> €</h2>
-                            
-                            <a href="<?=buildUrl('article', ['idArticle' => $product['idModel']])?>">Voir Plus</a>
+                        <div class="Product-figure-image">
+                            <img class="Product-figure-image-img" src="<?php echo(IMAGE_URL . '/' . $product["img"]); ?>" alt=""></img>
+                            <a href="<?=buildUrl('article', ['idArticle' => $product['idModel']])?>" class="Product-figure-image-buy" id="buy">Voir plus</a>
                         </div>
+                        <div class="Product-figure-info">
+                            <div class="Product-figure-infos">
+                                <small class="Product-figure-infos-model"><?= $product['libModel']?></small><br>
+                                <small class="Product-figure-infos-brand"><?= $product['libMarque']?></small>
+                            </div>
+                            <h3 class="Product-figure-prix"><?= $product['prix']?> €</h3>
+                        </div>
+                        
+
                     </figure>
                 <?php endforeach; ?>
 

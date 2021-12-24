@@ -49,6 +49,11 @@ $routes = [
         'controller' => 'Account',
         'method' => 'accountPage'
     ],
+    'logout' => [
+        'path' => '/logout',
+        'controller' => 'Auth',
+        'method' => 'logout'
+    ],
     // ADMIN_GENERAL///////////////////////////////////////////
     'admin' => [
         'path' => '/admin',

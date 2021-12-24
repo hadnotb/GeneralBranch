@@ -1,6 +1,4 @@
-@import"variable";
-@import"_nav-admin.scss";
-@import"_admin-index.scss";
+@import"_variable";
 
 @font-face {
     font-family: "Apercu";
@@ -21,12 +19,18 @@
     font-style: italic;
 }
 
+@import"_nav-admin";
+@import"_admin-index";
+@import"_admin-form";
+@import"_page-category";
+@import"_single-product";
+@import"_carousel.scss";
+
 // ------------------------------------HEADER----------------------------------
-// *{
-//     border:solid 1px black;
-// }
+
 body{
-    position: relative;
+    // position: relative;
+    background-color: $backgroundColor;
     margin:0;
     padding: 0;
     box-sizing: border-box;
@@ -35,143 +39,10 @@ body{
     color: black;
    
 }
-
-.SiteHeader{
-    // position:relative;
-    background-color: $firstColor;
-    &-logo{
-        &-img{
-            width: 80vw;
-            display:block;
-            margin: 0 auto;
-            padding: 15px;
-            &:hover{
-                transform: scale(1.1);
-            }
-        }
-    }
-
-    &-nav{
-        padding: 10px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-evenly;
-        &-search{
-            position: relative;
-            order:3;
-            background-color: $firstColor;
-            & button{
-                padding: 0;
-                margin: 0;
-                border: none;
-                background-color: $firstColor;
-                font-size: x-large;
-                margin-bottom: 10px;
-                &:hover{
-                    transform: scale(1.1);
-                }
-            } 
-        }
-
-        &-basket{
-            position: relative;
-        }
-        
-       
-        &-menu{
-            position:relative;
-            padding: 0;
-            margin: 0;
-            &-bars{
-                font-size: x-large;
-                margin-bottom: 10px;
-                position: relative;
-                left: -1px;
-                &:hover{
-                    transform: scale(1.1);
-                }
-            }
-            
-            &-links{
-                text-align:center;
-            }
-            
-            &-cross{
-                position:absolute;
-                right:50%;
-                display: none;
-            }
-
-            &-link{
-               display: none;
-               text-decoration: none;
-               padding: 15px;
-               color:black;  
-               &:hover{
-                transform: scale(1.1);
-                } 
-            }
-        }
-    }
+html{
+    font-size: 100%
 }
-
-
-
-.Search-bubble{
-    display: none;
-    position: absolute;
-    border: solid 1px black;
-    right: -139px;
-    bottom: -65px;
-    background-color: black;
-    width: 250px ;
-    min-height: 60px;
-    border-radius: 5px;
-    &::after{
-        content:'';
-        width: 15px;
-        height: 15px;
-        position: absolute;
-        transform: rotate(45deg);
-        background-color: black;
-        top: -7px;
-        left:90px;
-        z-index:2;
-    }
-}
-
-.not-hidden{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-}
-
-#times{
-    text-align: center;
-}
-
-.Basket{
-        &-icone{
-        text-decoration: none;
-        color: black;
-        font-size: x-large;
-        margin-bottom: 20px;
-        &:hover{
-            transform: scale(1.1);
-        }
-    }
-}
-
-.icon-img{
-    width: 25px;
-}
-
-#shopping-cart-logo{
-    position: relative;
-    left:-2px;
-}
+@import"_header.scss";
 
 // div.SiteHeader-nav-menu-links.showMenu{
 //     display:flex;
@@ -184,56 +55,9 @@ body{
     // bars.style.display.toggle ='none'
 
 
-// #############################################Plus-minus display for Category Page #######################################
-.css-label{cursor : pointer;}  
-.css-checkbox{display:none;}
-.Minus{display: none;}
-.css-checkbox:checked + .css-label .Minus{
-    display: inline-block;
-}
-.css-checkbox:checked + .css-label .Plus{
-      display: none;  
-}
-.inputList{
-    display: none;
-}
-.css-checkbox:checked ~  .inputList{
-    display: block;
-}
-// ################################################PageArticleIndividuel###################################################################
 
-.Article{
-    &-mainPic{
-        
-        &-img{
-            margin: 0 auto;
-            width: 80vw;
-        }
-    }
-    &-vigPic{
-        
-        &-img{
-            margin: 0 auto;
-            width: 50px;
-        }
-    }
-    &-info{
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
-        &-couleur{
-            &-container{
-                width: 100%;
-                display: flex;
-                flex-direction: row;
-                justify-content: space-around;
-                align-items: center;
-            }
-            
-        }
-    }
-}
+
+
 .product-thumbnail{
     width: 70px;
 }
@@ -243,101 +67,7 @@ body{
 
 @media screen and (min-width : 600px){
 
-    .SiteHeader{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        background-color: white;
-        position: sticky;
-        top: 0;
-        box-shadow: -1px 1px 10px -3px rgba(0,0,0,0.2);
-        &-logo{
-           &-img{
-               width: 250px;
-               &:hover{
-                    path{
-                        fill: #FFE542;;
-                    }
-               }
-           }
-        }
-        &-nav{
-            width: 30%;
-            display: flex;
-            flex-direction: row;
-            justify-content: space-around;
-            align-items: center;
-            &-search{
-                order:-1;
-                background-color: white;
-                & button{
-                    background-color: white;
-                    &:hover{
-                        color:$firstColor;
-                    }
-                }
-            }
-            
-            &-menu{
-                &-bars{
-                    &:hover{
-                        color:$firstColor;
-                    }
-                }
-                &-cross{
-                    &:hover{
-                        color:$firstColor;
-                    }
-                }
-                
-                &-links{
-                    position:fixed;
-                    top:69px;
-                    right: 0px;
-                    width: 100vw;
-                    background-color: rgb(0, 0, 0);
-                }        
-                &-link{
-                    width: 230px;
-                    color: white;
-                }           
-            }
-        }
-    }
-
-    .Basket-icone{
-        &:hover{
-            color: $firstColor;
-        }
-    }
-
-    #magnifying-glass{
-        position: relative;
-        top: 7px;
-    }
-    #boutonTrier{
-        display: none;
-    }
-
-    .Category{
-        display: block;
-    }
-
-    .PageCategory{
-        display: flex;
-        flex-wrap: wrap;
-    }
-
-    .Category{
-        width: 25%;
-    }
-
-    .Product{
-        width: 75%;
-        display: grid ;
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-        gap: 5%;
-    }
+    
 
     .Article{
         display: flex;
@@ -359,4 +89,6 @@ body{
             width: 40%;
         }
     }
+    
+    
 }
