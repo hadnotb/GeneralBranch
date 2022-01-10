@@ -4,6 +4,7 @@
     // max-width: 1600px;
     margin-bottom: 15px;
     background-color: $firstColor;
+    
     &-logo{
         &-img{
             width: 80vw;
@@ -137,6 +138,28 @@
     position: relative;
     left:-2px;
 }
+.Search-button{
+    & i{
+        
+        // background-color: black;
+        content: url('../img/magnifying-glass.png');
+        &:hover{
+            content: url('../img/magnifying-glassY.png');
+        }
+        width: 25px;
+    }
+}
+.Basket{
+    & i{
+        content:url('../img/shopping-cart.png');
+    }
+}
+#bars{
+    content: url('../img/search-option.png');
+}
+#times{
+    content: url('../img/next.png');
+}
 
 @media screen and (min-width : 600px){
 
@@ -147,7 +170,8 @@
         background-color: white;
         position: sticky;
         top: 0;
-        box-shadow: -1px 1px 10px -3px rgba(0,0,0,0.2);
+        // box-shadow: -1px 1px 10px -3px rgba(0,0,0,0.2);
+        box-shadow: $lightBoxShadow;
         &-logo{
            &-img{
                width: 250px;
@@ -172,6 +196,9 @@
                     &:hover{
                         color:$firstColor;
                     }
+                }
+                & .icon-img{
+                    background-image: url('../img/magnifying-glass.png');
                 }
             }
             
@@ -204,5 +231,6 @@
     #magnifying-glass{
         position: relative;
         top: 7px;
+        
     }
 }

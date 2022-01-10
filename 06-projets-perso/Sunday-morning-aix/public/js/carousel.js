@@ -38,4 +38,19 @@ const move = (e) => {
 	slider.addEventListener('mouseup', end);
 	slider.addEventListener('touchend', end);
 })();
-console.log(isDown);
+// document.style.backgroundImage = "url()"
+let items = document.querySelectorAll('.item');
+
+for(let i =0 ; i< items.length; i++){
+
+    
+    let j= i+1;
+    let element =items[i];
+    element.style.backgroundImage = "url('img/imgcarousel/mav-"+j+".jpg')";
+    element.style.backgroundSize ='250px 400px';
+    element.style.backgroundRepeat ="no-repeat";
+    element.style.backgroundPosition ='center';
+    
+    // background-size: cover;
+    // background-position: center;"
+}

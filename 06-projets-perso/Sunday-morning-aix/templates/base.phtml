@@ -42,21 +42,25 @@
 
         <section class="SiteHeader-nav">
             <form action="<?=buildUrl('search');?>" class="SiteHeader-nav-search" method="POST">
-                <button class="Search-button" type="button" onclick ="showSearchBar();"><img id ='magnifying-glass' class='icon-img' src="../img/magnifying-glass.png" alt=""></button>
+                <!--<button class="Search-button" type="button" onclick ="showSearchBar();"><img id ='magnifying-glass' class='icon-img' src="../img/magnifying-glass.png" alt=""></button>--> 
+                <button class="Search-button" type="button" onclick ="showSearchBar();"><i class="icon-img"></i></button>
                 <div class="Search-bubble">
-                    <input id="searchBar" type="text" class="Search-bar" type="search" value="" name="searchBar">
+                    <input id="searchBar" class="Search-bar" type="search" value="" name="searchBar">
                     <input type="submit" id="submit-search" class='submit-button' value='Rechercher'>
                 </div>
             </form>
 
             <div class="Siteheader-nav-basket Basket">
-                <img id='shopping-cart-logo'class='icon-img' src="../img/shopping-cart.png" alt="">
+                <!--<img id='shopping-cart-logo' class='icon-img' src="../img/shopping-cart.png" alt="">-->
+                <i class="icon-img"></i>
             </div>
 
             <div class="SiteHeader-nav-menu">
 
-                <i class="SiteHeader-nav-menu-bars" id='bars'><img class='icon-img' src="../img/search-option.png" alt=""></i>
-                <i class="SiteHeader-nav-menu-cross" id='times'><img  id='times-icon' class='icon-img' src="../img/next.png" alt=""></i>
+               <!-- <i class="SiteHeader-nav-menu-bars" id='bars'><img class='icon-img' src="../img/search-option.png" alt=""></i>
+                <i class="SiteHeader-nav-menu-cross" id='times'><img  id='times-icon' class='icon-img' src="../img/next.png" alt=""></i>-->
+                <i class="SiteHeader-nav-menu-bars icon-img" id='bars'></i>
+                <i class="SiteHeader-nav-menu-cross icon-img" id='times'></i>
 
                 <div class="SiteHeader-nav-menu-links" id='SiteHeaderMenu'>
                     <a href="<?=buildUrl('category');?>" class="SiteHeader-nav-menu-link" id="Menu-link">Catalogue</a>
@@ -92,18 +96,18 @@
 </main>
 
 <footer class="SiteFooter">
-    <form class = "SiteFooter-newsLetterForm NewsLetterForm" action="">
+    <!--<form class = "SiteFooter-newsLetterForm NewsLetterForm" action="">
         <label class ="NewsLetterForm-lab" for="newsletter">Newsletter</label>
-        <input class ="NewsLetterForm-input" type="email" name="newsletter" class="newsletter">
-        <!-- Trouver comment transfomer utiliser un svg dans un i -->
+        <input class ="NewsLetterForm-input" type="email" name="newsletter" class="newsletter"> #}
+        Trouver comment transfomer utiliser un svg dans un i 
         <button class ="NewsLetterForm-button" type="submit">TODO ICON</button> 
-    </form>
-    <a class ="SiteFooter-a" class ='' href="">Livraison et retour</a>
+    </form>-->
+    <a class ="SiteFooter-a" href="">Livraison et retour</a>
     <a class ="SiteFooter-a" href="">Mentions Légale</a>
     <a class ="SiteFooter-a" href="">Conditions générales de ventes</a>
     <a class ="SiteFooter-a" href="">Paiement Sécurisé</a>
 
-    <div class="SiteFooter-user-rsx">
+    <div class="SiteFooter-rsx">
         <a href="#"><i class="fab fa-instagram"></i></a>
         <a href=""><i class="fab fa-facebook"></i></a>
     </div>
@@ -115,6 +119,8 @@
 
     <script src="<?=asset('js/main.js');?>"></script>
     <script src="<?=asset('js/carousel.js');?>"></script>
+    <script src="<?=asset('js/carousel.js');?>"></script>
+
 
     
 </body>

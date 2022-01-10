@@ -677,15 +677,181 @@
   }
 }
 
+.wrapper ul {
+  padding: 0;
+}
+
+.wrapper li {
+  list-style: none;
+}
+
+.NewCollection {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.wrapper {
+  position: relative;
+  max-width: 250px;
+  -webkit-box-shadow: 1px 1px 1px rgba(56, 54, 54, 0.171);
+          box-shadow: 1px 1px 1px rgba(56, 54, 54, 0.171);
+}
+
+.wrapper:before, .wrapper:after {
+  position: absolute;
+  top: 0;
+  z-index: 1;
+  content: "";
+  display: block;
+  width: 20px;
+  height: 100%;
+}
+
+.items {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  font-size: 0;
+  cursor: pointer;
+}
+
+.items.active {
+  cursor: -webkit-grab;
+  cursor: grab;
+}
+
+.item {
+  display: inline-block;
+  margin-left: 0;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  width: 250px;
+  height: 400px;
+  color: #222;
+  font-size: 33px;
+  font-weight: bold;
+  line-height: 130px;
+}
+
+.item:last-child {
+  margin-right: 20px;
+}
+
+@media screen and (min-width: 1200px) {
+  .wrapper {
+    margin-left: -20px;
+    max-width: 750px;
+  }
+}
+
+.HomeNav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 20px;
+}
+
+.HomeNav-link {
+  margin: 20px;
+  font-size: 1.5rem;
+  text-decoration: none;
+  color: black;
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
+}
+
+.HomeNav-link:hover {
+  color: #FFE542;
+}
+
+.ForYou {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 400px;
+  margin: 0 auto;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-top: dotted 1px black;
+}
+
+.SiteFooter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 30px;
+  background-color: white;
+  -webkit-box-shadow: 1px 0px 1px 1px rgba(56, 54, 54, 0.171);
+          box-shadow: 1px 0px 1px 1px rgba(56, 54, 54, 0.171);
+  margin-top: 20px;
+  margin-bottom: 0px;
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+}
+
+.SiteFooter-a {
+  text-decoration: none;
+  color: black;
+}
+
+.SiteFooter-a:hover {
+  color: #FFE542;
+}
+
+.SiteFooter-rsx i {
+  color: black;
+  font-size: 1.3rem;
+  padding-right: 10px;
+}
+
 body {
+  position: relative;
   background-color: #e2e2e2c7;
   margin: 0;
   padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
   font-family: "Apercu";
   font-weight: 400;
   color: black;
+  min-height: 100vh;
+  padding-bottom: 40px;
+}
+
+main {
+  min-height: 100%;
 }
 
 html {
@@ -859,6 +1025,27 @@ html {
   left: -2px;
 }
 
+.Search-button i {
+  content: url("../img/magnifying-glass.png");
+  width: 25px;
+}
+
+.Search-button i:hover {
+  content: url("../img/magnifying-glassY.png");
+}
+
+.Basket i {
+  content: url("../img/shopping-cart.png");
+}
+
+#bars {
+  content: url("../img/search-option.png");
+}
+
+#times {
+  content: url("../img/next.png");
+}
+
 @media screen and (min-width: 600px) {
   .SiteHeader {
     display: -webkit-box;
@@ -875,8 +1062,8 @@ html {
     position: -webkit-sticky;
     position: sticky;
     top: 0;
-    -webkit-box-shadow: -1px 1px 10px -3px rgba(0, 0, 0, 0.2);
-            box-shadow: -1px 1px 10px -3px rgba(0, 0, 0, 0.2);
+    -webkit-box-shadow: 1px 1px 1px rgba(56, 54, 54, 0.171);
+            box-shadow: 1px 1px 1px rgba(56, 54, 54, 0.171);
   }
   .SiteHeader-logo-img {
     width: 250px;
@@ -910,6 +1097,9 @@ html {
   }
   .SiteHeader-nav-search button:hover {
     color: #FFE542;
+  }
+  .SiteHeader-nav-search .icon-img {
+    background-image: url("../img/magnifying-glass.png");
   }
   .SiteHeader-nav-menu-bars:hover {
     color: #FFE542;

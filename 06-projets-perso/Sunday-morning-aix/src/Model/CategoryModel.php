@@ -84,14 +84,15 @@ class CategoryModel extends AbstractModel {
         $catProducts = $this -> database -> getAllResults($sql,['idCat' =>$id]);
         return $catProducts;
     }
+    
 
    function getArticlebySearch($toSearch){
         $sql ='call Sp_brandArtCatsearch(:toSearch)';
 
         $results = $this -> database -> getAllResults($sql,['toSearch' => $toSearch]);
         return $results;
-
    }
+
 
    function insertCategory($cat){
 

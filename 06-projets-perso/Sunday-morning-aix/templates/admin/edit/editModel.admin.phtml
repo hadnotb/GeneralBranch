@@ -65,14 +65,15 @@
                         
                         <td><img class="model-thumbnail" src="<?=IMAGE_URL . '/' . $model['img'];?>" alt=""></td>
                         <td>
-                            <!--<?php foreach($images as $image):?>
-                            <?php endforeach?>-->
+                            <?php foreach($images as $image):?>
+                                <img class="model-thumbnail" src="<?=IMAGE_VAR_URL . '/' . $image['imgPath'];?>" alt="">
+                            <?php endforeach?>
                         </td>
                         <td>
                             <form action="<?=buildUrl('editModel')?>" method="POST">
                                 <label for="files">Select files:</label>
                                 <input type="file" id="image1" name="image[]" multiple><br><br> 
-                                <input type="submit">
+                                <input id="" type="submit">
                             </form> 
                         </td>
                         <td><a class='Delete-button' data-target="color" href="<?=buildUrl('deleteColor',['color_id' => $color['idCouleur']])?>"><i class="fas fa-trash-alt"></i></a></td>

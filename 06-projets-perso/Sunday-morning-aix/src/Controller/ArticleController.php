@@ -20,7 +20,7 @@ class ArticleController extends AbstractController
         // Creatiion d'un objet ArticleModel
         $articleModel = new ArticleModel();
         // Recuperation d'un Article avec l'id de l'url
-        
+        dump($_GET["idArticle"]);
         $article = $articleModel->getOneArticleInfo($_GET["idArticle"]);
         
        

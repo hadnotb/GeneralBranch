@@ -186,6 +186,8 @@ class ModelAdminController extends AbstractController{
         $imgPat = $model['img'];
         $imgPathToDel = $model['img'];
         $filename = $imgPathToDel;
+        $images = $this->articleModel ->readImagevar($idMod);
+        dump($images);
             
         
         if (!empty($_POST)) {
@@ -292,7 +294,8 @@ class ModelAdminController extends AbstractController{
             'productName' => $productName ?? $model['libModel'],
             'model' => $model,
             'categories'=>$cat,
-            'brands' => $brands
+            'brands' => $brands,
+            'images' => $images
         ]);
     }
 
